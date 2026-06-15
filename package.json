@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "fetch-data": "node scripts/fetch-data.js",
-    "fetch-odds": "node scripts/fetch-odds.js"
+    "fetch-odds": "node scripts/fetch-odds.js",
+    "predict": "node scripts/predict.js"
   },
   "dependencies": {
     "echarts": "^5.5.0",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "openai": "^6.42.0",
     "vite": "^5.2.8"
   }
 }

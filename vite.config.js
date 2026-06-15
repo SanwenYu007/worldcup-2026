@@ -3,6 +3,8 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // 部署到子路径（如 GitHub Pages 的 /worldcup-2026/）时通过 VITE_BASE 注入；本地默认 '/'
+  base: process.env.VITE_BASE || '/',
   plugins: [vue()],
   server: {
     port: 5173,

@@ -1,9 +1,9 @@
 {
-  "model": "claude-opus-4-8",
-  "modelLabel": "Claude Opus 4.8",
+  "model": "seed",
+  "modelLabel": "示例预测（待 ChatGPT 自动更新）",
   "generatedAt": "2026-06-14T18:30:00Z",
   "horizonDays": 2,
-  "_schema": "predictions[]: { matchId, home/away(队码), homeName/awayName, date, score{home,away}, outcome(home|draw|away), confidence(0-1), reasoning }. 每日由 Claude 重新生成未来2天的比赛预测覆盖此文件。",
+  "_schema": "predictions[]: { matchId, home/away(队码), homeName/awayName, date, score{home,away}, outcome(home|draw|away), confidence(0-1), reasoning }. 由 scripts/predict.js 调用 ChatGPT 每日重新生成未来2天的比赛预测覆盖此文件（此处为初始示例）。",
   "predictions": [
     {
       "matchId": "537357",

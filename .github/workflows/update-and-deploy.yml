@@ -1,0 +1,90 @@
+name: 定时更新数据与AI预测并部署
+
+# 「服务器到时间自动更新」：GitHub Actions 按 cron 定时运行，
+# 拉取真实赛程比分(football-data.org) + 体彩赔率(sporttery) + 重新生成 AI 预测(ChatGPT)，
+# 提交回仓库并部署到 GitHub Pages。
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # 每 6 小时（UTC）。可按需改频率
+  workflow_dispatch:          # 也可在 Actions 页手动触发
+  push:
+    branches: [main]          # 推送代码后也重新构建部署
+
+permissions:
+  contents: write   # 提交更新后的数据 JSON
+  pages: write      # 部署 Pages
+  id-token: write
+
+concurrency:
+  group: update-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: 拉取真实赛程比分（football-data.org）
+        if: ${{ github.event_name != 'push' }}
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          if [ -z "$FOOTBALL_DATA_TOKEN" ]; then echo "未配置 FOOTBALL_DATA_TOKEN，跳过赛程更新"; exit 0; fi
+          npm run fetch-data
+        continue-on-error: true
+
+      - name: 拉取体彩竞彩赔率（sporttery，可能因服务器地区受限）
+        if: ${{ github.event_name != 'push' }}
+        run: npm run fetch-odds || echo "赔率抓取失败（可能海外服务器被限），保留现有快照"
+        continue-on-error: true
+
+      - name: 生成 AI 预测（ChatGPT / OpenAI）
+        if: ${{ github.event_name != 'push' }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}   # 可选：仓库变量指定模型，默认 gpt-4o
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then echo "未配置 OPENAI_API_KEY，跳过 AI 预测"; exit 0; fi
+          npm run predict
+        continue-on-error: true
+
+      - name: 提交更新的数据
+        if: ${{ github.event_name != 'push' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/live.json public/odds.json public/predictions.json
+          if git diff --staged --quiet; then
+            echo "数据无变化，无需提交"
+          else
+            git commit -m "chore: 自动更新数据与AI预测 $(date -u +%FT%TZ)"
+            git push
+          fi
+
+      - name: 构建（注入 Pages 子路径）
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
