@@ -6,6 +6,17 @@ export default defineConfig({
   // 部署到子路径（如 GitHub Pages 的 /worldcup-2026/）时通过 VITE_BASE 注入；本地默认 '/'
   base: process.env.VITE_BASE || '/',
   plugins: [vue()],
+  build: {
+    chunkSizeWarningLimit: 700, // ECharts 单独成块约 650KB，属预期，提高阈值避免误报
+    // 把体积最大的 ECharts 单独拆成一个 chunk，降低首屏负担、消除大 chunk 警告
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          echarts: ['echarts', 'vue-echarts']
+        }
+      }
+    }
+  },
   server: {
     port: 5173,
     // 可选「实时模式」：开发时把 /api 代理到 football-data.org，避开浏览器 CORS。

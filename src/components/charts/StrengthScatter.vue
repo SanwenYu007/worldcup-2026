@@ -17,7 +17,7 @@ const option = computed(() => {
   const byConf = {}
   store.teams.forEach((t) => {
     ;(byConf[t.conf] ||= []).push({
-      value: [groupOrder.indexOf(t.group), t.rating, (t.rating - 1380) / 4 + 8],
+      value: [groupOrder.indexOf(t.group), t.rating, (t.rating - 1380) / 40 + 9],
       name: t.name, flag: t.flag, conf: t.conf
     })
   })
@@ -28,13 +28,14 @@ const option = computed(() => {
         `${p.data.flag} <b>${p.data.name}</b><br/>${groupOrder[p.data.value[0]]} 组 · ${p.data.conf}<br/>实力值 <b>${p.data.value[1]}</b>`
     },
     legend: { top: 0, textStyle: { color: '#9aa6c4' }, icon: 'circle' },
-    grid: { ...baseGrid, top: 38 },
+    grid: { ...baseGrid, top: 56, bottom: 16 },
     xAxis: {
       type: 'category', data: groupOrder, name: '小组', nameTextStyle: { color: '#647093' },
       ...axisStyle, boundaryGap: true
     },
     yAxis: {
-      type: 'value', name: '实力值', min: 1300, max: 2200, nameTextStyle: { color: '#647093' }, ...axisStyle
+      type: 'value', name: '实力值', min: 1300, max: 2300, interval: 200,
+      nameTextStyle: { color: '#647093' }, ...axisStyle
     },
     series: Object.entries(byConf).map(([conf, data]) => ({
       name: conf, type: 'scatter', data,

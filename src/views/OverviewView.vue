@@ -5,6 +5,7 @@ import { useDataStore } from '../stores/data'
 import { keyNumbers } from '../composables/useStats'
 import StatCard from '../components/StatCard.vue'
 import MatchCard from '../components/MatchCard.vue'
+import DataStatus from '../components/DataStatus.vue'
 import StrengthScatter from '../components/charts/StrengthScatter.vue'
 import GoalTimeline from '../components/charts/GoalTimeline.vue'
 
@@ -59,6 +60,9 @@ const biggest = computed(() => kn.value.biggest)
       </div>
     </div>
   </section>
+
+  <!-- 数据状态：来源 + 更新时间 -->
+  <DataStatus />
 
   <!-- 关键数字 -->
   <div class="grid stats-grid">

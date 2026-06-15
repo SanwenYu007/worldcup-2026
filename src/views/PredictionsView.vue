@@ -46,7 +46,7 @@ const accuracy = computed(() => {
     <div class="head">
       <div>
         <h2>AI 比分预测</h2>
-        <p class="muted">由 <b>{{ data?.modelLabel || 'AI 模型' }}</b> 分析实力、近况与赔率，预测未来 {{ data?.horizonDays || 2 }} 天比赛。</p>
+        <p class="muted">由 <b>{{ data?.modelLabel || 'AI 模型' }}</b> 综合两队<b>实力值</b>与<b>近期战绩</b>，预测未来 {{ data?.horizonDays || 2 }} 天比赛的比分与胜负；每条预测附判断依据与置信度。</p>
       </div>
       <span class="gen muted" v-if="fmtGen">更新于 {{ fmtGen }}</span>
     </div>
