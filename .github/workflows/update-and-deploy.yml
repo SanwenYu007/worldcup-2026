@@ -50,7 +50,8 @@ jobs:
         if: ${{ github.event_name != 'push' }}
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}   # 可选：仓库变量指定模型，默认 gpt-4o
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}        # 可选：仓库变量指定模型，默认 gpt-4o
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}  # 可选：第三方 OpenAI 兼容网关地址（如 https://xxx/v1）
         run: |
           if [ -z "$OPENAI_API_KEY" ]; then echo "未配置 OPENAI_API_KEY，跳过 AI 预测"; exit 0; fi
           npm run predict

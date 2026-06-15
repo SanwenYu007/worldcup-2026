@@ -19,7 +19,10 @@ if (!process.env.OPENAI_API_KEY) {
   process.exit(0)
 }
 
-const client = new OpenAI() // 从环境变量 OPENAI_API_KEY 读取
+// 支持第三方 OpenAI 兼容接口：设置 OPENAI_BASE_URL 即用自定义网关，缺省走官方
+const client = new OpenAI({
+  baseURL: process.env.OPENAI_BASE_URL || undefined
+})
 
 const data = JSON.parse(await readFile(LIVE, 'utf8'))
 const teamById = Object.fromEntries((data.teams || []).map((t) => [t.id, t]))
@@ -68,63 +71,40 @@ const matchLines = upcoming.map((m) => {
   ].join(' | ')
 }).join('\n')
 
-// 结构化输出 schema（OpenAI Structured Outputs，strict 模式要求每层 additionalProperties:false 且全字段 required）
-const schema = {
-  type: 'object',
-  additionalProperties: false,
-  properties: {
-    predictions: {
-      type: 'array',
-      items: {
-        type: 'object',
-        additionalProperties: false,
-        properties: {
-          matchId: { type: 'string' },
-          score: {
-            type: 'object',
-            additionalProperties: false,
-            properties: { home: { type: 'integer' }, away: { type: 'integer' } },
-            required: ['home', 'away']
-          },
-          outcome: { type: 'string', enum: ['home', 'draw', 'away'] },
-          confidence: { type: 'number' },
-          reasoning: { type: 'string' }
-        },
-        required: ['matchId', 'score', 'outcome', 'confidence', 'reasoning']
-      }
-    }
-  },
-  required: ['predictions']
-}
-
+// 用 json_object 模式（第三方 OpenAI 兼容网关支持更广），格式要求写在提示里
 const system =
   '你是一位专业足球分析师。基于两队实力值、近期战绩与赔率，预测每场比赛的最终比分与胜负。' +
-  'outcome 取 home(主胜)/draw(平)/away(客胜)，需与预测比分一致。confidence 为 0~1 的置信度。' +
-  'reasoning 用一两句简体中文说明依据。只依据给定信息做合理判断，对每个 matchId 输出一条预测。'
+  '只输出一个 JSON 对象，不要 markdown 代码块、不要额外文字，格式如下：\n' +
+  '{"predictions":[{"matchId":"<原样的matchId>","score":{"home":<整数>,"away":<整数>},' +
+  '"outcome":"home|draw|away","confidence":<0到1的小数>,"reasoning":"<简体中文一两句依据>"}]}\n' +
+  'outcome 须与预测比分一致（主队进球多=home，相等=draw，否则=away）。对每个给定 matchId 输出一条。'
 
 const userPrompt = `请预测以下 ${upcoming.length} 场比赛（未来 ${HORIZON_DAYS} 天）：\n\n${matchLines}`
 
 console.log(`→ 调用 ${MODEL} 预测 ${upcoming.length} 场比赛…`)
 const res = await client.chat.completions.create({
   model: MODEL,
-  max_completion_tokens: 4000,
-  response_format: {
-    type: 'json_schema',
-    json_schema: { name: 'match_predictions', strict: true, schema }
-  },
+  max_tokens: 4000,
+  response_format: { type: 'json_object' },
   messages: [
     { role: 'system', content: system },
     { role: 'user', content: userPrompt }
   ]
 })
 
-const content = res.choices[0]?.message?.content
-if (res.choices[0]?.message?.refusal) {
+const msg = res.choices[0]?.message
+if (msg?.refusal) {
   console.error('✗ 模型拒绝回答，保留现有预测。')
   process.exit(1)
 }
+let content = (msg?.content || '').trim()
 if (!content) throw new Error('响应中没有内容')
+// 容错：去掉可能的 ```json ... ``` 代码块包裹
+if (content.startsWith('```')) {
+  content = content.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim()
+}
 const parsed = JSON.parse(content)
+if (!Array.isArray(parsed.predictions)) throw new Error('返回结果缺少 predictions 数组')
 
 // 用比赛信息补全队名/日期，组装最终结构
 const byId = Object.fromEntries(upcoming.map((m) => [m.id, m]))
