@@ -110,5 +110,5 @@ npm run preview
 
 - ECharts 按需引入（`src/components/charts/echarts.js`）减小包体
 - 聚合逻辑为纯函数（`src/composables/useStats.js`），与 UI 解耦、易测试
-- hash 路由，纯静态部署无需服务端 rewrite
+- hash 路由，纯静态部署无需服务端 rewrite。**访问子页面统一用 hash 地址**：`/#/schedule`（赛程）、`/#/timeline`（时间表）、`/#/odds`（实时赔率）、`/#/predictions`（AI预测）、`/#/stats`（数据）、`/#/feedback`（意见）；直接访问 `/schedule` 这类路径会回到首页
 - 深色主题 + 响应式（移动端自适应）
