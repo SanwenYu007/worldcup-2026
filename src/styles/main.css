@@ -1,0 +1,95 @@
+:root {
+  /* 配色：深色为主，世界杯绿茵 + 金色点缀 */
+  --bg: #0b1020;
+  --bg-soft: #131a2e;
+  --card: #1a2238;
+  --card-hover: #222c47;
+  --border: #2a3654;
+  --text: #eef2ff;
+  --text-dim: #9aa6c4;
+  --text-mute: #647093;
+  --primary: #2dd4a7;
+  --primary-dim: #1f9e7c;
+  --accent: #ffd166;
+  --danger: #ff5d73;
+  --live: #ff4757;
+  --radius: 14px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --maxw: 1180px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(45, 212, 167, 0.12), transparent),
+    radial-gradient(900px 500px at -10% 20%, rgba(255, 209, 102, 0.08), transparent),
+    var(--bg);
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.section-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1.15rem; font-weight: 700; margin: 28px 0 14px;
+}
+.section-title::before {
+  content: ''; width: 4px; height: 18px; border-radius: 4px;
+  background: linear-gradient(var(--primary), var(--primary-dim));
+}
+
+.grid { display: grid; gap: 16px; }
+.muted { color: var(--text-dim); }
+.mono { font-variant-numeric: tabular-nums; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.72rem; font-weight: 600; padding: 2px 9px;
+  border-radius: 999px; background: var(--bg-soft); color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+.badge.live { color: #fff; background: var(--live); border-color: transparent; }
+.badge.live::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; background: #fff;
+}
+.badge.finished { color: var(--primary); }
+.badge.scheduled { color: var(--text-mute); }
+
+/* 实时指示的脉冲：仅在用户未要求减少动效时启用，避免无限动画干扰截图/省电 */
+@media (prefers-reduced-motion: no-preference) {
+  .badge.live::before { animation: pulse 1.2s ease-in-out infinite; }
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.fade-enter-active, .fade-leave-active { transition: opacity 0.22s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+/* 离开的视图绝对定位，避免与进入视图堆叠导致布局跳动 */
+.fade-leave-active { position: absolute; width: 100%; }
+
+::-webkit-scrollbar { height: 8px; width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+
+@media (max-width: 640px) {
+  .section-title { font-size: 1.05rem; }
+  .container { padding: 0 14px; }
+}

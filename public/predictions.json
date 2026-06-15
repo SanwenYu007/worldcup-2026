@@ -1,0 +1,79 @@
+{
+  "model": "claude-opus-4-8",
+  "modelLabel": "Claude Opus 4.8",
+  "generatedAt": "2026-06-14T18:30:00Z",
+  "horizonDays": 2,
+  "_schema": "predictions[]: { matchId, home/away(队码), homeName/awayName, date, score{home,away}, outcome(home|draw|away), confidence(0-1), reasoning }. 每日由 Claude 重新生成未来2天的比赛预测覆盖此文件。",
+  "predictions": [
+    {
+      "matchId": "537357",
+      "home": "NED", "away": "JPN",
+      "homeName": "荷兰", "awayName": "日本",
+      "date": "2026-06-14T20:00:00Z",
+      "score": { "home": 2, "away": 1 },
+      "outcome": "home",
+      "confidence": 0.55,
+      "reasoning": "荷兰整体实力与锋线深度占优，控球与定位球是利器；日本组织灵活、反击犀利，能咬住比分但难逆转。预计荷兰多点开花，日本扳回一球。"
+    },
+    {
+      "matchId": "537352",
+      "home": "CIV", "away": "ECU",
+      "homeName": "科特迪瓦", "awayName": "厄瓜多尔",
+      "date": "2026-06-14T23:00:00Z",
+      "score": { "home": 1, "away": 1 },
+      "outcome": "draw",
+      "confidence": 0.34,
+      "reasoning": "两队实力接近，厄瓜多尔防守纪律性强、科特迪瓦身体与速度突出。预计是一场势均力敌的低进球较量，平局概率不低，胜负在一球之间。"
+    },
+    {
+      "matchId": "537358",
+      "home": "SWE", "away": "TUN",
+      "homeName": "瑞典", "awayName": "突尼斯",
+      "date": "2026-06-15T02:00:00Z",
+      "score": { "home": 2, "away": 0 },
+      "outcome": "home",
+      "confidence": 0.52,
+      "reasoning": "瑞典身体对抗与高空球占优，突尼斯防守稳健但进攻手段有限。瑞典若把握住定位球机会有望零封取胜。"
+    },
+    {
+      "matchId": "537369",
+      "home": "ESP", "away": "CPV",
+      "homeName": "西班牙", "awayName": "佛得角",
+      "date": "2026-06-15T16:00:00Z",
+      "score": { "home": 3, "away": 0 },
+      "outcome": "home",
+      "confidence": 0.72,
+      "reasoning": "西班牙控球与传切体系全面碾压，佛得角实力差距明显。预计西班牙大部分时间压制，多入数球并保持零封。"
+    },
+    {
+      "matchId": "537363",
+      "home": "BEL", "away": "EGY",
+      "homeName": "比利时", "awayName": "埃及",
+      "date": "2026-06-15T19:00:00Z",
+      "score": { "home": 2, "away": 0 },
+      "outcome": "home",
+      "confidence": 0.60,
+      "reasoning": "比利时个人能力与整体厚度更强，埃及依赖核心球员的零星反击。比利时掌控节奏，有望两球以上取胜。"
+    },
+    {
+      "matchId": "537370",
+      "home": "KSA", "away": "URY",
+      "homeName": "沙特", "awayName": "乌拉圭",
+      "date": "2026-06-15T22:00:00Z",
+      "score": { "home": 0, "away": 2 },
+      "outcome": "away",
+      "confidence": 0.58,
+      "reasoning": "乌拉圭实力与经验明显占优，防守强硬、反击有效；沙特速度快但稳定性不足。预计乌拉圭控制比赛并客场取胜。"
+    },
+    {
+      "matchId": "537364",
+      "home": "IRN", "away": "NZL",
+      "homeName": "伊朗", "awayName": "新西兰",
+      "date": "2026-06-16T01:00:00Z",
+      "score": { "home": 2, "away": 0 },
+      "outcome": "home",
+      "confidence": 0.55,
+      "reasoning": "伊朗防守扎实、定位球与身体对抗占优，新西兰进攻资源有限。伊朗有望以稳健防反零封拿下三分。"
+    }
+  ]
+}

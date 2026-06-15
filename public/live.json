@@ -1,0 +1,8043 @@
+{
+  "meta": {
+    "title": "2026 FIFA 世界杯",
+    "source": "football-data.org",
+    "fetchedAt": "2026-06-14T13:41:19.622Z"
+  },
+  "teams": [
+    {
+      "id": "MEX",
+      "code": "MEX",
+      "name": "墨西哥",
+      "flag": "🇲🇽",
+      "rating": 1830,
+      "conf": "CONCACAF",
+      "group": "A"
+    },
+    {
+      "id": "RSA",
+      "code": "RSA",
+      "name": "南非",
+      "flag": "🇿🇦",
+      "rating": 1470,
+      "conf": "CAF",
+      "group": "A"
+    },
+    {
+      "id": "KOR",
+      "code": "KOR",
+      "name": "韩国",
+      "flag": "🇰🇷",
+      "rating": 1620,
+      "conf": "AFC",
+      "group": "A"
+    },
+    {
+      "id": "CZE",
+      "code": "CZE",
+      "name": "捷克",
+      "flag": "🇨🇿",
+      "rating": 1670,
+      "conf": "UEFA",
+      "group": "A"
+    },
+    {
+      "id": "CAN",
+      "code": "CAN",
+      "name": "加拿大",
+      "flag": "🇨🇦",
+      "rating": 1740,
+      "conf": "CONCACAF",
+      "group": "B"
+    },
+    {
+      "id": "BIH",
+      "code": "BIH",
+      "name": "波黑",
+      "flag": "🇧🇦",
+      "rating": 1530,
+      "conf": "UEFA",
+      "group": "B"
+    },
+    {
+      "id": "USA",
+      "code": "USA",
+      "name": "美国",
+      "flag": "🇺🇸",
+      "rating": 1790,
+      "conf": "CONCACAF",
+      "group": "D"
+    },
+    {
+      "id": "PAR",
+      "code": "PAR",
+      "name": "巴拉圭",
+      "flag": "🇵🇾",
+      "rating": 1560,
+      "conf": "CONMEBOL",
+      "group": "D"
+    },
+    {
+      "id": "QAT",
+      "code": "QAT",
+      "name": "卡塔尔",
+      "flag": "🇶🇦",
+      "rating": 1450,
+      "conf": "AFC",
+      "group": "B"
+    },
+    {
+      "id": "SUI",
+      "code": "SUI",
+      "name": "瑞士",
+      "flag": "🇨🇭",
+      "rating": 1720,
+      "conf": "UEFA",
+      "group": "B"
+    },
+    {
+      "id": "BRA",
+      "code": "BRA",
+      "name": "巴西",
+      "flag": "🇧🇷",
+      "rating": 2090,
+      "conf": "CONMEBOL",
+      "group": "C"
+    },
+    {
+      "id": "MAR",
+      "code": "MAR",
+      "name": "摩洛哥",
+      "flag": "🇲🇦",
+      "rating": 1740,
+      "conf": "CAF",
+      "group": "C"
+    },
+    {
+      "id": "HAI",
+      "code": "HAI",
+      "name": "海地",
+      "flag": "🇭🇹",
+      "rating": 1430,
+      "conf": "CONCACAF",
+      "group": "C"
+    },
+    {
+      "id": "SCO",
+      "code": "SCO",
+      "name": "苏格兰",
+      "flag": "🏴",
+      "rating": 1650,
+      "conf": "UEFA",
+      "group": "C"
+    },
+    {
+      "id": "AUS",
+      "code": "AUS",
+      "name": "澳大利亚",
+      "flag": "🇦🇺",
+      "rating": 1560,
+      "conf": "AFC",
+      "group": "D"
+    },
+    {
+      "id": "TUR",
+      "code": "TUR",
+      "name": "土耳其",
+      "flag": "🇹🇷",
+      "rating": 1620,
+      "conf": "UEFA",
+      "group": "D"
+    },
+    {
+      "id": "GER",
+      "code": "GER",
+      "name": "德国",
+      "flag": "🇩🇪",
+      "rating": 1990,
+      "conf": "UEFA",
+      "group": "E"
+    },
+    {
+      "id": "CUW",
+      "code": "CUW",
+      "name": "库拉索",
+      "flag": "🇨🇼",
+      "rating": 1380,
+      "conf": "CONCACAF",
+      "group": "E"
+    },
+    {
+      "id": "NED",
+      "code": "NED",
+      "name": "荷兰",
+      "flag": "🇳🇱",
+      "rating": 2020,
+      "conf": "UEFA",
+      "group": "F"
+    },
+    {
+      "id": "JPN",
+      "code": "JPN",
+      "name": "日本",
+      "flag": "🇯🇵",
+      "rating": 1830,
+      "conf": "AFC",
+      "group": "F"
+    },
+    {
+      "id": "CIV",
+      "code": "CIV",
+      "name": "科特迪瓦",
+      "flag": "🇨🇮",
+      "rating": 1540,
+      "conf": "CAF",
+      "group": "E"
+    },
+    {
+      "id": "ECU",
+      "code": "ECU",
+      "name": "厄瓜多尔",
+      "flag": "🇪🇨",
+      "rating": 1640,
+      "conf": "CONMEBOL",
+      "group": "E"
+    },
+    {
+      "id": "SWE",
+      "code": "SWE",
+      "name": "瑞典",
+      "flag": "🇸🇪",
+      "rating": 1700,
+      "conf": "UEFA",
+      "group": "F"
+    },
+    {
+      "id": "TUN",
+      "code": "TUN",
+      "name": "突尼斯",
+      "flag": "🇹🇳",
+      "rating": 1490,
+      "conf": "CAF",
+      "group": "F"
+    },
+    {
+      "id": "ESP",
+      "code": "ESP",
+      "name": "西班牙",
+      "flag": "🇪🇸",
+      "rating": 2050,
+      "conf": "UEFA",
+      "group": "H"
+    },
+    {
+      "id": "CPV",
+      "code": "CPV",
+      "name": "佛得角",
+      "flag": "🇨🇻",
+      "rating": 1500,
+      "conf": "CAF",
+      "group": "H"
+    },
+    {
+      "id": "BEL",
+      "code": "BEL",
+      "name": "比利时",
+      "flag": "🇧🇪",
+      "rating": 1950,
+      "conf": "UEFA",
+      "group": "G"
+    },
+    {
+      "id": "EGY",
+      "code": "EGY",
+      "name": "埃及",
+      "flag": "🇪🇬",
+      "rating": 1520,
+      "conf": "CAF",
+      "group": "G"
+    },
+    {
+      "id": "KSA",
+      "code": "KSA",
+      "name": "沙特",
+      "flag": "🇸🇦",
+      "rating": 1470,
+      "conf": "AFC",
+      "group": "H"
+    },
+    {
+      "id": "URY",
+      "code": "URY",
+      "name": "乌拉圭",
+      "flag": "🇺🇾",
+      "rating": 1820,
+      "conf": "CONMEBOL",
+      "group": "H"
+    },
+    {
+      "id": "IRN",
+      "code": "IRN",
+      "name": "伊朗",
+      "flag": "🇮🇷",
+      "rating": 1560,
+      "conf": "AFC",
+      "group": "G"
+    },
+    {
+      "id": "NZL",
+      "code": "NZL",
+      "name": "新西兰",
+      "flag": "🇳🇿",
+      "rating": 1380,
+      "conf": "OFC",
+      "group": "G"
+    },
+    {
+      "id": "FRA",
+      "code": "FRA",
+      "name": "法国",
+      "flag": "🇫🇷",
+      "rating": 2080,
+      "conf": "UEFA",
+      "group": "I"
+    },
+    {
+      "id": "SEN",
+      "code": "SEN",
+      "name": "塞内加尔",
+      "flag": "🇸🇳",
+      "rating": 1700,
+      "conf": "CAF",
+      "group": "I"
+    },
+    {
+      "id": "IRQ",
+      "code": "IRQ",
+      "name": "伊拉克",
+      "flag": "🇮🇶",
+      "rating": 1500,
+      "conf": "AFC",
+      "group": "I"
+    },
+    {
+      "id": "NOR",
+      "code": "NOR",
+      "name": "挪威",
+      "flag": "🇳🇴",
+      "rating": 1700,
+      "conf": "UEFA",
+      "group": "I"
+    },
+    {
+      "id": "ARG",
+      "code": "ARG",
+      "name": "阿根廷",
+      "flag": "🇦🇷",
+      "rating": 2110,
+      "conf": "CONMEBOL",
+      "group": "J"
+    },
+    {
+      "id": "ALG",
+      "code": "ALG",
+      "name": "阿尔及利亚",
+      "flag": "🇩🇿",
+      "rating": 1530,
+      "conf": "CAF",
+      "group": "J"
+    },
+    {
+      "id": "AUT",
+      "code": "AUT",
+      "name": "奥地利",
+      "flag": "🇦🇹",
+      "rating": 1660,
+      "conf": "UEFA",
+      "group": "J"
+    },
+    {
+      "id": "JOR",
+      "code": "JOR",
+      "name": "约旦",
+      "flag": "🇯🇴",
+      "rating": 1390,
+      "conf": "AFC",
+      "group": "J"
+    },
+    {
+      "id": "POR",
+      "code": "POR",
+      "name": "葡萄牙",
+      "flag": "🇵🇹",
+      "rating": 2010,
+      "conf": "UEFA",
+      "group": "K"
+    },
+    {
+      "id": "COD",
+      "code": "COD",
+      "name": "刚果(金)",
+      "flag": "🇨🇩",
+      "rating": 1530,
+      "conf": "CAF",
+      "group": "K"
+    },
+    {
+      "id": "ENG",
+      "code": "ENG",
+      "name": "英格兰",
+      "flag": "🏴",
+      "rating": 2030,
+      "conf": "UEFA",
+      "group": "L"
+    },
+    {
+      "id": "CRO",
+      "code": "CRO",
+      "name": "克罗地亚",
+      "flag": "🇭🇷",
+      "rating": 1900,
+      "conf": "UEFA",
+      "group": "L"
+    },
+    {
+      "id": "GHA",
+      "code": "GHA",
+      "name": "加纳",
+      "flag": "🇬🇭",
+      "rating": 1470,
+      "conf": "CAF",
+      "group": "L"
+    },
+    {
+      "id": "PAN",
+      "code": "PAN",
+      "name": "美墨加附加",
+      "flag": "🇵🇦",
+      "rating": 1450,
+      "conf": "CONCACAF",
+      "group": "L"
+    },
+    {
+      "id": "UZB",
+      "code": "UZB",
+      "name": "乌兹别克斯坦",
+      "flag": "🇺🇿",
+      "rating": 1490,
+      "conf": "AFC",
+      "group": "K"
+    },
+    {
+      "id": "COL",
+      "code": "COL",
+      "name": "哥伦比亚",
+      "flag": "🇨🇴",
+      "rating": 1700,
+      "conf": "CONMEBOL",
+      "group": "K"
+    }
+  ],
+  "matches": [
+    {
+      "id": "537327",
+      "stage": "group",
+      "stageName": null,
+      "group": "A",
+      "matchday": 1,
+      "date": "2026-06-11T19:00:00Z",
+      "home": "MEX",
+      "away": "RSA",
+      "homeName": "Mexico",
+      "awayName": "South Africa",
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.17,
+          "d": 5.91,
+          "a": 11.59
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.66,
+          "d": 3.96,
+          "a": 3.92
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.58
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.49
+          },
+          {
+            "score": "1:0",
+            "odds": 7.85
+          },
+          {
+            "score": "3:0",
+            "odds": 8.05
+          },
+          {
+            "score": "2:1",
+            "odds": 10.3
+          },
+          {
+            "score": "1:1",
+            "odds": 12.46
+          },
+          {
+            "score": "3:1",
+            "odds": 12.77
+          },
+          {
+            "score": "4:0",
+            "odds": 13.3
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周四001"
+    },
+    {
+      "id": "537328",
+      "stage": "group",
+      "stageName": null,
+      "group": "A",
+      "matchday": 1,
+      "date": "2026-06-12T02:00:00Z",
+      "home": "KOR",
+      "away": "CZE",
+      "homeName": "South Korea",
+      "awayName": "Czechia",
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.18,
+          "d": 3.75,
+          "a": 2.59
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.18,
+          "d": 3.75,
+          "a": 2.59
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.19
+          },
+          {
+            "score": "2:1",
+            "odds": 10.24
+          },
+          {
+            "score": "1:2",
+            "odds": 11.3
+          },
+          {
+            "score": "1:0",
+            "odds": 11.88
+          },
+          {
+            "score": "0:1",
+            "odds": 13.11
+          },
+          {
+            "score": "2:2",
+            "odds": 14.12
+          },
+          {
+            "score": "2:0",
+            "odds": 14.85
+          },
+          {
+            "score": "0:2",
+            "odds": 18.08
+          }
+        ]
+      },
+      "matchNum": "周五001"
+    },
+    {
+      "id": "537333",
+      "stage": "group",
+      "stageName": null,
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-12T19:00:00Z",
+      "home": "CAN",
+      "away": "BIH",
+      "homeName": "Canada",
+      "awayName": "Bosnia-Herzegovina",
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.39,
+          "d": 4.54,
+          "a": 5.81
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.2,
+          "d": 3.78,
+          "a": 2.55
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.19
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.46
+          },
+          {
+            "score": "1:0",
+            "odds": 8.96
+          },
+          {
+            "score": "2:1",
+            "odds": 9.09
+          },
+          {
+            "score": "1:1",
+            "odds": 9.64
+          },
+          {
+            "score": "3:0",
+            "odds": 11.97
+          },
+          {
+            "score": "3:1",
+            "odds": 12.87
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 19.56
+          }
+        ]
+      },
+      "matchNum": "周五002"
+    },
+    {
+      "id": "537345",
+      "stage": "group",
+      "stageName": null,
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-13T01:00:00Z",
+      "home": "USA",
+      "away": "PAR",
+      "homeName": "United States",
+      "awayName": "Paraguay",
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.36,
+          "d": 4.67,
+          "a": 6.3
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.11,
+          "d": 3.79,
+          "a": 2.68
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.22
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.15
+          },
+          {
+            "score": "1:0",
+            "odds": 8.8
+          },
+          {
+            "score": "2:1",
+            "odds": 9.15
+          },
+          {
+            "score": "1:1",
+            "odds": 9.89
+          },
+          {
+            "score": "3:0",
+            "odds": 11.31
+          },
+          {
+            "score": "3:1",
+            "odds": 12.71
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 20.57
+          }
+        ]
+      },
+      "matchNum": "周六001"
+    },
+    {
+      "id": "537334",
+      "stage": "group",
+      "stageName": null,
+      "group": "B",
+      "matchday": 1,
+      "date": "2026-06-13T19:00:00Z",
+      "home": "QAT",
+      "away": "SUI",
+      "homeName": "Qatar",
+      "awayName": "Switzerland",
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 3.88,
+          "d": 4.02,
+          "a": 1.65
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 1.97,
+          "d": 3.9,
+          "a": 2.87
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.05
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.67
+          },
+          {
+            "score": "1:2",
+            "odds": 9.17
+          },
+          {
+            "score": "0:1",
+            "odds": 10.05
+          },
+          {
+            "score": "0:2",
+            "odds": 10.64
+          },
+          {
+            "score": "1:3",
+            "odds": 14.56
+          },
+          {
+            "score": "2:1",
+            "odds": 14.94
+          },
+          {
+            "score": "2:2",
+            "odds": 15.81
+          },
+          {
+            "score": "1:0",
+            "odds": 16.38
+          }
+        ]
+      },
+      "matchNum": "周六002"
+    },
+    {
+      "id": "537339",
+      "stage": "group",
+      "stageName": null,
+      "group": "C",
+      "matchday": 1,
+      "date": "2026-06-13T22:00:00Z",
+      "home": "BRA",
+      "away": "MAR",
+      "homeName": "Brazil",
+      "awayName": "Morocco",
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.18,
+          "d": 5.79,
+          "a": 10.98
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.69,
+          "d": 3.94,
+          "a": 3.79
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.55
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.6
+          },
+          {
+            "score": "1:0",
+            "odds": 7.92
+          },
+          {
+            "score": "3:0",
+            "odds": 8.25
+          },
+          {
+            "score": "2:1",
+            "odds": 10.15
+          },
+          {
+            "score": "1:1",
+            "odds": 12.18
+          },
+          {
+            "score": "3:1",
+            "odds": 12.69
+          },
+          {
+            "score": "4:0",
+            "odds": 13.75
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周六003"
+    },
+    {
+      "id": "537340",
+      "stage": "group",
+      "stageName": null,
+      "group": "C",
+      "matchday": 1,
+      "date": "2026-06-14T01:00:00Z",
+      "home": "HAI",
+      "away": "SCO",
+      "homeName": "Haiti",
+      "awayName": "Scotland",
+      "status": "finished",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 3.34,
+          "d": 3.88,
+          "a": 1.81
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 1.79,
+          "d": 4.02,
+          "a": 3.28
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.01
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.43
+          },
+          {
+            "score": "1:2",
+            "odds": 9.41
+          },
+          {
+            "score": "0:1",
+            "odds": 10.62
+          },
+          {
+            "score": "0:2",
+            "odds": 11.86
+          },
+          {
+            "score": "2:1",
+            "odds": 13.37
+          },
+          {
+            "score": "2:2",
+            "odds": 14.94
+          },
+          {
+            "score": "1:0",
+            "odds": 15.08
+          },
+          {
+            "score": "1:3",
+            "odds": 15.78
+          }
+        ]
+      },
+      "matchNum": "周日001"
+    },
+    {
+      "id": "537346",
+      "stage": "group",
+      "stageName": null,
+      "group": "D",
+      "matchday": 1,
+      "date": "2026-06-14T04:00:00Z",
+      "home": "AUS",
+      "away": "TUR",
+      "homeName": "Australia",
+      "awayName": "Turkey",
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.23,
+          "d": 3.74,
+          "a": 2.53
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.23,
+          "d": 3.74,
+          "a": 2.53
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.18
+          },
+          {
+            "score": "2:1",
+            "odds": 10.36
+          },
+          {
+            "score": "1:2",
+            "odds": 11.13
+          },
+          {
+            "score": "1:0",
+            "odds": 12.03
+          },
+          {
+            "score": "0:1",
+            "odds": 12.93
+          },
+          {
+            "score": "2:2",
+            "odds": 14.09
+          },
+          {
+            "score": "2:0",
+            "odds": 15.22
+          },
+          {
+            "score": "0:2",
+            "odds": 17.59
+          }
+        ]
+      },
+      "matchNum": "周日002"
+    },
+    {
+      "id": "537351",
+      "stage": "group",
+      "stageName": null,
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-14T17:00:00Z",
+      "home": "GER",
+      "away": "CUW",
+      "homeName": "Germany",
+      "awayName": "Curaçao",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 11.43,
+          "a": 54.11
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.79,
+          "d": 3.97,
+          "a": 3.35
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 21.43
+          },
+          {
+            "goals": "1",
+            "odds": 6.76
+          },
+          {
+            "goals": "2",
+            "odds": 4.26
+          },
+          {
+            "goals": "3",
+            "odds": 4.04
+          },
+          {
+            "goals": "4",
+            "odds": 5.09
+          },
+          {
+            "goals": "5",
+            "odds": 8.03
+          },
+          {
+            "goals": "6",
+            "odds": 15.2
+          },
+          {
+            "goals": "7+",
+            "odds": 22.71
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.03
+          },
+          {
+            "score": "3:0",
+            "odds": 5.16
+          },
+          {
+            "score": "4:0",
+            "odds": 7.07
+          },
+          {
+            "score": "1:0",
+            "odds": 7.34
+          },
+          {
+            "score": "5:0",
+            "odds": 12.11
+          },
+          {
+            "score": "2:1",
+            "odds": 20.1
+          },
+          {
+            "score": "3:1",
+            "odds": 20.65
+          },
+          {
+            "score": "0:0",
+            "odds": 21.43
+          }
+        ]
+      },
+      "matchNum": "周日003"
+    },
+    {
+      "id": "537357",
+      "stage": "group",
+      "stageName": null,
+      "group": "F",
+      "matchday": 1,
+      "date": "2026-06-14T20:00:00Z",
+      "home": "NED",
+      "away": "JPN",
+      "homeName": "Netherlands",
+      "awayName": "Japan",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.43,
+          "d": 4.43,
+          "a": 5.38
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.3,
+          "d": 3.79,
+          "a": 2.43
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.16
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.79
+          },
+          {
+            "score": "2:1",
+            "odds": 9.06
+          },
+          {
+            "score": "1:0",
+            "odds": 9.14
+          },
+          {
+            "score": "1:1",
+            "odds": 9.42
+          },
+          {
+            "score": "3:0",
+            "odds": 12.67
+          },
+          {
+            "score": "3:1",
+            "odds": 13.06
+          },
+          {
+            "score": "2:2",
+            "odds": 18.67
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周日004"
+    },
+    {
+      "id": "537352",
+      "stage": "group",
+      "stageName": null,
+      "group": "E",
+      "matchday": 1,
+      "date": "2026-06-14T23:00:00Z",
+      "home": "CIV",
+      "away": "ECU",
+      "homeName": "Ivory Coast",
+      "awayName": "Ecuador",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.44,
+          "d": 3.74,
+          "a": 2.3
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.44,
+          "d": 3.74,
+          "a": 2.3
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.17
+          },
+          {
+            "score": "1:2",
+            "odds": 10.55
+          },
+          {
+            "score": "2:1",
+            "odds": 10.9
+          },
+          {
+            "score": "0:1",
+            "odds": 12.26
+          },
+          {
+            "score": "1:0",
+            "odds": 12.67
+          },
+          {
+            "score": "2:2",
+            "odds": 14.06
+          },
+          {
+            "score": "0:2",
+            "odds": 15.82
+          },
+          {
+            "score": "2:0",
+            "odds": 16.89
+          }
+        ]
+      },
+      "matchNum": "周日005"
+    },
+    {
+      "id": "537358",
+      "stage": "group",
+      "stageName": null,
+      "group": "F",
+      "matchday": 1,
+      "date": "2026-06-15T02:00:00Z",
+      "home": "SWE",
+      "away": "TUN",
+      "homeName": "Sweden",
+      "awayName": "Tunisia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.39,
+          "d": 4.54,
+          "a": 5.81
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.2,
+          "d": 3.78,
+          "a": 2.55
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.19
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.46
+          },
+          {
+            "score": "1:0",
+            "odds": 8.96
+          },
+          {
+            "score": "2:1",
+            "odds": 9.09
+          },
+          {
+            "score": "1:1",
+            "odds": 9.64
+          },
+          {
+            "score": "3:0",
+            "odds": 11.97
+          },
+          {
+            "score": "3:1",
+            "odds": 12.87
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 19.56
+          }
+        ]
+      },
+      "matchNum": "周一001"
+    },
+    {
+      "id": "537369",
+      "stage": "group",
+      "stageName": null,
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15T16:00:00Z",
+      "home": "ESP",
+      "away": "CPV",
+      "homeName": "Spain",
+      "awayName": "Cape Verde Islands",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 10.37,
+          "a": 48.62
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.9,
+          "d": 3.86,
+          "a": 3.1
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 26.74
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 4.85
+          },
+          {
+            "score": "3:0",
+            "odds": 5.19
+          },
+          {
+            "score": "1:0",
+            "odds": 6.79
+          },
+          {
+            "score": "4:0",
+            "odds": 7.42
+          },
+          {
+            "score": "5:0",
+            "odds": 13.25
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:1",
+            "odds": 19.39
+          },
+          {
+            "score": "3:1",
+            "odds": 20.78
+          }
+        ]
+      },
+      "matchNum": "周一002"
+    },
+    {
+      "id": "537363",
+      "stage": "group",
+      "stageName": null,
+      "group": "G",
+      "matchday": 1,
+      "date": "2026-06-15T19:00:00Z",
+      "home": "BEL",
+      "away": "EGY",
+      "homeName": "Belgium",
+      "awayName": "Egypt",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.1,
+          "d": 7.02,
+          "a": 17.64
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 2.41,
+          "d": 3.89,
+          "a": 2.28
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.9
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.8
+          },
+          {
+            "score": "3:0",
+            "odds": 6.8
+          },
+          {
+            "score": "1:0",
+            "odds": 7.42
+          },
+          {
+            "score": "4:0",
+            "odds": 10.62
+          },
+          {
+            "score": "2:1",
+            "odds": 11.84
+          },
+          {
+            "score": "3:1",
+            "odds": 13.87
+          },
+          {
+            "score": "1:1",
+            "odds": 15.15
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周一003"
+    },
+    {
+      "id": "537370",
+      "stage": "group",
+      "stageName": null,
+      "group": "H",
+      "matchday": 1,
+      "date": "2026-06-15T22:00:00Z",
+      "home": "KSA",
+      "away": "URY",
+      "homeName": "Saudi Arabia",
+      "awayName": "Uruguay",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 5.09,
+          "d": 4.35,
+          "a": 1.46
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 2.34,
+          "d": 3.8,
+          "a": 2.38
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.13
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 9.04
+          },
+          {
+            "score": "1:2",
+            "odds": 9.04
+          },
+          {
+            "score": "0:1",
+            "odds": 9.27
+          },
+          {
+            "score": "1:1",
+            "odds": 9.27
+          },
+          {
+            "score": "0:3",
+            "odds": 13.24
+          },
+          {
+            "score": "1:3",
+            "odds": 13.24
+          },
+          {
+            "score": "2:2",
+            "odds": 18.09
+          },
+          {
+            "score": "2:1",
+            "odds": 18.54
+          }
+        ]
+      },
+      "matchNum": "周一004"
+    },
+    {
+      "id": "537364",
+      "stage": "group",
+      "stageName": null,
+      "group": "G",
+      "matchday": 1,
+      "date": "2026-06-16T01:00:00Z",
+      "home": "IRN",
+      "away": "NZL",
+      "homeName": "Iran",
+      "awayName": "New Zealand",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.45,
+          "d": 4.37,
+          "a": 5.19
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.45,
+          "d": 4.37,
+          "a": 5.19
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.14
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.96
+          },
+          {
+            "score": "2:1",
+            "odds": 9.05
+          },
+          {
+            "score": "1:0",
+            "odds": 9.23
+          },
+          {
+            "score": "1:1",
+            "odds": 9.32
+          },
+          {
+            "score": "3:0",
+            "odds": 13.04
+          },
+          {
+            "score": "3:1",
+            "odds": 13.18
+          },
+          {
+            "score": "2:2",
+            "odds": 18.28
+          },
+          {
+            "score": "1:2",
+            "odds": 18.82
+          }
+        ]
+      },
+      "matchNum": "周二001"
+    },
+    {
+      "id": "537391",
+      "stage": "group",
+      "stageName": null,
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16T19:00:00Z",
+      "home": "FRA",
+      "away": "SEN",
+      "homeName": "France",
+      "awayName": "Senegal",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.15,
+          "d": 6.19,
+          "a": 12.96
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.61,
+          "d": 4.01,
+          "a": 4.19
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.66
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.28
+          },
+          {
+            "score": "3:0",
+            "odds": 7.66
+          },
+          {
+            "score": "1:0",
+            "odds": 7.73
+          },
+          {
+            "score": "2:1",
+            "odds": 10.65
+          },
+          {
+            "score": "4:0",
+            "odds": 12.45
+          },
+          {
+            "score": "3:1",
+            "odds": 12.98
+          },
+          {
+            "score": "1:1",
+            "odds": 13.09
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周二002"
+    },
+    {
+      "id": "537392",
+      "stage": "group",
+      "stageName": null,
+      "group": "I",
+      "matchday": 1,
+      "date": "2026-06-16T22:00:00Z",
+      "home": "IRQ",
+      "away": "NOR",
+      "homeName": "Iraq",
+      "awayName": "Norway",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 3.15,
+          "d": 3.84,
+          "a": 1.87
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 1.73,
+          "d": 4.08,
+          "a": 3.47
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.35
+          },
+          {
+            "score": "1:2",
+            "odds": 9.55
+          },
+          {
+            "score": "0:1",
+            "odds": 10.86
+          },
+          {
+            "score": "0:2",
+            "odds": 12.41
+          },
+          {
+            "score": "2:1",
+            "odds": 12.85
+          },
+          {
+            "score": "1:0",
+            "odds": 14.62
+          },
+          {
+            "score": "2:2",
+            "odds": 14.69
+          },
+          {
+            "score": "1:3",
+            "odds": 16.37
+          }
+        ]
+      },
+      "matchNum": "周二003"
+    },
+    {
+      "id": "537397",
+      "stage": "group",
+      "stageName": null,
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-17T01:00:00Z",
+      "home": "ARG",
+      "away": "ALG",
+      "homeName": "Argentina",
+      "awayName": "Algeria",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 10.89,
+          "a": 51.3
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.84,
+          "d": 3.91,
+          "a": 3.22
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 20.18
+          },
+          {
+            "goals": "1",
+            "odds": 6.49
+          },
+          {
+            "goals": "2",
+            "odds": 4.17
+          },
+          {
+            "goals": "3",
+            "odds": 4.03
+          },
+          {
+            "goals": "4",
+            "odds": 5.18
+          },
+          {
+            "goals": "5",
+            "odds": 8.32
+          },
+          {
+            "goals": "6",
+            "odds": 16.06
+          },
+          {
+            "goals": "7+",
+            "odds": 24.61
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 4.93
+          },
+          {
+            "score": "3:0",
+            "odds": 5.18
+          },
+          {
+            "score": "1:0",
+            "odds": 7.06
+          },
+          {
+            "score": "4:0",
+            "odds": 7.24
+          },
+          {
+            "score": "5:0",
+            "odds": 12.65
+          },
+          {
+            "score": "2:1",
+            "odds": 19.74
+          },
+          {
+            "score": "0:0",
+            "odds": 20.18
+          },
+          {
+            "score": "3:1",
+            "odds": 20.7
+          }
+        ]
+      },
+      "matchNum": "周三001"
+    },
+    {
+      "id": "537398",
+      "stage": "group",
+      "stageName": null,
+      "group": "J",
+      "matchday": 1,
+      "date": "2026-06-17T04:00:00Z",
+      "home": "AUT",
+      "away": "JOR",
+      "homeName": "Austria",
+      "awayName": "Jordan",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.29,
+          "d": 4.97,
+          "a": 7.46
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.95,
+          "d": 3.81,
+          "a": 2.98
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.31
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 7.57
+          },
+          {
+            "score": "1:0",
+            "odds": 8.48
+          },
+          {
+            "score": "2:1",
+            "odds": 9.35
+          },
+          {
+            "score": "3:0",
+            "odds": 10.14
+          },
+          {
+            "score": "1:1",
+            "odds": 10.47
+          },
+          {
+            "score": "3:1",
+            "odds": 12.52
+          },
+          {
+            "score": "4:0",
+            "odds": 18.12
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周三002"
+    },
+    {
+      "id": "537403",
+      "stage": "group",
+      "stageName": null,
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-17T17:00:00Z",
+      "home": "POR",
+      "away": "COD",
+      "homeName": "Portugal",
+      "awayName": "Congo DR",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.06,
+          "d": 8.12,
+          "a": 25.32
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 2.17,
+          "d": 3.85,
+          "a": 2.57
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 26.19
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.37
+          },
+          {
+            "score": "3:0",
+            "odds": 6.06
+          },
+          {
+            "score": "1:0",
+            "odds": 7.14
+          },
+          {
+            "score": "4:0",
+            "odds": 9.11
+          },
+          {
+            "score": "2:1",
+            "odds": 13.77
+          },
+          {
+            "score": "3:1",
+            "odds": 15.53
+          },
+          {
+            "score": "5:0",
+            "odds": 17.12
+          },
+          {
+            "score": "1:1",
+            "odds": 18.32
+          }
+        ]
+      },
+      "matchNum": "周三003"
+    },
+    {
+      "id": "537409",
+      "stage": "group",
+      "stageName": null,
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-17T20:00:00Z",
+      "home": "ENG",
+      "away": "CRO",
+      "homeName": "England",
+      "awayName": "Croatia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.56,
+          "d": 4.14,
+          "a": 4.35
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.56,
+          "d": 4.14,
+          "a": 4.35
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.08
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.9
+          },
+          {
+            "score": "2:1",
+            "odds": 9.08
+          },
+          {
+            "score": "1:0",
+            "odds": 9.7
+          },
+          {
+            "score": "2:0",
+            "odds": 9.89
+          },
+          {
+            "score": "3:1",
+            "odds": 13.89
+          },
+          {
+            "score": "3:0",
+            "odds": 15.14
+          },
+          {
+            "score": "1:2",
+            "odds": 16.32
+          },
+          {
+            "score": "2:2",
+            "odds": 16.65
+          }
+        ]
+      },
+      "matchNum": "周三004"
+    },
+    {
+      "id": "537410",
+      "stage": "group",
+      "stageName": null,
+      "group": "L",
+      "matchday": 1,
+      "date": "2026-06-17T23:00:00Z",
+      "home": "GHA",
+      "away": "PAN",
+      "homeName": "Ghana",
+      "awayName": "Panama",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.89,
+          "d": 3.83,
+          "a": 3.11
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.89,
+          "d": 3.83,
+          "a": 3.11
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.34
+          },
+          {
+            "score": "2:1",
+            "odds": 9.58
+          },
+          {
+            "score": "1:0",
+            "odds": 10.92
+          },
+          {
+            "score": "2:0",
+            "odds": 12.55
+          },
+          {
+            "score": "1:2",
+            "odds": 12.73
+          },
+          {
+            "score": "0:1",
+            "odds": 14.51
+          },
+          {
+            "score": "2:2",
+            "odds": 14.63
+          },
+          {
+            "score": "3:1",
+            "odds": 16.52
+          }
+        ]
+      },
+      "matchNum": "周三005"
+    },
+    {
+      "id": "537404",
+      "stage": "group",
+      "stageName": null,
+      "group": "K",
+      "matchday": 1,
+      "date": "2026-06-18T02:00:00Z",
+      "home": "UZB",
+      "away": "COL",
+      "homeName": "Uzbekistan",
+      "awayName": "Colombia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 3.24,
+          "d": 3.86,
+          "a": 1.84
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 1.76,
+          "d": 4.05,
+          "a": 3.37
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.01
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.39
+          },
+          {
+            "score": "1:2",
+            "odds": 9.48
+          },
+          {
+            "score": "0:1",
+            "odds": 10.74
+          },
+          {
+            "score": "0:2",
+            "odds": 12.13
+          },
+          {
+            "score": "2:1",
+            "odds": 13.11
+          },
+          {
+            "score": "2:2",
+            "odds": 14.81
+          },
+          {
+            "score": "1:0",
+            "odds": 14.85
+          },
+          {
+            "score": "1:3",
+            "odds": 16.06
+          }
+        ]
+      },
+      "matchNum": "周四001"
+    },
+    {
+      "id": "537329",
+      "stage": "group",
+      "stageName": null,
+      "group": "A",
+      "matchday": 2,
+      "date": "2026-06-18T16:00:00Z",
+      "home": "CZE",
+      "away": "RSA",
+      "homeName": "Czechia",
+      "awayName": "South Africa",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.41,
+          "d": 4.48,
+          "a": 5.59
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.25,
+          "d": 3.79,
+          "a": 2.49
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.17
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.62
+          },
+          {
+            "score": "1:0",
+            "odds": 9.05
+          },
+          {
+            "score": "2:1",
+            "odds": 9.07
+          },
+          {
+            "score": "1:1",
+            "odds": 9.53
+          },
+          {
+            "score": "3:0",
+            "odds": 12.31
+          },
+          {
+            "score": "3:1",
+            "odds": 12.96
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 19.1
+          }
+        ]
+      },
+      "matchNum": "周四002"
+    },
+    {
+      "id": "537335",
+      "stage": "group",
+      "stageName": null,
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-18T19:00:00Z",
+      "home": "SUI",
+      "away": "BIH",
+      "homeName": "Switzerland",
+      "awayName": "Bosnia-Herzegovina",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.43,
+          "d": 4.43,
+          "a": 5.38
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.3,
+          "d": 3.79,
+          "a": 2.43
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.16
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.79
+          },
+          {
+            "score": "2:1",
+            "odds": 9.06
+          },
+          {
+            "score": "1:0",
+            "odds": 9.14
+          },
+          {
+            "score": "1:1",
+            "odds": 9.42
+          },
+          {
+            "score": "3:0",
+            "odds": 12.67
+          },
+          {
+            "score": "3:1",
+            "odds": 13.06
+          },
+          {
+            "score": "2:2",
+            "odds": 18.67
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周四003"
+    },
+    {
+      "id": "537336",
+      "stage": "group",
+      "stageName": null,
+      "group": "B",
+      "matchday": 2,
+      "date": "2026-06-18T22:00:00Z",
+      "home": "CAN",
+      "away": "QAT",
+      "homeName": "Canada",
+      "awayName": "Qatar",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.26,
+          "d": 5.14,
+          "a": 8.16
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.88,
+          "d": 3.83,
+          "a": 3.16
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.36
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 7.31
+          },
+          {
+            "score": "1:0",
+            "odds": 8.34
+          },
+          {
+            "score": "2:1",
+            "odds": 9.5
+          },
+          {
+            "score": "3:0",
+            "odds": 9.62
+          },
+          {
+            "score": "1:1",
+            "odds": 10.82
+          },
+          {
+            "score": "3:1",
+            "odds": 12.49
+          },
+          {
+            "score": "4:0",
+            "odds": 16.88
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周四004"
+    },
+    {
+      "id": "537330",
+      "stage": "group",
+      "stageName": null,
+      "group": "A",
+      "matchday": 2,
+      "date": "2026-06-19T01:00:00Z",
+      "home": "MEX",
+      "away": "KOR",
+      "homeName": "Mexico",
+      "awayName": "South Korea",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.39,
+          "d": 4.54,
+          "a": 5.81
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.2,
+          "d": 3.78,
+          "a": 2.55
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.19
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.46
+          },
+          {
+            "score": "1:0",
+            "odds": 8.96
+          },
+          {
+            "score": "2:1",
+            "odds": 9.09
+          },
+          {
+            "score": "1:1",
+            "odds": 9.64
+          },
+          {
+            "score": "3:0",
+            "odds": 11.97
+          },
+          {
+            "score": "3:1",
+            "odds": 12.87
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 19.56
+          }
+        ]
+      },
+      "matchNum": "周五001"
+    },
+    {
+      "id": "537348",
+      "stage": "group",
+      "stageName": null,
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-19T19:00:00Z",
+      "home": "USA",
+      "away": "AUS",
+      "homeName": "United States",
+      "awayName": "Australia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.36,
+          "d": 4.67,
+          "a": 6.3
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.11,
+          "d": 3.79,
+          "a": 2.68
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.22
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.15
+          },
+          {
+            "score": "1:0",
+            "odds": 8.8
+          },
+          {
+            "score": "2:1",
+            "odds": 9.15
+          },
+          {
+            "score": "1:1",
+            "odds": 9.89
+          },
+          {
+            "score": "3:0",
+            "odds": 11.31
+          },
+          {
+            "score": "3:1",
+            "odds": 12.71
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 20.57
+          }
+        ]
+      },
+      "matchNum": "周五002"
+    },
+    {
+      "id": "537342",
+      "stage": "group",
+      "stageName": null,
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-19T22:00:00Z",
+      "home": "SCO",
+      "away": "MAR",
+      "homeName": "Scotland",
+      "awayName": "Morocco",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.38,
+          "d": 3.74,
+          "a": 2.36
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.38,
+          "d": 3.74,
+          "a": 2.36
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.17
+          },
+          {
+            "score": "1:2",
+            "odds": 10.68
+          },
+          {
+            "score": "2:1",
+            "odds": 10.75
+          },
+          {
+            "score": "0:1",
+            "odds": 12.42
+          },
+          {
+            "score": "1:0",
+            "odds": 12.5
+          },
+          {
+            "score": "2:2",
+            "odds": 14.05
+          },
+          {
+            "score": "0:2",
+            "odds": 16.24
+          },
+          {
+            "score": "2:0",
+            "odds": 16.45
+          }
+        ]
+      },
+      "matchNum": "周五003"
+    },
+    {
+      "id": "537341",
+      "stage": "group",
+      "stageName": null,
+      "group": "C",
+      "matchday": 2,
+      "date": "2026-06-20T00:30:00Z",
+      "home": "BRA",
+      "away": "HAI",
+      "homeName": "Brazil",
+      "awayName": "Haiti",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 12.4,
+          "a": 59.16
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.72,
+          "d": 4.07,
+          "a": 3.58
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 23.68
+          },
+          {
+            "goals": "1",
+            "odds": 7.24
+          },
+          {
+            "goals": "2",
+            "odds": 4.43
+          },
+          {
+            "goals": "3",
+            "odds": 4.06
+          },
+          {
+            "goals": "4",
+            "odds": 4.97
+          },
+          {
+            "goals": "5",
+            "odds": 7.6
+          },
+          {
+            "goals": "6",
+            "odds": 13.95
+          },
+          {
+            "goals": "7+",
+            "odds": 19.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "3:0",
+            "odds": 5.16
+          },
+          {
+            "score": "2:0",
+            "odds": 5.19
+          },
+          {
+            "score": "4:0",
+            "odds": 6.83
+          },
+          {
+            "score": "1:0",
+            "odds": 7.84
+          },
+          {
+            "score": "5:0",
+            "odds": 11.31
+          },
+          {
+            "score": "3:1",
+            "odds": 20.63
+          },
+          {
+            "score": "2:1",
+            "odds": 20.77
+          },
+          {
+            "score": "6:0",
+            "odds": 22.47
+          }
+        ]
+      },
+      "matchNum": "周六001"
+    },
+    {
+      "id": "537347",
+      "stage": "group",
+      "stageName": null,
+      "group": "D",
+      "matchday": 2,
+      "date": "2026-06-20T03:00:00Z",
+      "home": "TUR",
+      "away": "PAR",
+      "homeName": "Turkey",
+      "awayName": "Paraguay",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.76,
+          "d": 3.92,
+          "a": 3.49
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.76,
+          "d": 3.92,
+          "a": 3.49
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.02
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.49
+          },
+          {
+            "score": "2:1",
+            "odds": 9.33
+          },
+          {
+            "score": "1:0",
+            "odds": 10.44
+          },
+          {
+            "score": "2:0",
+            "odds": 11.47
+          },
+          {
+            "score": "1:2",
+            "odds": 13.8
+          },
+          {
+            "score": "2:2",
+            "odds": 15.17
+          },
+          {
+            "score": "3:1",
+            "odds": 15.38
+          },
+          {
+            "score": "0:1",
+            "odds": 15.45
+          }
+        ]
+      },
+      "matchNum": "周六002"
+    },
+    {
+      "id": "537359",
+      "stage": "group",
+      "stageName": null,
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-20T17:00:00Z",
+      "home": "NED",
+      "away": "SWE",
+      "homeName": "Netherlands",
+      "awayName": "Sweden",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.22,
+          "d": 5.44,
+          "a": 9.42
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.78,
+          "d": 3.88,
+          "a": 3.45
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.45
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.94
+          },
+          {
+            "score": "1:0",
+            "odds": 8.12
+          },
+          {
+            "score": "3:0",
+            "odds": 8.9
+          },
+          {
+            "score": "2:1",
+            "odds": 9.78
+          },
+          {
+            "score": "1:1",
+            "odds": 11.44
+          },
+          {
+            "score": "3:1",
+            "odds": 12.53
+          },
+          {
+            "score": "4:0",
+            "odds": 15.21
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周六003"
+    },
+    {
+      "id": "537353",
+      "stage": "group",
+      "stageName": null,
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-20T20:00:00Z",
+      "home": "GER",
+      "away": "CIV",
+      "homeName": "Germany",
+      "awayName": "Ivory Coast",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.08,
+          "d": 7.42,
+          "a": 20.23
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 2.31,
+          "d": 3.87,
+          "a": 2.39
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 26.01
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.62
+          },
+          {
+            "score": "3:0",
+            "odds": 6.49
+          },
+          {
+            "score": "1:0",
+            "odds": 7.31
+          },
+          {
+            "score": "4:0",
+            "odds": 9.98
+          },
+          {
+            "score": "2:1",
+            "odds": 12.49
+          },
+          {
+            "score": "3:1",
+            "odds": 14.42
+          },
+          {
+            "score": "1:1",
+            "odds": 16.24
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周六004"
+    },
+    {
+      "id": "537354",
+      "stage": "group",
+      "stageName": null,
+      "group": "E",
+      "matchday": 2,
+      "date": "2026-06-21T00:00:00Z",
+      "home": "ECU",
+      "away": "CUW",
+      "homeName": "Ecuador",
+      "awayName": "Curaçao",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.31,
+          "d": 4.89,
+          "a": 7.14
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.99,
+          "d": 3.8,
+          "a": 2.9
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.29
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 7.71
+          },
+          {
+            "score": "1:0",
+            "odds": 8.56
+          },
+          {
+            "score": "2:1",
+            "odds": 9.29
+          },
+          {
+            "score": "1:1",
+            "odds": 10.31
+          },
+          {
+            "score": "3:0",
+            "odds": 10.42
+          },
+          {
+            "score": "3:1",
+            "odds": 12.56
+          },
+          {
+            "score": "4:0",
+            "odds": 18.78
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周日001"
+    },
+    {
+      "id": "537360",
+      "stage": "group",
+      "stageName": null,
+      "group": "F",
+      "matchday": 2,
+      "date": "2026-06-21T04:00:00Z",
+      "home": "TUN",
+      "away": "JPN",
+      "homeName": "Tunisia",
+      "awayName": "Japan",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 4.91,
+          "d": 4.3,
+          "a": 1.48
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 2.29,
+          "d": 3.8,
+          "a": 2.43
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.12
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:2",
+            "odds": 9.04
+          },
+          {
+            "score": "1:1",
+            "odds": 9.18
+          },
+          {
+            "score": "0:2",
+            "odds": 9.22
+          },
+          {
+            "score": "0:1",
+            "odds": 9.36
+          },
+          {
+            "score": "1:3",
+            "odds": 13.36
+          },
+          {
+            "score": "0:3",
+            "odds": 13.63
+          },
+          {
+            "score": "2:2",
+            "odds": 17.73
+          },
+          {
+            "score": "2:1",
+            "odds": 18
+          }
+        ]
+      },
+      "matchNum": "周日002"
+    },
+    {
+      "id": "537371",
+      "stage": "group",
+      "stageName": null,
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21T16:00:00Z",
+      "home": "ESP",
+      "away": "KSA",
+      "homeName": "Spain",
+      "awayName": "Saudi Arabia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 10.89,
+          "a": 51.3
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.84,
+          "d": 3.91,
+          "a": 3.22
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 20.18
+          },
+          {
+            "goals": "1",
+            "odds": 6.49
+          },
+          {
+            "goals": "2",
+            "odds": 4.17
+          },
+          {
+            "goals": "3",
+            "odds": 4.03
+          },
+          {
+            "goals": "4",
+            "odds": 5.18
+          },
+          {
+            "goals": "5",
+            "odds": 8.32
+          },
+          {
+            "goals": "6",
+            "odds": 16.06
+          },
+          {
+            "goals": "7+",
+            "odds": 24.61
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 4.93
+          },
+          {
+            "score": "3:0",
+            "odds": 5.18
+          },
+          {
+            "score": "1:0",
+            "odds": 7.06
+          },
+          {
+            "score": "4:0",
+            "odds": 7.24
+          },
+          {
+            "score": "5:0",
+            "odds": 12.65
+          },
+          {
+            "score": "2:1",
+            "odds": 19.74
+          },
+          {
+            "score": "0:0",
+            "odds": 20.18
+          },
+          {
+            "score": "3:1",
+            "odds": 20.7
+          }
+        ]
+      },
+      "matchNum": "周日003"
+    },
+    {
+      "id": "537365",
+      "stage": "group",
+      "stageName": null,
+      "group": "G",
+      "matchday": 2,
+      "date": "2026-06-21T19:00:00Z",
+      "home": "BEL",
+      "away": "IRN",
+      "homeName": "Belgium",
+      "awayName": "Iran",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.14,
+          "d": 6.34,
+          "a": 13.73
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.58,
+          "d": 4.05,
+          "a": 4.34
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.7
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.18
+          },
+          {
+            "score": "3:0",
+            "odds": 7.48
+          },
+          {
+            "score": "1:0",
+            "odds": 7.66
+          },
+          {
+            "score": "2:1",
+            "odds": 10.84
+          },
+          {
+            "score": "4:0",
+            "odds": 12.06
+          },
+          {
+            "score": "3:1",
+            "odds": 13.11
+          },
+          {
+            "score": "1:1",
+            "odds": 13.44
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周日004"
+    },
+    {
+      "id": "537372",
+      "stage": "group",
+      "stageName": null,
+      "group": "H",
+      "matchday": 2,
+      "date": "2026-06-21T22:00:00Z",
+      "home": "URY",
+      "away": "CPV",
+      "homeName": "Uruguay",
+      "awayName": "Cape Verde Islands",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.22,
+          "d": 5.44,
+          "a": 9.42
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.78,
+          "d": 3.88,
+          "a": 3.45
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.45
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.94
+          },
+          {
+            "score": "1:0",
+            "odds": 8.12
+          },
+          {
+            "score": "3:0",
+            "odds": 8.9
+          },
+          {
+            "score": "2:1",
+            "odds": 9.78
+          },
+          {
+            "score": "1:1",
+            "odds": 11.44
+          },
+          {
+            "score": "3:1",
+            "odds": 12.53
+          },
+          {
+            "score": "4:0",
+            "odds": 15.21
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周日005"
+    },
+    {
+      "id": "537366",
+      "stage": "group",
+      "stageName": null,
+      "group": "G",
+      "matchday": 2,
+      "date": "2026-06-22T01:00:00Z",
+      "home": "NZL",
+      "away": "EGY",
+      "homeName": "New Zealand",
+      "awayName": "Egypt",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.69,
+          "d": 3.76,
+          "a": 2.11
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.69,
+          "d": 3.76,
+          "a": 2.11
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.21
+          },
+          {
+            "score": "1:2",
+            "odds": 10.07
+          },
+          {
+            "score": "2:1",
+            "odds": 11.56
+          },
+          {
+            "score": "0:1",
+            "odds": 11.66
+          },
+          {
+            "score": "1:0",
+            "odds": 13.38
+          },
+          {
+            "score": "2:2",
+            "odds": 14.19
+          },
+          {
+            "score": "0:2",
+            "odds": 14.31
+          },
+          {
+            "score": "1:3",
+            "odds": 18.54
+          }
+        ]
+      },
+      "matchNum": "周一001"
+    },
+    {
+      "id": "537399",
+      "stage": "group",
+      "stageName": null,
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-22T17:00:00Z",
+      "home": "ARG",
+      "away": "AUT",
+      "homeName": "Argentina",
+      "awayName": "Austria",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.08,
+          "d": 7.42,
+          "a": 20.23
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 2.31,
+          "d": 3.87,
+          "a": 2.39
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 26.01
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.62
+          },
+          {
+            "score": "3:0",
+            "odds": 6.49
+          },
+          {
+            "score": "1:0",
+            "odds": 7.31
+          },
+          {
+            "score": "4:0",
+            "odds": 9.98
+          },
+          {
+            "score": "2:1",
+            "odds": 12.49
+          },
+          {
+            "score": "3:1",
+            "odds": 14.42
+          },
+          {
+            "score": "1:1",
+            "odds": 16.24
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周一002"
+    },
+    {
+      "id": "537393",
+      "stage": "group",
+      "stageName": null,
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-22T21:00:00Z",
+      "home": "FRA",
+      "away": "IRQ",
+      "homeName": "France",
+      "awayName": "Iraq",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 10.89,
+          "a": 51.3
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.84,
+          "d": 3.91,
+          "a": 3.22
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 20.18
+          },
+          {
+            "goals": "1",
+            "odds": 6.49
+          },
+          {
+            "goals": "2",
+            "odds": 4.17
+          },
+          {
+            "goals": "3",
+            "odds": 4.03
+          },
+          {
+            "goals": "4",
+            "odds": 5.18
+          },
+          {
+            "goals": "5",
+            "odds": 8.32
+          },
+          {
+            "goals": "6",
+            "odds": 16.06
+          },
+          {
+            "goals": "7+",
+            "odds": 24.61
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 4.93
+          },
+          {
+            "score": "3:0",
+            "odds": 5.18
+          },
+          {
+            "score": "1:0",
+            "odds": 7.06
+          },
+          {
+            "score": "4:0",
+            "odds": 7.24
+          },
+          {
+            "score": "5:0",
+            "odds": 12.65
+          },
+          {
+            "score": "2:1",
+            "odds": 19.74
+          },
+          {
+            "score": "0:0",
+            "odds": 20.18
+          },
+          {
+            "score": "3:1",
+            "odds": 20.7
+          }
+        ]
+      },
+      "matchNum": "周一003"
+    },
+    {
+      "id": "537394",
+      "stage": "group",
+      "stageName": null,
+      "group": "I",
+      "matchday": 2,
+      "date": "2026-06-23T00:00:00Z",
+      "home": "NOR",
+      "away": "SEN",
+      "homeName": "Norway",
+      "awayName": "Senegal",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.97,
+          "d": 3.8,
+          "a": 2.95
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.97,
+          "d": 3.8,
+          "a": 2.95
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.28
+          },
+          {
+            "score": "2:1",
+            "odds": 9.74
+          },
+          {
+            "score": "1:0",
+            "odds": 11.18
+          },
+          {
+            "score": "1:2",
+            "odds": 12.27
+          },
+          {
+            "score": "2:0",
+            "odds": 13.15
+          },
+          {
+            "score": "0:1",
+            "odds": 14.08
+          },
+          {
+            "score": "2:2",
+            "odds": 14.43
+          },
+          {
+            "score": "3:1",
+            "odds": 17.19
+          }
+        ]
+      },
+      "matchNum": "周二001"
+    },
+    {
+      "id": "537400",
+      "stage": "group",
+      "stageName": null,
+      "group": "J",
+      "matchday": 2,
+      "date": "2026-06-23T03:00:00Z",
+      "home": "JOR",
+      "away": "ALG",
+      "homeName": "Jordan",
+      "awayName": "Algeria",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.69,
+          "d": 3.76,
+          "a": 2.11
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.69,
+          "d": 3.76,
+          "a": 2.11
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.21
+          },
+          {
+            "score": "1:2",
+            "odds": 10.07
+          },
+          {
+            "score": "2:1",
+            "odds": 11.56
+          },
+          {
+            "score": "0:1",
+            "odds": 11.66
+          },
+          {
+            "score": "1:0",
+            "odds": 13.38
+          },
+          {
+            "score": "2:2",
+            "odds": 14.19
+          },
+          {
+            "score": "0:2",
+            "odds": 14.31
+          },
+          {
+            "score": "1:3",
+            "odds": 18.54
+          }
+        ]
+      },
+      "matchNum": "周二002"
+    },
+    {
+      "id": "537405",
+      "stage": "group",
+      "stageName": null,
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-23T17:00:00Z",
+      "home": "POR",
+      "away": "UZB",
+      "homeName": "Portugal",
+      "awayName": "Uzbekistan",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.03,
+          "d": 9.28,
+          "a": 35.76
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 2.01,
+          "d": 3.85,
+          "a": 2.85
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 26.48
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.06
+          },
+          {
+            "score": "3:0",
+            "odds": 5.54
+          },
+          {
+            "score": "1:0",
+            "odds": 6.94
+          },
+          {
+            "score": "4:0",
+            "odds": 8.09
+          },
+          {
+            "score": "5:0",
+            "odds": 14.77
+          },
+          {
+            "score": "2:1",
+            "odds": 16.33
+          },
+          {
+            "score": "3:1",
+            "odds": 17.88
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周二003"
+    },
+    {
+      "id": "537411",
+      "stage": "group",
+      "stageName": null,
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-23T20:00:00Z",
+      "home": "ENG",
+      "away": "GHA",
+      "homeName": "England",
+      "awayName": "Ghana",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.01,
+          "d": 10.54,
+          "a": 49.5
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 1.88,
+          "d": 3.88,
+          "a": 3.14
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19.39
+          },
+          {
+            "goals": "1",
+            "odds": 6.32
+          },
+          {
+            "goals": "2",
+            "odds": 4.11
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.24
+          },
+          {
+            "goals": "5",
+            "odds": 8.53
+          },
+          {
+            "goals": "6",
+            "odds": 16.67
+          },
+          {
+            "goals": "7+",
+            "odds": 26
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 4.88
+          },
+          {
+            "score": "3:0",
+            "odds": 5.19
+          },
+          {
+            "score": "1:0",
+            "odds": 6.88
+          },
+          {
+            "score": "4:0",
+            "odds": 7.36
+          },
+          {
+            "score": "5:0",
+            "odds": 13.05
+          },
+          {
+            "score": "0:0",
+            "odds": 19.39
+          },
+          {
+            "score": "2:1",
+            "odds": 19.5
+          },
+          {
+            "score": "3:1",
+            "odds": 20.75
+          }
+        ]
+      },
+      "matchNum": "周二004"
+    },
+    {
+      "id": "537412",
+      "stage": "group",
+      "stageName": null,
+      "group": "L",
+      "matchday": 2,
+      "date": "2026-06-23T23:00:00Z",
+      "home": "PAN",
+      "away": "CRO",
+      "homeName": "Panama",
+      "awayName": "Croatia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 7.63,
+          "d": 5.01,
+          "a": 1.28
+        },
+        "hhad": {
+          "goalLine": 2,
+          "h": 1.69,
+          "d": 4.28,
+          "a": 3.52
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.32
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 7.51
+          },
+          {
+            "score": "0:1",
+            "odds": 8.45
+          },
+          {
+            "score": "1:2",
+            "odds": 9.38
+          },
+          {
+            "score": "0:3",
+            "odds": 10.01
+          },
+          {
+            "score": "1:1",
+            "odds": 10.56
+          },
+          {
+            "score": "1:3",
+            "odds": 12.51
+          },
+          {
+            "score": "0:4",
+            "odds": 17.8
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周二005"
+    },
+    {
+      "id": "537406",
+      "stage": "group",
+      "stageName": null,
+      "group": "K",
+      "matchday": 2,
+      "date": "2026-06-24T02:00:00Z",
+      "home": "COL",
+      "away": "COD",
+      "homeName": "Colombia",
+      "awayName": "Congo DR",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.47,
+          "d": 4.32,
+          "a": 5
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.47,
+          "d": 4.32,
+          "a": 5
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.13
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:1",
+            "odds": 9.04
+          },
+          {
+            "score": "2:0",
+            "odds": 9.13
+          },
+          {
+            "score": "1:1",
+            "odds": 9.22
+          },
+          {
+            "score": "1:0",
+            "odds": 9.32
+          },
+          {
+            "score": "3:1",
+            "odds": 13.3
+          },
+          {
+            "score": "3:0",
+            "odds": 13.43
+          },
+          {
+            "score": "2:2",
+            "odds": 17.91
+          },
+          {
+            "score": "1:2",
+            "odds": 18.26
+          }
+        ]
+      },
+      "matchNum": "周三001"
+    },
+    {
+      "id": "537337",
+      "stage": "group",
+      "stageName": null,
+      "group": "B",
+      "matchday": 3,
+      "date": "2026-06-24T19:00:00Z",
+      "home": "SUI",
+      "away": "CAN",
+      "homeName": "Switzerland",
+      "awayName": "Canada",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.05,
+          "d": 3.78,
+          "a": 2.79
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.05,
+          "d": 3.78,
+          "a": 2.79
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.24
+          },
+          {
+            "score": "2:1",
+            "odds": 9.92
+          },
+          {
+            "score": "1:0",
+            "odds": 11.45
+          },
+          {
+            "score": "1:2",
+            "odds": 11.85
+          },
+          {
+            "score": "0:1",
+            "odds": 13.67
+          },
+          {
+            "score": "2:0",
+            "odds": 13.79
+          },
+          {
+            "score": "2:2",
+            "odds": 14.28
+          },
+          {
+            "score": "3:1",
+            "odds": 17.93
+          }
+        ]
+      },
+      "matchNum": "周三002"
+    },
+    {
+      "id": "537338",
+      "stage": "group",
+      "stageName": null,
+      "group": "B",
+      "matchday": 3,
+      "date": "2026-06-24T19:00:00Z",
+      "home": "BIH",
+      "away": "QAT",
+      "homeName": "Bosnia-Herzegovina",
+      "awayName": "Qatar",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.7,
+          "d": 3.97,
+          "a": 3.7
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.7,
+          "d": 3.97,
+          "a": 3.7
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.04
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.59
+          },
+          {
+            "score": "2:1",
+            "odds": 9.23
+          },
+          {
+            "score": "1:0",
+            "odds": 10.22
+          },
+          {
+            "score": "2:0",
+            "odds": 10.99
+          },
+          {
+            "score": "1:2",
+            "odds": 14.43
+          },
+          {
+            "score": "3:1",
+            "odds": 14.89
+          },
+          {
+            "score": "2:2",
+            "odds": 15.52
+          },
+          {
+            "score": "0:1",
+            "odds": 15.97
+          }
+        ]
+      },
+      "matchNum": "周三003"
+    },
+    {
+      "id": "537344",
+      "stage": "group",
+      "stageName": null,
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24T22:00:00Z",
+      "home": "MAR",
+      "away": "HAI",
+      "homeName": "Morocco",
+      "awayName": "Haiti",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.23,
+          "d": 5.34,
+          "a": 8.97
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.81,
+          "d": 3.86,
+          "a": 3.35
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.42
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 7.06
+          },
+          {
+            "score": "1:0",
+            "odds": 8.19
+          },
+          {
+            "score": "3:0",
+            "odds": 9.13
+          },
+          {
+            "score": "2:1",
+            "odds": 9.67
+          },
+          {
+            "score": "1:1",
+            "odds": 11.22
+          },
+          {
+            "score": "3:1",
+            "odds": 12.51
+          },
+          {
+            "score": "4:0",
+            "odds": 15.74
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周三004"
+    },
+    {
+      "id": "537343",
+      "stage": "group",
+      "stageName": null,
+      "group": "C",
+      "matchday": 3,
+      "date": "2026-06-24T22:00:00Z",
+      "home": "SCO",
+      "away": "BRA",
+      "homeName": "Scotland",
+      "awayName": "Brazil",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 7.3,
+          "d": 4.93,
+          "a": 1.3
+        },
+        "hhad": {
+          "goalLine": 2,
+          "h": 1.66,
+          "d": 4.32,
+          "a": 3.62
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.3
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 7.64
+          },
+          {
+            "score": "0:1",
+            "odds": 8.52
+          },
+          {
+            "score": "1:2",
+            "odds": 9.32
+          },
+          {
+            "score": "0:3",
+            "odds": 10.28
+          },
+          {
+            "score": "1:1",
+            "odds": 10.39
+          },
+          {
+            "score": "1:3",
+            "odds": 12.54
+          },
+          {
+            "score": "0:4",
+            "odds": 18.44
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周三005"
+    },
+    {
+      "id": "537331",
+      "stage": "group",
+      "stageName": null,
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-25T01:00:00Z",
+      "home": "CZE",
+      "away": "MEX",
+      "homeName": "Czechia",
+      "awayName": "Mexico",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.83,
+          "d": 3.78,
+          "a": 2.03
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.83,
+          "d": 3.78,
+          "a": 2.03
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.25
+          },
+          {
+            "score": "1:2",
+            "odds": 9.88
+          },
+          {
+            "score": "0:1",
+            "odds": 11.38
+          },
+          {
+            "score": "2:1",
+            "odds": 11.95
+          },
+          {
+            "score": "0:2",
+            "odds": 13.63
+          },
+          {
+            "score": "1:0",
+            "odds": 13.77
+          },
+          {
+            "score": "2:2",
+            "odds": 14.31
+          },
+          {
+            "score": "1:3",
+            "odds": 17.74
+          }
+        ]
+      },
+      "matchNum": "周四001"
+    },
+    {
+      "id": "537332",
+      "stage": "group",
+      "stageName": null,
+      "group": "A",
+      "matchday": 3,
+      "date": "2026-06-25T01:00:00Z",
+      "home": "RSA",
+      "away": "KOR",
+      "homeName": "South Africa",
+      "awayName": "South Korea",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.76,
+          "d": 3.77,
+          "a": 2.07
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.76,
+          "d": 3.77,
+          "a": 2.07
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.23
+          },
+          {
+            "score": "1:2",
+            "odds": 9.97
+          },
+          {
+            "score": "0:1",
+            "odds": 11.52
+          },
+          {
+            "score": "2:1",
+            "odds": 11.75
+          },
+          {
+            "score": "1:0",
+            "odds": 13.57
+          },
+          {
+            "score": "0:2",
+            "odds": 13.96
+          },
+          {
+            "score": "2:2",
+            "odds": 14.25
+          },
+          {
+            "score": "1:3",
+            "odds": 18.13
+          }
+        ]
+      },
+      "matchNum": "周四002"
+    },
+    {
+      "id": "537355",
+      "stage": "group",
+      "stageName": null,
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25T20:00:00Z",
+      "home": "ECU",
+      "away": "GER",
+      "homeName": "Ecuador",
+      "awayName": "Germany",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 5.09,
+          "d": 4.35,
+          "a": 1.46
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 2.34,
+          "d": 3.8,
+          "a": 2.38
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.13
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 9.04
+          },
+          {
+            "score": "1:2",
+            "odds": 9.04
+          },
+          {
+            "score": "0:1",
+            "odds": 9.27
+          },
+          {
+            "score": "1:1",
+            "odds": 9.27
+          },
+          {
+            "score": "0:3",
+            "odds": 13.24
+          },
+          {
+            "score": "1:3",
+            "odds": 13.24
+          },
+          {
+            "score": "2:2",
+            "odds": 18.09
+          },
+          {
+            "score": "2:1",
+            "odds": 18.54
+          }
+        ]
+      },
+      "matchNum": "周四003"
+    },
+    {
+      "id": "537356",
+      "stage": "group",
+      "stageName": null,
+      "group": "E",
+      "matchday": 3,
+      "date": "2026-06-25T20:00:00Z",
+      "home": "CUW",
+      "away": "CIV",
+      "homeName": "Curaçao",
+      "awayName": "Ivory Coast",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.83,
+          "d": 3.78,
+          "a": 2.03
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.83,
+          "d": 3.78,
+          "a": 2.03
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.25
+          },
+          {
+            "score": "1:2",
+            "odds": 9.88
+          },
+          {
+            "score": "0:1",
+            "odds": 11.38
+          },
+          {
+            "score": "2:1",
+            "odds": 11.95
+          },
+          {
+            "score": "0:2",
+            "odds": 13.63
+          },
+          {
+            "score": "1:0",
+            "odds": 13.77
+          },
+          {
+            "score": "2:2",
+            "odds": 14.31
+          },
+          {
+            "score": "1:3",
+            "odds": 17.74
+          }
+        ]
+      },
+      "matchNum": "周四004"
+    },
+    {
+      "id": "537361",
+      "stage": "group",
+      "stageName": null,
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-25T23:00:00Z",
+      "home": "TUN",
+      "away": "NED",
+      "homeName": "Tunisia",
+      "awayName": "Netherlands",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 11.28,
+          "d": 5.85,
+          "a": 1.18
+        },
+        "hhad": {
+          "goalLine": 2,
+          "h": 1.95,
+          "d": 4.03,
+          "a": 2.87
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.56
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 6.54
+          },
+          {
+            "score": "0:1",
+            "odds": 7.89
+          },
+          {
+            "score": "0:3",
+            "odds": 8.15
+          },
+          {
+            "score": "1:2",
+            "odds": 10.22
+          },
+          {
+            "score": "1:1",
+            "odds": 12.32
+          },
+          {
+            "score": "1:3",
+            "odds": 12.73
+          },
+          {
+            "score": "0:4",
+            "odds": 13.52
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周四005"
+    },
+    {
+      "id": "537362",
+      "stage": "group",
+      "stageName": null,
+      "group": "F",
+      "matchday": 3,
+      "date": "2026-06-25T23:00:00Z",
+      "home": "JPN",
+      "away": "SWE",
+      "homeName": "Japan",
+      "awayName": "Sweden",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.56,
+          "d": 4.14,
+          "a": 4.35
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.56,
+          "d": 4.14,
+          "a": 4.35
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.08
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.9
+          },
+          {
+            "score": "2:1",
+            "odds": 9.08
+          },
+          {
+            "score": "1:0",
+            "odds": 9.7
+          },
+          {
+            "score": "2:0",
+            "odds": 9.89
+          },
+          {
+            "score": "3:1",
+            "odds": 13.89
+          },
+          {
+            "score": "3:0",
+            "odds": 15.14
+          },
+          {
+            "score": "1:2",
+            "odds": 16.32
+          },
+          {
+            "score": "2:2",
+            "odds": 16.65
+          }
+        ]
+      },
+      "matchNum": "周四006"
+    },
+    {
+      "id": "537349",
+      "stage": "group",
+      "stageName": null,
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-26T02:00:00Z",
+      "home": "TUR",
+      "away": "USA",
+      "homeName": "Turkey",
+      "awayName": "United States",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.91,
+          "d": 3.79,
+          "a": 1.99
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.91,
+          "d": 3.79,
+          "a": 1.99
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.27
+          },
+          {
+            "score": "1:2",
+            "odds": 9.78
+          },
+          {
+            "score": "0:1",
+            "odds": 11.24
+          },
+          {
+            "score": "2:1",
+            "odds": 12.16
+          },
+          {
+            "score": "0:2",
+            "odds": 13.31
+          },
+          {
+            "score": "1:0",
+            "odds": 13.97
+          },
+          {
+            "score": "2:2",
+            "odds": 14.39
+          },
+          {
+            "score": "1:3",
+            "odds": 17.37
+          }
+        ]
+      },
+      "matchNum": "周五001"
+    },
+    {
+      "id": "537350",
+      "stage": "group",
+      "stageName": null,
+      "group": "D",
+      "matchday": 3,
+      "date": "2026-06-26T02:00:00Z",
+      "home": "PAR",
+      "away": "AUS",
+      "homeName": "Paraguay",
+      "awayName": "Australia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.97,
+          "d": 3.8,
+          "a": 2.95
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.97,
+          "d": 3.8,
+          "a": 2.95
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.99
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.28
+          },
+          {
+            "score": "2:1",
+            "odds": 9.74
+          },
+          {
+            "score": "1:0",
+            "odds": 11.18
+          },
+          {
+            "score": "1:2",
+            "odds": 12.27
+          },
+          {
+            "score": "2:0",
+            "odds": 13.15
+          },
+          {
+            "score": "0:1",
+            "odds": 14.08
+          },
+          {
+            "score": "2:2",
+            "odds": 14.43
+          },
+          {
+            "score": "3:1",
+            "odds": 17.19
+          }
+        ]
+      },
+      "matchNum": "周五002"
+    },
+    {
+      "id": "537395",
+      "stage": "group",
+      "stageName": null,
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26T19:00:00Z",
+      "home": "NOR",
+      "away": "FRA",
+      "homeName": "Norway",
+      "awayName": "France",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 5.7,
+          "d": 4.51,
+          "a": 1.4
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 2.52,
+          "d": 3.79,
+          "a": 2.22
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.18
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 8.54
+          },
+          {
+            "score": "0:1",
+            "odds": 9.01
+          },
+          {
+            "score": "1:2",
+            "odds": 9.08
+          },
+          {
+            "score": "1:1",
+            "odds": 9.58
+          },
+          {
+            "score": "0:3",
+            "odds": 12.14
+          },
+          {
+            "score": "1:3",
+            "odds": 12.91
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 19.32
+          }
+        ]
+      },
+      "matchNum": "周五003"
+    },
+    {
+      "id": "537396",
+      "stage": "group",
+      "stageName": null,
+      "group": "I",
+      "matchday": 3,
+      "date": "2026-06-26T19:00:00Z",
+      "home": "SEN",
+      "away": "IRQ",
+      "homeName": "Senegal",
+      "awayName": "Iraq",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.41,
+          "d": 4.48,
+          "a": 5.59
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 2.25,
+          "d": 3.79,
+          "a": 2.49
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.17
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 8.62
+          },
+          {
+            "score": "1:0",
+            "odds": 9.05
+          },
+          {
+            "score": "2:1",
+            "odds": 9.07
+          },
+          {
+            "score": "1:1",
+            "odds": 9.53
+          },
+          {
+            "score": "3:0",
+            "odds": 12.31
+          },
+          {
+            "score": "3:1",
+            "odds": 12.96
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "2:2",
+            "odds": 19.1
+          }
+        ]
+      },
+      "matchNum": "周五004"
+    },
+    {
+      "id": "537373",
+      "stage": "group",
+      "stageName": null,
+      "group": "H",
+      "matchday": 3,
+      "date": "2026-06-27T00:00:00Z",
+      "home": "URY",
+      "away": "ESP",
+      "homeName": "Uruguay",
+      "awayName": "Spain",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 3.44,
+          "d": 3.91,
+          "a": 1.77
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 1.83,
+          "d": 3.99,
+          "a": 3.19
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.02
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.47
+          },
+          {
+            "score": "1:2",
+            "odds": 9.36
+          },
+          {
+            "score": "0:1",
+            "odds": 10.5
+          },
+          {
+            "score": "0:2",
+            "odds": 11.6
+          },
+          {
+            "score": "2:1",
+            "odds": 13.66
+          },
+          {
+            "score": "2:2",
+            "odds": 15.09
+          },
+          {
+            "score": "1:0",
+            "odds": 15.33
+          },
+          {
+            "score": "1:3",
+            "odds": 15.51
+          }
+        ]
+      },
+      "matchNum": "周六001"
+    },
+    {
+      "id": "537374",
+      "stage": "group",
+      "stageName": null,
+      "group": "H",
+      "matchday": 3,
+      "date": "2026-06-27T00:00:00Z",
+      "home": "CPV",
+      "away": "KSA",
+      "homeName": "Cape Verde Islands",
+      "awayName": "Saudi Arabia",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.86,
+          "d": 3.85,
+          "a": 3.2
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.86,
+          "d": 3.85,
+          "a": 3.2
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.01
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.37
+          },
+          {
+            "score": "2:1",
+            "odds": 9.51
+          },
+          {
+            "score": "1:0",
+            "odds": 10.8
+          },
+          {
+            "score": "2:0",
+            "odds": 12.27
+          },
+          {
+            "score": "1:2",
+            "odds": 12.98
+          },
+          {
+            "score": "0:1",
+            "odds": 14.73
+          },
+          {
+            "score": "2:2",
+            "odds": 14.75
+          },
+          {
+            "score": "3:1",
+            "odds": 16.21
+          }
+        ]
+      },
+      "matchNum": "周六002"
+    },
+    {
+      "id": "537367",
+      "stage": "group",
+      "stageName": null,
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27T03:00:00Z",
+      "home": "NZL",
+      "away": "BEL",
+      "homeName": "New Zealand",
+      "awayName": "Belgium",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 14.15,
+          "d": 6.41,
+          "a": 1.13
+        },
+        "hhad": {
+          "goalLine": 2,
+          "h": 2.11,
+          "d": 3.95,
+          "a": 2.61
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.73
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 6.13
+          },
+          {
+            "score": "0:3",
+            "odds": 7.39
+          },
+          {
+            "score": "0:1",
+            "odds": 7.63
+          },
+          {
+            "score": "1:2",
+            "odds": 10.95
+          },
+          {
+            "score": "0:4",
+            "odds": 11.86
+          },
+          {
+            "score": "1:3",
+            "odds": 13.19
+          },
+          {
+            "score": "1:1",
+            "odds": 13.63
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周六003"
+    },
+    {
+      "id": "537368",
+      "stage": "group",
+      "stageName": null,
+      "group": "G",
+      "matchday": 3,
+      "date": "2026-06-27T03:00:00Z",
+      "home": "EGY",
+      "away": "IRN",
+      "homeName": "Egypt",
+      "awayName": "Iran",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.13,
+          "d": 3.76,
+          "a": 2.66
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.13,
+          "d": 3.76,
+          "a": 2.66
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.2
+          },
+          {
+            "score": "2:1",
+            "odds": 10.13
+          },
+          {
+            "score": "1:2",
+            "odds": 11.47
+          },
+          {
+            "score": "1:0",
+            "odds": 11.73
+          },
+          {
+            "score": "0:1",
+            "odds": 13.29
+          },
+          {
+            "score": "2:2",
+            "odds": 14.16
+          },
+          {
+            "score": "2:0",
+            "odds": 14.48
+          },
+          {
+            "score": "0:2",
+            "odds": 18.59
+          }
+        ]
+      },
+      "matchNum": "周六004"
+    },
+    {
+      "id": "537413",
+      "stage": "group",
+      "stageName": null,
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27T21:00:00Z",
+      "home": "PAN",
+      "away": "ENG",
+      "homeName": "Panama",
+      "awayName": "England",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 15.03,
+          "d": 6.58,
+          "a": 1.12
+        },
+        "hhad": {
+          "goalLine": 2,
+          "h": 2.16,
+          "d": 3.93,
+          "a": 2.55
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.77
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 6.03
+          },
+          {
+            "score": "0:3",
+            "odds": 7.21
+          },
+          {
+            "score": "0:1",
+            "odds": 7.57
+          },
+          {
+            "score": "1:2",
+            "odds": 11.17
+          },
+          {
+            "score": "0:4",
+            "odds": 11.49
+          },
+          {
+            "score": "1:3",
+            "odds": 13.35
+          },
+          {
+            "score": "1:1",
+            "odds": 14.02
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周六005"
+    },
+    {
+      "id": "537414",
+      "stage": "group",
+      "stageName": null,
+      "group": "L",
+      "matchday": 3,
+      "date": "2026-06-27T21:00:00Z",
+      "home": "CRO",
+      "away": "GHA",
+      "homeName": "Croatia",
+      "awayName": "Ghana",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.1,
+          "d": 7.02,
+          "a": 17.64
+        },
+        "hhad": {
+          "goalLine": -2,
+          "h": 2.41,
+          "d": 3.89,
+          "a": 2.28
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.9
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 5.8
+          },
+          {
+            "score": "3:0",
+            "odds": 6.8
+          },
+          {
+            "score": "1:0",
+            "odds": 7.42
+          },
+          {
+            "score": "4:0",
+            "odds": 10.62
+          },
+          {
+            "score": "2:1",
+            "odds": 11.84
+          },
+          {
+            "score": "3:1",
+            "odds": 13.87
+          },
+          {
+            "score": "1:1",
+            "odds": 15.15
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
+      "matchNum": "周六006"
+    },
+    {
+      "id": "537407",
+      "stage": "group",
+      "stageName": null,
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-27T23:30:00Z",
+      "home": "COL",
+      "away": "POR",
+      "homeName": "Colombia",
+      "awayName": "Portugal",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 4.42,
+          "d": 4.16,
+          "a": 1.55
+        },
+        "hhad": {
+          "goalLine": 1,
+          "h": 2.14,
+          "d": 3.83,
+          "a": 2.61
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.09
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.93
+          },
+          {
+            "score": "1:2",
+            "odds": 9.07
+          },
+          {
+            "score": "0:1",
+            "odds": 9.65
+          },
+          {
+            "score": "0:2",
+            "odds": 9.79
+          },
+          {
+            "score": "1:3",
+            "odds": 13.81
+          },
+          {
+            "score": "0:3",
+            "odds": 14.91
+          },
+          {
+            "score": "2:1",
+            "odds": 16.54
+          },
+          {
+            "score": "2:2",
+            "odds": 16.79
+          }
+        ]
+      },
+      "matchNum": "周六007"
+    },
+    {
+      "id": "537408",
+      "stage": "group",
+      "stageName": null,
+      "group": "K",
+      "matchday": 3,
+      "date": "2026-06-27T23:30:00Z",
+      "home": "COD",
+      "away": "UZB",
+      "homeName": "Congo DR",
+      "awayName": "Uzbekistan",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 1.82,
+          "d": 3.87,
+          "a": 3.29
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.82,
+          "d": 3.87,
+          "a": 3.29
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.01
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.41
+          },
+          {
+            "score": "2:1",
+            "odds": 9.45
+          },
+          {
+            "score": "1:0",
+            "odds": 10.68
+          },
+          {
+            "score": "2:0",
+            "odds": 12
+          },
+          {
+            "score": "1:2",
+            "odds": 13.24
+          },
+          {
+            "score": "2:2",
+            "odds": 14.87
+          },
+          {
+            "score": "0:1",
+            "odds": 14.96
+          },
+          {
+            "score": "3:1",
+            "odds": 15.92
+          }
+        ]
+      },
+      "matchNum": "周六008"
+    },
+    {
+      "id": "537401",
+      "stage": "group",
+      "stageName": null,
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-28T02:00:00Z",
+      "home": "JOR",
+      "away": "ARG",
+      "homeName": "Jordan",
+      "awayName": "Argentina",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 46.03,
+          "d": 10.17,
+          "a": 1.01
+        },
+        "hhad": {
+          "goalLine": 2,
+          "h": 3.06,
+          "d": 3.86,
+          "a": 1.91
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 26.69
+          }
+        ],
+        "crs": [
+          {
+            "score": "0:2",
+            "odds": 4.88
+          },
+          {
+            "score": "0:3",
+            "odds": 5.25
+          },
+          {
+            "score": "0:1",
+            "odds": 6.81
+          },
+          {
+            "score": "0:4",
+            "odds": 7.53
+          },
+          {
+            "score": "0:5",
+            "odds": 13.49
+          },
+          {
+            "score": "1:2",
+            "odds": 18.78
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          },
+          {
+            "score": "1:3",
+            "odds": 20.19
+          }
+        ]
+      },
+      "matchNum": "周日001"
+    },
+    {
+      "id": "537402",
+      "stage": "group",
+      "stageName": null,
+      "group": "J",
+      "matchday": 3,
+      "date": "2026-06-28T02:00:00Z",
+      "home": "ALG",
+      "away": "AUT",
+      "homeName": "Algeria",
+      "awayName": "Austria",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "odds": {
+        "had": {
+          "h": 2.62,
+          "d": 3.75,
+          "a": 2.16
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.62,
+          "d": 3.75,
+          "a": 2.16
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.2
+          },
+          {
+            "score": "1:2",
+            "odds": 10.18
+          },
+          {
+            "score": "2:1",
+            "odds": 11.38
+          },
+          {
+            "score": "0:1",
+            "odds": 11.8
+          },
+          {
+            "score": "1:0",
+            "odds": 13.2
+          },
+          {
+            "score": "2:2",
+            "odds": 14.14
+          },
+          {
+            "score": "0:2",
+            "odds": 14.66
+          },
+          {
+            "score": "2:0",
+            "odds": 18.33
+          }
+        ]
+      },
+      "matchNum": "周日002"
+    },
+    {
+      "id": "537417",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-06-28T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周日003"
+    },
+    {
+      "id": "537423",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-06-29T17:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周一001"
+    },
+    {
+      "id": "537415",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-06-29T20:30:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周一002"
+    },
+    {
+      "id": "537418",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-06-30T01:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二001"
+    },
+    {
+      "id": "537424",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-06-30T17:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二002"
+    },
+    {
+      "id": "537416",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-06-30T21:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二003"
+    },
+    {
+      "id": "537425",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-01T01:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周三001"
+    },
+    {
+      "id": "537426",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-01T16:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周三002"
+    },
+    {
+      "id": "537422",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-01T20:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周三003"
+    },
+    {
+      "id": "537421",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-02T00:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周四001"
+    },
+    {
+      "id": "537420",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-02T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周四002"
+    },
+    {
+      "id": "537419",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-02T23:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周四003"
+    },
+    {
+      "id": "537429",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-03T03:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周五001"
+    },
+    {
+      "id": "537428",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-03T18:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周五002"
+    },
+    {
+      "id": "537427",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-03T22:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周五003"
+    },
+    {
+      "id": "537430",
+      "stage": "last32",
+      "stageName": "LAST 32",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-04T01:30:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周六001"
+    },
+    {
+      "id": "537376",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-04T17:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周六002"
+    },
+    {
+      "id": "537375",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-04T21:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周六003"
+    },
+    {
+      "id": "537377",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-05T20:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周日001"
+    },
+    {
+      "id": "537378",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-06T00:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周一001"
+    },
+    {
+      "id": "537379",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-06T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周一002"
+    },
+    {
+      "id": "537380",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-07T00:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二001"
+    },
+    {
+      "id": "537381",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-07T16:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二002"
+    },
+    {
+      "id": "537382",
+      "stage": "last16",
+      "stageName": "LAST 16",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-07T20:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二003"
+    },
+    {
+      "id": "537383",
+      "stage": "quarterfinals",
+      "stageName": "QUARTER FINALS",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-09T20:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周四001"
+    },
+    {
+      "id": "537384",
+      "stage": "quarterfinals",
+      "stageName": "QUARTER FINALS",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-10T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周五001"
+    },
+    {
+      "id": "537385",
+      "stage": "quarterfinals",
+      "stageName": "QUARTER FINALS",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-11T21:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周六001"
+    },
+    {
+      "id": "537386",
+      "stage": "quarterfinals",
+      "stageName": "QUARTER FINALS",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-12T01:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周日001"
+    },
+    {
+      "id": "537387",
+      "stage": "semifinals",
+      "stageName": "SEMI FINALS",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-14T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周二001"
+    },
+    {
+      "id": "537388",
+      "stage": "semifinals",
+      "stageName": "SEMI FINALS",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-15T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周三001"
+    },
+    {
+      "id": "537389",
+      "stage": "thirdplace",
+      "stageName": "THIRD PLACE",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-18T21:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周六001"
+    },
+    {
+      "id": "537390",
+      "stage": "final",
+      "stageName": "FINAL",
+      "group": null,
+      "matchday": null,
+      "date": "2026-07-19T19:00:00Z",
+      "home": null,
+      "away": null,
+      "homeName": null,
+      "awayName": null,
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "events": [],
+      "matchNum": "周日001"
+    }
+  ]
+}
