@@ -84,7 +84,7 @@ const userPrompt = `请预测以下 ${upcoming.length} 场比赛（未来 ${HORI
 console.log(`→ 调用 ${MODEL} 预测 ${upcoming.length} 场比赛…`)
 const res = await client.chat.completions.create({
   model: MODEL,
-  max_tokens: 4000,
+  max_completion_tokens: 4000, // GPT-5 系列要求用此参数（而非 max_tokens）
   response_format: { type: 'json_object' },
   messages: [
     { role: 'system', content: system },
