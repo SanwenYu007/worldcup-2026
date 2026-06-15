@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-14T13:41:19.622Z"
+    "fetchedAt": "2026-06-15T15:18:18.244Z"
   },
   "teams": [
     {
@@ -1234,9 +1234,9 @@
       "away": "CUW",
       "homeName": "Germany",
       "awayName": "Curaçao",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 7,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -1332,9 +1332,9 @@
       "away": "JPN",
       "homeName": "Netherlands",
       "awayName": "Japan",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
@@ -1430,9 +1430,9 @@
       "away": "ECU",
       "homeName": "Ivory Coast",
       "awayName": "Ecuador",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -1528,9 +1528,9 @@
       "away": "TUN",
       "homeName": "Sweden",
       "awayName": "Tunisia",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 5,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
