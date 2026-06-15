@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-15T15:18:18.244Z"
+    "fetchedAt": "2026-06-15T20:51:10.043Z"
   },
   "teams": [
     {
@@ -1626,9 +1626,9 @@
       "away": "CPV",
       "homeName": "Spain",
       "awayName": "Cape Verde Islands",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 0,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -1724,9 +1724,9 @@
       "away": "EGY",
       "homeName": "Belgium",
       "awayName": "Egypt",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 1,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
