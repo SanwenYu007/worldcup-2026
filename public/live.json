@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-15T20:51:10.043Z"
+    "fetchedAt": "2026-06-16T03:36:45.049Z"
   },
   "teams": [
     {
@@ -647,8 +647,8 @@
       "homeName": "Canada",
       "awayName": "Bosnia-Herzegovina",
       "status": "finished",
-      "homeGoals": 1,
-      "awayGoals": 1,
+      "homeGoals": null,
+      "awayGoals": null,
       "events": [],
       "odds": {
         "had": {
@@ -1724,7 +1724,7 @@
       "away": "EGY",
       "homeName": "Belgium",
       "awayName": "Egypt",
-      "status": "live",
+      "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
       "events": [],
@@ -1822,9 +1822,9 @@
       "away": "URY",
       "homeName": "Saudi Arabia",
       "awayName": "Uruguay",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -1920,9 +1920,9 @@
       "away": "NZL",
       "homeName": "Iran",
       "awayName": "New Zealand",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
