@@ -21,6 +21,7 @@ onMounted(() => {
       <nav class="nav">
         <RouterLink to="/" exact-active-class="active">总览</RouterLink>
         <RouterLink to="/schedule" active-class="active">赛程</RouterLink>
+        <RouterLink to="/teams" active-class="active">球队</RouterLink>
         <RouterLink to="/timeline" active-class="active">时间表</RouterLink>
         <RouterLink to="/odds" active-class="active">实时赔率</RouterLink>
         <RouterLink to="/predictions" active-class="active">AI预测</RouterLink>

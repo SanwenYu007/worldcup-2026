@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "fetch-data": "node scripts/fetch-data.js",
     "fetch-odds": "node scripts/fetch-odds.js",
+    "fetch-teams": "node scripts/fetch-teams.js",
     "predict": "node scripts/predict.js"
   },
   "dependencies": {

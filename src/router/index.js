@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   { path: '/', name: 'overview', component: () => import('../views/OverviewView.vue'), meta: { title: '总览' } },
   { path: '/schedule', name: 'schedule', component: () => import('../views/ScheduleView.vue'), meta: { title: '赛程' } },
+  { path: '/teams', name: 'teams', component: () => import('../views/TeamsView.vue'), meta: { title: '球队' } },
   { path: '/timeline', name: 'timeline', component: () => import('../views/TimelineView.vue'), meta: { title: '时间表' } },
   { path: '/odds', name: 'odds', component: () => import('../views/OddsLiveView.vue'), meta: { title: '实时赔率' } },
   { path: '/predictions', name: 'predictions', component: () => import('../views/PredictionsView.vue'), meta: { title: 'AI预测' } },

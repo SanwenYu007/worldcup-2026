@@ -41,6 +41,19 @@ export const useDataStore = defineStore('data', () => {
     await tryOverlayOdds()
     // 加载 AI 预测（来自 public/predictions.json）
     await tryLoadPredictions()
+    // 加载球队资料与名单（来自 public/teams.json）
+    await tryLoadTeams()
+  }
+
+  // 加载球队资料 + 大名单。
+  const teamsFull = ref(null)
+  async function tryLoadTeams() {
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}teams.json`, { cache: 'no-cache' })
+      if (res.ok) teamsFull.value = await res.json()
+    } catch {
+      teamsFull.value = null
+    }
   }
 
   // 加载每日 AI 预测。
@@ -129,7 +142,7 @@ export const useDataStore = defineStore('data', () => {
 
   return {
     teams, matches, groups, meta, now, source, loading, oddsSource, oddsFeed,
-    predictions, finishedMatches, liveMatches, groupMatches, knockoutMatches,
+    predictions, teamsFull, finishedMatches, liveMatches, groupMatches, knockoutMatches,
     getTeam, tryLoadLive, getPrediction, shouldShowOdds
   }
 })
