@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-16T20:44:59.967Z"
+    "fetchedAt": "2026-06-17T03:35:20.725Z"
   },
   "teams": [
     {
@@ -2018,9 +2018,9 @@
       "away": "SEN",
       "homeName": "France",
       "awayName": "Senegal",
-      "status": "live",
-      "homeGoals": 1,
-      "awayGoals": 0,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -2116,9 +2116,9 @@
       "away": "NOR",
       "homeName": "Iraq",
       "awayName": "Norway",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 4,
       "events": [],
       "odds": {
         "had": {
@@ -2214,9 +2214,9 @@
       "away": "ALG",
       "homeName": "Argentina",
       "awayName": "Algeria",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
