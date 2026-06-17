@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-17T03:35:20.725Z"
+    "fetchedAt": "2026-06-17T10:47:03.677Z"
   },
   "teams": [
     {
@@ -2312,9 +2312,9 @@
       "away": "JOR",
       "homeName": "Austria",
       "awayName": "Jordan",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
