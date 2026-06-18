@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-17T20:07:29.851Z"
+    "fetchedAt": "2026-06-18T03:26:49.055Z"
   },
   "teams": [
     {
@@ -267,8 +267,8 @@
       "group": "H"
     },
     {
-      "id": "URY",
-      "code": "URY",
+      "id": "URU",
+      "code": "URU",
       "name": "乌拉圭",
       "flag": "🇺🇾",
       "rating": 1820,
@@ -1819,7 +1819,7 @@
       "matchday": 1,
       "date": "2026-06-15T22:00:00Z",
       "home": "KSA",
-      "away": "URY",
+      "away": "URU",
       "homeName": "Saudi Arabia",
       "awayName": "Uruguay",
       "status": "finished",
@@ -2508,9 +2508,9 @@
       "away": "CRO",
       "homeName": "England",
       "awayName": "Croatia",
-      "status": "live",
-      "homeGoals": 0,
-      "awayGoals": 0,
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
@@ -2606,9 +2606,9 @@
       "away": "PAN",
       "homeName": "Ghana",
       "awayName": "Panama",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -2704,9 +2704,9 @@
       "away": "COL",
       "homeName": "Uzbekistan",
       "awayName": "Colombia",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 0,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -4170,7 +4170,7 @@
       "group": "H",
       "matchday": 2,
       "date": "2026-06-21T22:00:00Z",
-      "home": "URY",
+      "home": "URU",
       "away": "CPV",
       "homeName": "Uruguay",
       "awayName": "Cape Verde Islands",
@@ -6522,7 +6522,7 @@
       "group": "H",
       "matchday": 3,
       "date": "2026-06-27T00:00:00Z",
-      "home": "URY",
+      "home": "URU",
       "away": "ESP",
       "homeName": "Uruguay",
       "awayName": "Spain",
