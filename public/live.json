@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-18T03:26:49.055Z"
+    "fetchedAt": "2026-06-18T10:14:51.031Z"
   },
   "teams": [
     {
@@ -2606,7 +2606,7 @@
       "away": "PAN",
       "homeName": "Ghana",
       "awayName": "Panama",
-      "status": "finished",
+      "status": "live",
       "homeGoals": 1,
       "awayGoals": 0,
       "events": [],
@@ -2704,9 +2704,9 @@
       "away": "COL",
       "homeName": "Uzbekistan",
       "awayName": "Colombia",
-      "status": "live",
-      "homeGoals": 0,
-      "awayGoals": 1,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 3,
       "events": [],
       "odds": {
         "had": {
