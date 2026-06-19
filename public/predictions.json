@@ -1,143 +1,128 @@
 {
   "model": "gpt-5.5",
   "modelLabel": "ChatGPT (gpt-5.5)",
-  "generatedAt": "2026-06-16T20:45:16.388Z",
+  "generatedAt": "2026-06-19T10:19:59.036Z",
   "horizonDays": 2,
   "predictions": [
     {
-      "matchId": "537392",
-      "home": "IRQ",
-      "away": "NOR",
-      "homeName": "伊拉克",
-      "awayName": "挪威",
-      "date": "2026-06-16T22:00:00Z",
+      "matchId": "537348",
+      "home": "USA",
+      "away": "AUS",
+      "homeName": "美国",
+      "awayName": "澳大利亚",
+      "date": "2026-06-19T19:00:00Z",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "outcome": "home",
+      "confidence": 0.78,
+      "reasoning": "美国实力值明显高于澳大利亚，且近期4-1大胜巴拉圭显示进攻状态出色。澳大利亚虽有胜绩，但面对更高强度对手防线压力较大。"
+    },
+    {
+      "matchId": "537342",
+      "home": "SCO",
+      "away": "MAR",
+      "homeName": "苏格兰",
+      "awayName": "摩洛哥",
+      "date": "2026-06-19T22:00:00Z",
       "score": {
         "home": 1,
         "away": 2
       },
       "outcome": "away",
-      "confidence": 0.68,
-      "reasoning": "挪威实力值高出约200，整体进攻质量和个人能力占优。伊拉克虽有主场因素，但面对更高强度对手防线压力较大。"
+      "confidence": 0.6,
+      "reasoning": "摩洛哥实力值高于苏格兰，且能1-1战平巴西说明抗强队能力不错。苏格兰近期小胜海地，进攻火力相对有限。"
     },
     {
-      "matchId": "537397",
-      "home": "ARG",
-      "away": "ALG",
-      "homeName": "阿根廷",
-      "awayName": "阿尔及利亚",
-      "date": "2026-06-17T01:00:00Z",
+      "matchId": "537341",
+      "home": "BRA",
+      "away": "HAI",
+      "homeName": "巴西",
+      "awayName": "海地",
+      "date": "2026-06-20T00:30:00Z",
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "outcome": "home",
+      "confidence": 0.92,
+      "reasoning": "巴西实力值远高于海地，整体技术和进攻能力优势巨大。海地刚负于苏格兰，面对巴西预计很难抵挡。"
+    },
+    {
+      "matchId": "537347",
+      "home": "TUR",
+      "away": "PAR",
+      "homeName": "土耳其",
+      "awayName": "巴拉圭",
+      "date": "2026-06-20T03:00:00Z",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "confidence": 0.56,
+      "reasoning": "土耳其实力略高于巴拉圭，虽然上场失利，但对手澳大利亚实力不弱。巴拉圭刚被美国打入4球，防守状态存在隐患。"
+    },
+    {
+      "matchId": "537359",
+      "home": "NED",
+      "away": "SWE",
+      "homeName": "荷兰",
+      "awayName": "瑞典",
+      "date": "2026-06-20T17:00:00Z",
       "score": {
         "home": 3,
-        "away": 0
+        "away": 1
+      },
+      "outcome": "home",
+      "confidence": 0.75,
+      "reasoning": "荷兰实力值明显高于瑞典，虽与日本战平但进攻端仍有稳定输出。瑞典大胜突尼斯提升士气，但面对荷兰防线压力会显著增加。"
+    },
+    {
+      "matchId": "537353",
+      "home": "GER",
+      "away": "CIV",
+      "homeName": "德国",
+      "awayName": "科特迪瓦",
+      "date": "2026-06-20T20:00:00Z",
+      "score": {
+        "home": 4,
+        "away": 1
       },
       "outcome": "home",
       "confidence": 0.86,
-      "reasoning": "阿根廷实力值大幅领先，攻防稳定性明显优于阿尔及利亚。主场作战下预计能较早掌控节奏并扩大优势。"
+      "reasoning": "德国实力优势巨大，近期7-1大胜库拉索显示火力极强。科特迪瓦虽击败厄瓜多尔，但整体实力与德国仍有明显差距。"
     },
     {
-      "matchId": "537398",
-      "home": "AUT",
-      "away": "JOR",
-      "homeName": "奥地利",
-      "awayName": "约旦",
-      "date": "2026-06-17T04:00:00Z",
+      "matchId": "537354",
+      "home": "ECU",
+      "away": "CUW",
+      "homeName": "厄瓜多尔",
+      "awayName": "库拉索",
+      "date": "2026-06-21T00:00:00Z",
       "score": {
         "home": 2,
         "away": 0
       },
       "outcome": "home",
-      "confidence": 0.76,
-      "reasoning": "奥地利实力明显高于约旦，身体对抗和中前场压迫能力更强。约旦客场进攻威胁有限，较难持续制造机会。"
+      "confidence": 0.7,
+      "reasoning": "厄瓜多尔实力值高于库拉索，尽管上场小负但防守并未崩盘。库拉索刚被德国打入7球，防线状态和信心都较差。"
     },
     {
-      "matchId": "537403",
-      "home": "POR",
-      "away": "COD",
-      "homeName": "葡萄牙",
-      "awayName": "刚果(金)",
-      "date": "2026-06-17T17:00:00Z",
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "outcome": "home",
-      "confidence": 0.84,
-      "reasoning": "葡萄牙实力优势巨大，阵容深度和进攻效率均明显占优。刚果(金)客场面对高压控球体系，防守端预计会承受较大压力。"
-    },
-    {
-      "matchId": "537409",
-      "home": "ENG",
-      "away": "CRO",
-      "homeName": "英格兰",
-      "awayName": "克罗地亚",
-      "date": "2026-06-17T20:00:00Z",
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "outcome": "home",
-      "confidence": 0.62,
-      "reasoning": "英格兰实力值略高且坐镇主场，整体阵容厚度更好。克罗地亚经验丰富、控场能力强，预计能制造威胁但略处下风。"
-    },
-    {
-      "matchId": "537410",
-      "home": "GHA",
-      "away": "PAN",
-      "homeName": "加纳",
-      "awayName": "美墨加附加",
-      "date": "2026-06-17T23:00:00Z",
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "outcome": "draw",
-      "confidence": 0.46,
-      "reasoning": "双方实力值非常接近，比赛均势明显。加纳主场略有优势，但客队实力差距不大，平局概率较高。"
-    },
-    {
-      "matchId": "537404",
-      "home": "UZB",
-      "away": "COL",
-      "homeName": "乌兹别克斯坦",
-      "awayName": "哥伦比亚",
-      "date": "2026-06-18T02:00:00Z",
+      "matchId": "537360",
+      "home": "TUN",
+      "away": "JPN",
+      "homeName": "突尼斯",
+      "awayName": "日本",
+      "date": "2026-06-21T04:00:00Z",
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "outcome": "away",
-      "confidence": 0.7,
-      "reasoning": "哥伦比亚实力值高出约210，攻防转换速度和前场个人能力更强。乌兹别克斯坦主场具备一定韧性，但整体抗压能力仍处劣势。"
-    },
-    {
-      "matchId": "537329",
-      "home": "CZE",
-      "away": "RSA",
-      "homeName": "捷克",
-      "awayName": "南非",
-      "date": "2026-06-18T16:00:00Z",
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "outcome": "home",
-      "confidence": 0.63,
-      "reasoning": "捷克实力值高于南非，尽管近期输给韩国，但整体组织和定位球威胁仍更突出。南非近期进攻乏力，客场拿分难度较大。"
-    },
-    {
-      "matchId": "537335",
-      "home": "SUI",
-      "away": "BIH",
-      "homeName": "瑞士",
-      "awayName": "波黑",
-      "date": "2026-06-18T19:00:00Z",
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "outcome": "home",
-      "confidence": 0.61,
-      "reasoning": "瑞士实力值领先波黑，主场稳定性和防守结构更可靠。两队近期都打成平局，但瑞士整体阵容均衡度更好。"
+      "confidence": 0.82,
+      "reasoning": "日本实力值显著高于突尼斯，并且能2-2战平荷兰说明竞争力强。突尼斯刚1-5惨败瑞典，防守端问题明显。"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-16T20:44:59.967Z"
+    "fetchedAt": "2026-06-19T10:19:41.217Z"
   },
   "teams": [
     {
@@ -2018,9 +2018,9 @@
       "away": "SEN",
       "homeName": "France",
       "awayName": "Senegal",
-      "status": "live",
-      "homeGoals": 1,
-      "awayGoals": 0,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -2116,9 +2116,9 @@
       "away": "NOR",
       "homeName": "Iraq",
       "awayName": "Norway",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 4,
       "events": [],
       "odds": {
         "had": {
@@ -2214,9 +2214,9 @@
       "away": "ALG",
       "homeName": "Argentina",
       "awayName": "Algeria",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -2312,9 +2312,9 @@
       "away": "JOR",
       "homeName": "Austria",
       "awayName": "Jordan",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -2410,9 +2410,9 @@
       "away": "COD",
       "homeName": "Portugal",
       "awayName": "Congo DR",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -2508,9 +2508,9 @@
       "away": "CRO",
       "homeName": "England",
       "awayName": "Croatia",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
@@ -2606,9 +2606,9 @@
       "away": "PAN",
       "homeName": "Ghana",
       "awayName": "Panama",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -2704,9 +2704,9 @@
       "away": "COL",
       "homeName": "Uzbekistan",
       "awayName": "Colombia",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 3,
       "events": [],
       "odds": {
         "had": {
@@ -2802,9 +2802,9 @@
       "away": "RSA",
       "homeName": "Czechia",
       "awayName": "South Africa",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -2900,9 +2900,9 @@
       "away": "BIH",
       "homeName": "Switzerland",
       "awayName": "Bosnia-Herzegovina",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -2998,9 +2998,9 @@
       "away": "QAT",
       "homeName": "Canada",
       "awayName": "Qatar",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 6,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -3096,9 +3096,9 @@
       "away": "KOR",
       "homeName": "Mexico",
       "awayName": "South Korea",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
