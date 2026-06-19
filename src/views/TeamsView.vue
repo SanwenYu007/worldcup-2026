@@ -1,9 +1,11 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import PlayerAvatar from '../components/PlayerAvatar.vue'
 
 const store = useDataStore()
+const { t, locale } = useI18n()
 const selected = ref(null) // 选中的球队 code
 const query = ref('')
 
@@ -20,44 +22,42 @@ const filtered = computed(() => {
 const current = computed(() => teams.value.find((t) => t.code === selected.value) || null)
 
 // 选中球队的名单按位置分组
-const POS = [
-  { key: 'GK', label: '门将' }, { key: 'DEF', label: '后卫' },
-  { key: 'MID', label: '中场' }, { key: 'FWD', label: '前锋' }, { key: 'OTH', label: '其他' }
-]
+const POS = ['GK', 'DEF', 'MID', 'FWD', 'OTH']
 const squadByPos = computed(() => {
   if (!current.value) return []
-  return POS.map((p) => ({ ...p, players: current.value.squad.filter((s) => s.posKey === p.key) }))
+  return POS.map((key) => ({ key, label: t(`teams.pos.${key}`), players: current.value.squad.filter((s) => s.posKey === key) }))
     .filter((g) => g.players.length)
 })
 
-// 球队简介（真实字段拼描述）
+// 球队简介（真实字段拼描述，双语）
 const intro = computed(() => {
-  const t = current.value
-  if (!t) return ''
+  const tm = current.value
+  if (!tm) return ''
   const parts = []
-  if (t.country) parts.push(t.country)
-  if (t.founded) parts.push(`成立于 ${t.founded} 年`)
-  if (t.venue) parts.push(`主场 ${t.venue}`)
-  if (t.coach) parts.push(`主帅 ${t.coach}`)
-  if (t.clubColors) parts.push(`队服 ${t.clubColors}`)
+  if (tm.country) parts.push(tm.country)
+  if (tm.founded) parts.push(`${t('teams.founded')} ${tm.founded}${t('teams.foundedYear')}`)
+  if (tm.venue) parts.push(`${t('teams.venue')} ${tm.venue}`)
+  if (tm.coach) parts.push(`${t('teams.coach')} ${tm.coach}`)
+  if (tm.clubColors) parts.push(`${t('teams.colors')} ${tm.clubColors}`)
   return parts.join(' · ')
 })
-
-const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fetchedAt).toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }) : '')
+// 球队显示名：英文界面优先英文名
+const dName = (tm) => (locale.value === 'en' ? tm.name : tm.cnName)
+const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fetchedAt).toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }) : '')
 </script>
 
 <template>
   <div class="view">
     <!-- 球队详情 -->
     <template v-if="current">
-      <button class="back" @click="selected = null">← 返回全部球队</button>
+      <button class="back" @click="selected = null">{{ t('teams.backToAll') }}</button>
       <div class="team-head card">
         <img v-if="current.crest" class="crest-lg" :src="current.crest" :alt="current.cnName" />
         <div class="th-text">
-          <h2>{{ current.cnName }} <small>{{ current.name }}</small></h2>
+          <h2>{{ dName(current) }} <small>{{ locale === 'en' ? current.cnName : current.name }}</small></h2>
           <div class="th-tags">
-            <span v-if="current.group" class="badge">{{ current.group }} 组</span>
-            <span class="badge">{{ current.squad.length }} 人名单</span>
+            <span v-if="current.group" class="badge">{{ current.group }} {{ t('common.group') }}</span>
+            <span class="badge">{{ current.squad.length }}{{ t('teams.roster') }}</span>
           </div>
           <p class="intro">{{ intro }}</p>
         </div>
@@ -70,8 +70,9 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
             <PlayerAvatar :name="p.name" :photo="p.photo" :size="48" />
             <div class="p-info">
               <div class="p-name">{{ p.name }}</div>
-              <div class="p-meta muted">{{ p.position }}<template v-if="p.age"> · {{ p.age }} 岁</template></div>
+              <div class="p-meta muted">{{ g.label }}<template v-if="p.age"> · {{ p.age }}{{ t('teams.age') }}</template></div>
               <div class="p-nat muted">{{ p.nationality }}</div>
+              <div v-if="p.bio" class="p-bio"><span class="bio-tag">{{ t('teams.aiBio') }}</span>{{ p.bio }}</div>
             </div>
           </div>
         </div>
@@ -81,20 +82,20 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
     <!-- 球队列表 -->
     <template v-else>
       <div class="head">
-        <h2>参赛球队 · 阵容名单</h2>
-        <span class="muted gen" v-if="fmtUpdated">资料更新于 {{ fmtUpdated }}</span>
+        <h2>{{ t('teams.title') }}</h2>
+        <span class="muted gen" v-if="fmtUpdated">{{ t('teams.updatedAt') }} {{ fmtUpdated }}</span>
       </div>
-      <p class="lead muted">48 支参赛队的徽标、26 人大名单与球员信息（数据来自 football-data.org）。点击球队查看详情。</p>
+      <p class="lead muted">{{ t('teams.lead') }}</p>
 
-      <input class="search" v-model="query" placeholder="🔍 搜索球队 / 国家…" />
+      <input class="search" v-model="query" :placeholder="t('teams.searchPlaceholder')" />
 
-      <div v-if="!teams.length" class="empty card muted">球队资料加载中或暂不可用（public/teams.json）。</div>
+      <div v-if="!teams.length" class="empty card muted">{{ t('teams.loading') }}</div>
 
       <div class="grid team-grid">
-        <button v-for="t in filtered" :key="t.code" class="team-card card" @click="selected = t.code">
-          <img v-if="t.crest" class="crest" :src="t.crest" :alt="t.cnName" />
-          <div class="tc-name">{{ t.cnName }}</div>
-          <div class="tc-sub muted">{{ t.group ? t.group + ' 组' : '' }} · {{ t.squad.length }}人</div>
+        <button v-for="tm in filtered" :key="tm.code" class="team-card card" @click="selected = tm.code">
+          <img v-if="tm.crest" class="crest" :src="tm.crest" :alt="tm.cnName" />
+          <div class="tc-name">{{ dName(tm) }}</div>
+          <div class="tc-sub muted">{{ tm.group ? tm.group + ' ' + t('common.group') : '' }} · {{ tm.squad.length }}</div>
         </button>
       </div>
     </template>
@@ -132,6 +133,8 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
 .p-name { font-weight: 600; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p-meta { font-size: 0.74rem; margin-top: 2px; }
 .p-nat { font-size: 0.7rem; margin-top: 1px; }
+.p-bio { font-size: 0.72rem; color: var(--text-dim); margin-top: 5px; line-height: 1.45; }
+.bio-tag { display: inline-block; font-size: 0.6rem; color: #5b8def; border: 1px solid rgba(91,141,239,0.4); border-radius: 4px; padding: 0 4px; margin-right: 5px; }
 
 @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(4, 1fr); } .players { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .team-grid { grid-template-columns: repeat(3, 1fr); } .players { grid-template-columns: 1fr; } .team-head { flex-direction: column; text-align: center; } }

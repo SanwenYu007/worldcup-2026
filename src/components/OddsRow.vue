@@ -1,9 +1,11 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const props = defineProps({ match: { type: Object, required: true } })
 const store = useDataStore()
+const { t, locale } = useI18n()
 const expanded = ref(false)
 
 const home = computed(() => store.getTeam(props.match.home))
@@ -13,13 +15,13 @@ const odds = computed(() => props.match.odds)
 const showOdds = computed(() => store.shouldShowOdds(props.match))
 // AI 预测
 const pred = computed(() => store.getPrediction(props.match))
-const outcomeLabel = { home: '主胜', draw: '平局', away: '客胜' }
+const outcomeLabel = computed(() => ({ home: t('result.home'), draw: t('result.draw'), away: t('result.away') }))
 
 const dateLabel = computed(() => {
   const d = new Date(props.match.date)
-  return d.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+  return d.toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
 })
-const statusText = { finished: '完场', live: '进行中', scheduled: '未开赛' }
+const statusText = computed(() => ({ finished: t('common.finished'), live: t('common.inplay'), scheduled: t('common.upcoming') }))
 const hasScore = computed(() => props.match.homeGoals != null)
 
 // 实际结果命中的项（用于高亮）
@@ -39,6 +41,7 @@ const crsHit = computed(() =>
 )
 const lineLabel = computed(() => {
   const l = odds.value?.hhad.goalLine ?? 0
+  if (locale.value === 'en') return l === 0 ? 'Level' : (l > 0 ? `+${l}` : `${l}`)
   if (l === 0) return '平手'
   return l > 0 ? `受让${l}球` : `让${-l}球`
 })
@@ -49,7 +52,7 @@ const lineLabel = computed(() => {
     <!-- 头部：场次编号 / 赛事 / 时间 / 状态 -->
     <div class="row-head">
       <span class="num">{{ match.matchNum }}</span>
-      <span class="league">{{ match.group ? match.group + '组' : (match.stageName || '世界杯') }}</span>
+      <span class="league">{{ match.group ? match.group + t('common.group') : (match.stageName || 'WC') }}</span>
       <span class="time">{{ dateLabel }}</span>
       <span class="status" :class="match.status">
         {{ statusText[match.status] }}
@@ -61,7 +64,7 @@ const lineLabel = computed(() => {
     <div class="teams">
       <div class="t home">
         <span class="flag">{{ home?.flag || '🏳️' }}</span>
-        <span class="nm">{{ home?.name || match.homeLabel || '待定' }}</span>
+        <span class="nm">{{ home?.name || match.homeLabel || t('common.tbd') }}</span>
         <span class="hcap" v-if="showOdds">{{ lineLabel }}</span>
       </div>
       <div class="score" v-if="hasScore" :class="match.status">
@@ -70,50 +73,50 @@ const lineLabel = computed(() => {
       <div class="score vs" v-else>VS</div>
       <div class="t away">
         <span class="flag">{{ away?.flag || '🏳️' }}</span>
-        <span class="nm">{{ away?.name || match.awayLabel || '待定' }}</span>
+        <span class="nm">{{ away?.name || match.awayLabel || t('common.tbd') }}</span>
       </div>
     </div>
 
     <!-- AI 预测 -->
     <div class="ai-pred" v-if="pred" :class="{ done: match.status === 'finished' }">
-      <span class="ai-tag">AI 预测</span>
+      <span class="ai-tag">AI</span>
       <span class="ai-score mono">{{ pred.score.home }}:{{ pred.score.away }}</span>
       <span class="ai-out">{{ outcomeLabel[pred.outcome] }}</span>
-      <span class="ai-conf">置信 {{ Math.round(pred.confidence * 100) }}%</span>
+      <span class="ai-conf">{{ t('common.confidence') }} {{ Math.round(pred.confidence * 100) }}%</span>
       <span class="ai-result" v-if="match.status === 'finished'">
-        {{ (match.homeGoals === pred.score.home && match.awayGoals === pred.score.away) ? '✓比分命中'
-          : (hadHit === pred.outcome ? '✓胜负命中' : '✗未中') }}
+        {{ (match.homeGoals === pred.score.home && match.awayGoals === pred.score.away) ? '✓ ' + t('predictions.scoreHit')
+          : (hadHit === pred.outcome ? '✓ ' + t('predictions.outcomeHit') : '✗ ' + t('predictions.miss')) }}
       </span>
     </div>
 
     <!-- 赔率：胜平负 + 让球胜平负 -->
     <template v-if="showOdds">
       <div class="odds-grid">
-        <div class="play-label">胜平负</div>
-        <div class="box" :class="{ hit: hadHit === 'h' }"><b>胜</b><i>{{ odds.had.h }}</i></div>
-        <div class="box" :class="{ hit: hadHit === 'd' }"><b>平</b><i>{{ odds.had.d }}</i></div>
-        <div class="box" :class="{ hit: hadHit === 'a' }"><b>负</b><i>{{ odds.had.a }}</i></div>
+        <div class="play-label">{{ t('schedule.oddsTitle') }}</div>
+        <div class="box" :class="{ hit: hadHit === 'h' }"><b>{{ t('common.win') }}</b><i>{{ odds.had.h }}</i></div>
+        <div class="box" :class="{ hit: hadHit === 'd' }"><b>{{ t('common.draw') }}</b><i>{{ odds.had.d }}</i></div>
+        <div class="box" :class="{ hit: hadHit === 'a' }"><b>{{ t('common.loss') }}</b><i>{{ odds.had.a }}</i></div>
       </div>
       <div class="odds-grid">
-        <div class="play-label">让球<small>{{ odds.hhad.goalLine > 0 ? '+' + odds.hhad.goalLine : odds.hhad.goalLine }}</small></div>
-        <div class="box" :class="{ hit: hhadHit === 'h' }"><b>胜</b><i>{{ odds.hhad.h }}</i></div>
-        <div class="box" :class="{ hit: hhadHit === 'd' }"><b>平</b><i>{{ odds.hhad.d }}</i></div>
-        <div class="box" :class="{ hit: hhadHit === 'a' }"><b>负</b><i>{{ odds.hhad.a }}</i></div>
+        <div class="play-label">{{ t('odds.handicap') }}<small>{{ odds.hhad.goalLine > 0 ? '+' + odds.hhad.goalLine : odds.hhad.goalLine }}</small></div>
+        <div class="box" :class="{ hit: hhadHit === 'h' }"><b>{{ t('common.win') }}</b><i>{{ odds.hhad.h }}</i></div>
+        <div class="box" :class="{ hit: hhadHit === 'd' }"><b>{{ t('common.draw') }}</b><i>{{ odds.hhad.d }}</i></div>
+        <div class="box" :class="{ hit: hhadHit === 'a' }"><b>{{ t('common.loss') }}</b><i>{{ odds.hhad.a }}</i></div>
       </div>
 
       <button class="more-btn" @click="expanded = !expanded">
-        {{ expanded ? '收起' : '更多赔率' }} · 总进球 / 比分
+        {{ expanded ? t('common.back') : t('odds.moreplay') }} · {{ t('odds.totalGoals') }} / {{ t('odds.score') }}
         <span :class="{ flip: expanded }">▾</span>
       </button>
 
       <div class="more" v-if="expanded">
-        <div class="more-title">总进球</div>
+        <div class="more-title">{{ t('odds.totalGoals') }}</div>
         <div class="ttg">
-          <div v-for="t in odds.ttg" :key="t.goals" class="mini">
-            <b>{{ t.goals }}</b><i>{{ t.odds }}</i>
+          <div v-for="tg in odds.ttg" :key="tg.goals" class="mini">
+            <b>{{ tg.goals }}</b><i>{{ tg.odds }}</i>
           </div>
         </div>
-        <div class="more-title">比分（最热门）</div>
+        <div class="more-title">{{ t('odds.score') }}</div>
         <div class="crs">
           <div v-for="c in odds.crs" :key="c.score" class="mini" :class="{ hit: crsHit === c.score }">
             <b>{{ c.score }}</b><i>{{ c.odds }}</i>
@@ -122,7 +125,7 @@ const lineLabel = computed(() => {
       </div>
     </template>
     <div v-else class="no-odds muted">
-      {{ match.status === 'finished' ? '赛后赔率已截止' : (match.odds ? '' : '对阵确定后开售赔率') }}
+      {{ match.status === 'finished' ? t('schedule.oddsClosed') : '' }}
     </div>
   </div>
 </template>

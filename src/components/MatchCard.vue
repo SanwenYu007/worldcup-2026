@@ -1,20 +1,22 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const props = defineProps({
   match: { type: Object, required: true }
 })
 const store = useDataStore()
+const { t, locale } = useI18n()
 
 const home = computed(() => store.getTeam(props.match.home))
 const away = computed(() => store.getTeam(props.match.away))
 
 const dateLabel = computed(() => {
   const d = new Date(props.match.date)
-  return d.toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+  return d.toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
 })
-const statusLabel = { finished: '完场', live: '进行中', scheduled: '未开始' }
+const statusLabel = computed(() => ({ finished: t('common.finished'), live: t('common.inplay'), scheduled: t('common.upcoming') }))
 const hasScore = computed(() => props.match.homeGoals != null)
 function won(side) {
   if (!hasScore.value || props.match.status === 'scheduled') return false
@@ -30,7 +32,7 @@ function won(side) {
       <span class="badge" :class="match.status">{{ statusLabel[match.status] }}
         <template v-if="match.status === 'live'"> · {{ match.minute }}'</template>
       </span>
-      <span class="when">{{ match.group ? `${match.group} 组` : (match.stageName || '') }} · {{ dateLabel }}</span>
+      <span class="when">{{ match.group ? `${match.group} ${t('common.group')}` : (match.stageName || '') }} · {{ dateLabel }}</span>
     </div>
     <div class="teams">
       <div class="team" :class="{ win: won('home') }">

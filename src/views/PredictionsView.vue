@@ -1,9 +1,11 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const store = useDataStore()
-const outcomeLabel = { home: '主胜', draw: '平局', away: '客胜' }
+const { t, locale } = useI18n()
+const outcomeLabel = computed(() => ({ home: t('result.home'), draw: t('result.draw'), away: t('result.away') }))
 
 const data = computed(() => store.predictions)
 
@@ -26,8 +28,9 @@ const rows = computed(() => {
   })
 })
 
-const fmtDate = (d) => new Date(d).toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
-const fmtGen = computed(() => data.value?.generatedAt ? new Date(data.value.generatedAt).toLocaleString('zh-CN') : '')
+const lc = () => (locale.value === 'en' ? 'en-GB' : 'zh-CN')
+const fmtDate = (d) => new Date(d).toLocaleString(lc(), { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+const fmtGen = computed(() => data.value?.generatedAt ? new Date(data.value.generatedAt).toLocaleString(lc()) : '')
 
 // 准确率统计（已完赛的预测）
 const settled = computed(() => rows.value.filter((r) => r.result))
@@ -45,19 +48,19 @@ const accuracy = computed(() => {
   <div class="view">
     <div class="head">
       <div>
-        <h2>AI 比分预测</h2>
-        <p class="muted">由 <b>{{ data?.modelLabel || 'AI 模型' }}</b> 综合两队<b>实力值</b>与<b>近期战绩</b>，预测未来 {{ data?.horizonDays || 2 }} 天比赛的比分与胜负；每条预测附判断依据与置信度。</p>
+        <h2>{{ t('predictions.title') }}</h2>
+        <p class="muted">{{ t('predictions.leadPrefix') }} <b>{{ data?.modelLabel || 'AI' }}</b>{{ t('predictions.leadSuffix', { n: data?.horizonDays || 2 }) }}</p>
       </div>
-      <span class="gen muted" v-if="fmtGen">更新于 {{ fmtGen }}</span>
+      <span class="gen muted" v-if="fmtGen">{{ t('common.updatedAt') }} {{ fmtGen }}</span>
     </div>
 
     <div class="acc card" v-if="accuracy">
-      <div class="acc-item"><b>{{ accuracy.total }}</b><span>已验证</span></div>
-      <div class="acc-item"><b class="g">{{ accuracy.outPct }}%</b><span>胜负命中 {{ accuracy.out }}/{{ accuracy.total }}</span></div>
-      <div class="acc-item"><b class="a">{{ accuracy.exactPct }}%</b><span>比分命中 {{ accuracy.exact }}/{{ accuracy.total }}</span></div>
+      <div class="acc-item"><b>{{ accuracy.total }}</b><span>{{ t('predictions.verified') }}</span></div>
+      <div class="acc-item"><b class="g">{{ accuracy.outPct }}%</b><span>{{ t('predictions.outcomeHit') }} {{ accuracy.out }}/{{ accuracy.total }}</span></div>
+      <div class="acc-item"><b class="a">{{ accuracy.exactPct }}%</b><span>{{ t('predictions.scoreHit') }} {{ accuracy.exact }}/{{ accuracy.total }}</span></div>
     </div>
 
-    <div v-if="!rows.length" class="empty card muted">暂无预测数据（public/predictions.json）。</div>
+    <div v-if="!rows.length" class="empty card muted">{{ t('predictions.empty') }}</div>
 
     <div class="grid list">
       <div v-for="r in rows" :key="r.p.matchId" class="pred card" :class="{ done: r.result }">
@@ -65,19 +68,19 @@ const accuracy = computed(() => {
           <span class="when">{{ fmtDate(r.p.date) }}</span>
           <span class="badge" v-if="r.result"
             :class="r.result.exact ? 'finished' : (r.result.outcomeHit ? 'finished' : 'scheduled')">
-            {{ r.result.exact ? '✓ 比分命中' : (r.result.outcomeHit ? '✓ 胜负命中' : '✗ 未命中') }}
+            {{ r.result.exact ? '✓ ' + t('predictions.scoreHit') : (r.result.outcomeHit ? '✓ ' + t('predictions.outcomeHit') : '✗ ' + t('predictions.miss')) }}
           </span>
-          <span class="badge scheduled" v-else>待赛</span>
+          <span class="badge scheduled" v-else>{{ t('predictions.pending') }}</span>
         </div>
         <div class="p-match">
-          <span class="tm">{{ r.p.homeName }}</span>
+          <span class="tm">{{ locale === 'en' ? (r.p.home || r.p.homeName) : r.p.homeName }}</span>
           <span class="pscore mono">{{ r.p.score.home }} : {{ r.p.score.away }}</span>
-          <span class="tm">{{ r.p.awayName }}</span>
+          <span class="tm">{{ locale === 'en' ? (r.p.away || r.p.awayName) : r.p.awayName }}</span>
         </div>
         <div class="p-meta">
-          <span class="out">预测 {{ outcomeLabel[r.p.outcome] }}</span>
-          <span class="conf">置信度 {{ Math.round(r.p.confidence * 100) }}%</span>
-          <span class="actual" v-if="r.result">实际 {{ r.result.score }}</span>
+          <span class="out">{{ t('predictions.predicted') }} {{ outcomeLabel[r.p.outcome] }}</span>
+          <span class="conf">{{ t('common.confidence') }} {{ Math.round(r.p.confidence * 100) }}%</span>
+          <span class="actual" v-if="r.result">{{ t('predictions.actual') }} {{ r.result.score }}</span>
         </div>
         <div class="conf-bar"><span :style="{ width: r.p.confidence * 100 + '%' }" /></div>
         <p class="reason muted">{{ r.p.reasoning }}</p>

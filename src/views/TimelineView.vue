@@ -1,9 +1,12 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const store = useDataStore()
+const { t, locale } = useI18n()
 const filter = ref('all') // all | upcoming | finished
+const lc = () => (locale.value === 'en' ? 'en-GB' : 'zh-CN')
 
 // 全部比赛按日期分组、组内按时间排序。
 const dayGroups = computed(() => {
@@ -20,11 +23,11 @@ const dayGroups = computed(() => {
   return Object.entries(days).map(([date, matches]) => ({ date, matches }))
 })
 
-const statusText = { finished: '完场', live: '进行中', scheduled: '未开赛' }
-const weekday = (d) => ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date(d).getDay()]
-const fmtDay = (d) => new Date(d).toLocaleDateString('zh-CN', { month: 'long', day: 'numeric' })
-const fmtTime = (d) => new Date(d).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
-const stageLabel = (m) => m.group ? `${m.group}组` : (m.stageName || '淘汰赛')
+const statusText = computed(() => ({ finished: t('common.finished'), live: t('common.inplay'), scheduled: t('common.upcoming') }))
+const weekday = (d) => new Date(d).toLocaleDateString(lc(), { weekday: 'short' })
+const fmtDay = (d) => new Date(d).toLocaleDateString(lc(), { month: 'long', day: 'numeric' })
+const fmtTime = (d) => new Date(d).toLocaleTimeString(lc(), { hour: '2-digit', minute: '2-digit' })
+const stageLabel = (m) => m.group ? `${m.group}${t('common.group')}` : (m.stageName || t('schedule.knockoutTab'))
 
 function isToday(d) {
   return new Date(d).toDateString() === store.now.toDateString()
@@ -34,11 +37,11 @@ function isToday(d) {
 <template>
   <div class="view">
     <div class="head">
-      <h2>赛程时间表</h2>
+      <h2>{{ t('timeline.title') }}</h2>
       <div class="filters">
-        <button :class="{ on: filter === 'all' }" @click="filter = 'all'">全部</button>
-        <button :class="{ on: filter === 'upcoming' }" @click="filter = 'upcoming'">未赛</button>
-        <button :class="{ on: filter === 'finished' }" @click="filter = 'finished'">已赛</button>
+        <button :class="{ on: filter === 'all' }" @click="filter = 'all'">{{ t('timeline.all') }}</button>
+        <button :class="{ on: filter === 'upcoming' }" @click="filter = 'upcoming'">{{ t('timeline.upcoming') }}</button>
+        <button :class="{ on: filter === 'finished' }" @click="filter = 'finished'">{{ t('timeline.finished') }}</button>
       </div>
     </div>
 
@@ -46,8 +49,8 @@ function isToday(d) {
       <div class="day-head" :class="{ today: isToday(day.date) }">
         <span class="d-date">{{ fmtDay(day.date) }}</span>
         <span class="d-wd">{{ weekday(day.date) }}</span>
-        <span class="d-badge" v-if="isToday(day.date)">今天</span>
-        <span class="d-count muted">{{ day.matches.length }} 场</span>
+        <span class="d-badge" v-if="isToday(day.date)">{{ t('common.today') }}</span>
+        <span class="d-count muted">{{ day.matches.length }}</span>
       </div>
 
       <div class="rows card">

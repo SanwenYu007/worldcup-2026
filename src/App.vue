@@ -1,9 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from './stores/data'
+import { setLocale } from './i18n'
 
 const store = useDataStore()
+const { t, locale } = useI18n()
+const toggleLang = () => setLocale(locale.value === 'zh' ? 'en' : 'zh')
 
 onMounted(() => {
   // 非阻塞尝试加载真实数据；失败则继续用示例数据
@@ -19,17 +23,19 @@ onMounted(() => {
         <span class="brand-txt">2026 <b>世界杯</b></span>
       </RouterLink>
       <nav class="nav">
-        <RouterLink to="/" exact-active-class="active">总览</RouterLink>
-        <RouterLink to="/schedule" active-class="active">赛程</RouterLink>
-        <RouterLink to="/teams" active-class="active">球队</RouterLink>
-        <RouterLink to="/timeline" active-class="active">时间表</RouterLink>
-        <RouterLink to="/odds" active-class="active">实时赔率</RouterLink>
-        <RouterLink to="/predictions" active-class="active">AI预测</RouterLink>
-        <RouterLink to="/stats" active-class="active">数据</RouterLink>
-        <RouterLink to="/feedback" active-class="active">意见</RouterLink>
+        <RouterLink to="/" exact-active-class="active">{{ t('nav.overview') }}</RouterLink>
+        <RouterLink to="/schedule" active-class="active">{{ t('nav.schedule') }}</RouterLink>
+        <RouterLink to="/teams" active-class="active">{{ t('nav.teams') }}</RouterLink>
+        <RouterLink to="/timeline" active-class="active">{{ t('nav.timeline') }}</RouterLink>
+        <RouterLink to="/odds" active-class="active">{{ t('nav.odds') }}</RouterLink>
+        <RouterLink to="/predictions" active-class="active">{{ t('nav.predictions') }}</RouterLink>
+        <RouterLink to="/strategy" active-class="active">{{ t('nav.strategy') }}</RouterLink>
+        <RouterLink to="/stats" active-class="active">{{ t('nav.stats') }}</RouterLink>
+        <RouterLink to="/feedback" active-class="active">{{ t('nav.feedback') }}</RouterLink>
       </nav>
+      <button class="lang-btn" @click="toggleLang">{{ locale === 'zh' ? 'EN' : '中' }}</button>
       <span class="src-tag" :class="store.source">
-        {{ store.source === 'live' ? '实时数据' : '示例数据' }}
+        {{ store.source === 'live' ? t('common.live') : t('common.sample') }}
       </span>
     </div>
   </header>
@@ -40,8 +46,8 @@ onMounted(() => {
   </main>
 
   <footer class="footer container">
-    <span>2026 FIFA 世界杯 · {{ store.meta.host }} · 48 队 / 104 场</span>
-    <span class="muted">作品集演示 · Vue 3 + ECharts</span>
+    <span>2026 FIFA · {{ t('overview.host') }} · 48 / 104</span>
+    <span class="muted">{{ t('footer.subtitle') }}</span>
   </footer>
 </template>
 
@@ -64,8 +70,13 @@ onMounted(() => {
 }
 .nav a:hover { color: var(--text); background: var(--card); }
 .nav a.active { color: #06231b; background: var(--primary); }
+.lang-btn {
+  margin-left: auto; flex-shrink: 0; font-size: 0.78rem; font-weight: 700; width: 34px; height: 30px;
+  border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text-dim);
+}
+.lang-btn:hover { color: var(--text); border-color: var(--primary-dim); }
 .src-tag {
-  margin-left: auto; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;
+  font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;
   border: 1px solid var(--border); color: var(--text-mute);
 }
 .src-tag.live { color: var(--primary); border-color: var(--primary-dim); }

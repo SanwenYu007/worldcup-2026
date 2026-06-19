@@ -1,11 +1,13 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import OddsRow from '../components/OddsRow.vue'
 import GroupStandings from '../components/GroupStandings.vue'
 import Bracket from '../components/Bracket.vue'
 
 const store = useDataStore()
+const { t } = useI18n()
 const tab = ref('group') // 'group' | 'knockout'
 const activeGroup = ref('A')
 const groupKeys = 'ABCDEFGHIJKL'.split('')
@@ -33,41 +35,41 @@ const groupMatchList = computed(() => {
 
 <template>
   <div class="view">
-  <h2 class="page-title">完整赛程 · 胜平负赔率与积分榜</h2>
+  <h2 class="page-title">{{ t('schedule.title') }}</h2>
   <div class="tabs">
-    <button :class="{ on: tab === 'group' }" @click="tab = 'group'">小组赛</button>
-    <button :class="{ on: tab === 'knockout' }" @click="tab = 'knockout'">淘汰赛</button>
+    <button :class="{ on: tab === 'group' }" @click="tab = 'group'">{{ t('schedule.groupTab') }}</button>
+    <button :class="{ on: tab === 'knockout' }" @click="tab = 'knockout'">{{ t('schedule.knockoutTab') }}</button>
   </div>
 
   <template v-if="tab === 'group'">
     <div class="group-pills" v-show="!query">
       <button v-for="g in groupKeys" :key="g" :class="{ on: activeGroup === g }" @click="activeGroup = g">{{ g }}</button>
       <span class="odds-src" :class="store.oddsSource">
-        {{ store.oddsSource === 'sporttery' ? '体彩实时赔率' : '模型赔率' }}
+        {{ store.oddsSource === 'sporttery' ? t('schedule.sportteryOdds') : t('schedule.modelOdds') }}
       </span>
     </div>
 
     <div class="filters">
-      <input class="search" v-model="query" placeholder="🔍 搜索球队（跨小组）…" />
-      <button :class="{ on: filterMode === 'all' }" @click="filterMode = 'all'">全部</button>
-      <button :class="{ on: filterMode === 'upcoming' }" @click="filterMode = 'upcoming'">未开赛</button>
-      <button :class="{ on: filterMode === 'today' }" @click="filterMode = 'today'">今日</button>
+      <input class="search" v-model="query" :placeholder="t('schedule.searchTeam')" />
+      <button :class="{ on: filterMode === 'all' }" @click="filterMode = 'all'">{{ t('common.all') }}</button>
+      <button :class="{ on: filterMode === 'upcoming' }" @click="filterMode = 'upcoming'">{{ t('common.upcoming') }}</button>
+      <button :class="{ on: filterMode === 'today' }" @click="filterMode = 'today'">{{ t('common.today') }}</button>
     </div>
 
     <div class="grid layout" :class="{ single: query }">
       <GroupStandings v-if="!query" :group="activeGroup" />
       <div>
-        <div class="section-title" style="margin-top:0">{{ query ? `搜索“${query}”` : activeGroup + ' 组' }} · 胜平负赔率</div>
+        <div class="section-title" style="margin-top:0">{{ query ? `“${query}”` : activeGroup + ' ' + t('common.group') }} · {{ t('schedule.oddsTitle') }}</div>
         <div class="grid matches">
           <OddsRow v-for="m in groupMatchList" :key="m.id" :match="m" />
-          <div v-if="!groupMatchList.length" class="empty muted">没有符合条件的比赛</div>
+          <div v-if="!groupMatchList.length" class="empty muted">{{ t('common.noResult') }}</div>
         </div>
       </div>
     </div>
   </template>
 
   <template v-else>
-    <div class="section-title">淘汰赛对阵树</div>
+    <div class="section-title">{{ t('schedule.bracketTitle') }}</div>
     <Bracket />
   </template>
   </div>

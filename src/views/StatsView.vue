@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import { topScorers, groupStrength } from '../composables/useStats'
 import StrengthScatter from '../components/charts/StrengthScatter.vue'
@@ -8,30 +9,31 @@ import GoalBar from '../components/charts/GoalBar.vue'
 import GoalTimeline from '../components/charts/GoalTimeline.vue'
 
 const store = useDataStore()
+const { t } = useI18n()
 const scorers = computed(() => topScorers(store.finishedMatches, store.getTeam, 8))
 const deathGroups = computed(() => groupStrength(store.groups).slice(0, 3))
 </script>
 
 <template>
   <div class="view">
-  <div class="section-title" style="margin-top:24px">球队实力分布</div>
-  <p class="lead muted">气泡按大洲着色，纵轴为实力值（近似 FIFA 积分），横轴为小组。气泡越高、越大代表实力越强。</p>
+  <div class="section-title" style="margin-top:24px">{{ t('stats.strengthTitle') }}</div>
+  <p class="lead muted">{{ t('stats.strengthLead') }}</p>
   <div class="card pad"><StrengthScatter /></div>
 
   <div class="grid two">
     <div>
-      <div class="section-title">小组实力雷达（死亡之组）</div>
+      <div class="section-title">{{ t('stats.radarTitle') }}</div>
       <div class="card pad"><GroupRadar /></div>
     </div>
     <div>
-      <div class="section-title">最难小组 Top 3</div>
+      <div class="section-title">{{ t('stats.deathTitle') }}</div>
       <div class="death-list">
         <div v-for="(g, i) in deathGroups" :key="g.group" class="death card">
           <div class="rank">#{{ i + 1 }}</div>
           <div class="dg-body">
-            <div class="dg-head"><b>{{ g.group }} 组</b><span class="muted">平均实力 {{ g.avgRating }}</span></div>
+            <div class="dg-head"><b>{{ g.group }} {{ t('common.group') }}</b><span class="muted">{{ t('stats.avgStrength') }} {{ g.avgRating }}</span></div>
             <div class="dg-teams">
-              <span v-for="t in g.teams" :key="t.code">{{ t.flag }} {{ t.name }}</span>
+              <span v-for="tm in g.teams" :key="tm.code">{{ tm.flag }} {{ tm.name }}</span>
             </div>
           </div>
         </div>
@@ -41,13 +43,13 @@ const deathGroups = computed(() => groupStrength(store.groups).slice(0, 3))
 
   <div class="grid two">
     <div>
-      <div class="section-title">得分榜（进球 / 失球）</div>
+      <div class="section-title">{{ t('stats.goalBar') }}</div>
       <div class="card pad"><GoalBar /></div>
     </div>
     <div>
-      <div class="section-title">进球时段分布</div>
+      <div class="section-title">{{ t('stats.goalTiming') }}</div>
       <div class="card pad"><GoalTimeline /></div>
-      <div class="section-title">球队进球榜</div>
+      <div class="section-title">{{ t('stats.scorers') }}</div>
       <div class="card scorers">
         <div v-for="(s, i) in scorers" :key="s.team.code" class="scorer">
           <span class="idx">{{ i + 1 }}</span>
@@ -56,7 +58,7 @@ const deathGroups = computed(() => groupStrength(store.groups).slice(0, 3))
           <span class="bar"><span :style="{ width: (s.goals / scorers[0].goals * 100) + '%' }" /></span>
           <span class="g mono">{{ s.goals }}</span>
         </div>
-        <div v-if="!scorers.length" class="empty muted">暂无进球数据</div>
+        <div v-if="!scorers.length" class="empty muted">{{ t('common.goals') }}</div>
       </div>
     </div>
   </div>

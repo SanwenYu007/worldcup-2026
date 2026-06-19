@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 
 // 意见反馈页：
 // - 访客提交的意见保存到浏览器 localStorage（刷新保留）。
@@ -54,50 +56,50 @@ function removeLocal(idx) {
   localStorage.setItem(LS_KEY, JSON.stringify(next))
 }
 
-const fmt = (d) => new Date(d).toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+const fmt = (d) => new Date(d).toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
 const allCount = computed(() => seedItems.value.length + localItems.value.length)
 </script>
 
 <template>
   <div class="view">
     <div class="head">
-      <h2>意见反馈</h2>
-      <span class="muted">共 {{ allCount }} 条</span>
+      <h2>{{ t('feedback.title') }}</h2>
+      <span class="muted">{{ t('feedback.count', { n: allCount }) }}</span>
     </div>
-    <p class="lead muted">欢迎提交对本站的建议。提交内容会保存在你的浏览器并展示在下方；被采纳的意见会更新到「官方精选」，所有访客可见。</p>
+    <p class="lead muted">{{ t('feedback.lead') }}</p>
 
     <!-- 提交表单 -->
     <div class="form card">
-      <input class="name" v-model="name" maxlength="20" placeholder="昵称（选填）" />
-      <textarea v-model="content" maxlength="500" rows="3" placeholder="写下你的意见或建议…（最多 500 字）" @keydown.ctrl.enter="submit" @keydown.meta.enter="submit"></textarea>
+      <input class="name" v-model="name" maxlength="20" :placeholder="t('feedback.namePlaceholder')" />
+      <textarea v-model="content" maxlength="500" rows="3" :placeholder="t('feedback.contentPlaceholder')" @keydown.ctrl.enter="submit" @keydown.meta.enter="submit"></textarea>
       <div class="form-foot">
-        <span class="hint muted" :class="{ ok: submitted }">{{ submitted ? '✓ 已提交，感谢反馈！' : `${content.length}/500 · Ctrl/⌘+Enter 提交` }}</span>
-        <button class="submit" :disabled="!content.trim()" @click="submit">提交意见</button>
+        <span class="hint muted" :class="{ ok: submitted }">{{ submitted ? t('feedback.submitted') : `${content.length}/500 · Ctrl/⌘+Enter` }}</span>
+        <button class="submit" :disabled="!content.trim()" @click="submit">{{ t('feedback.submit') }}</button>
       </div>
     </div>
 
     <!-- 官方精选 -->
-    <div class="section-title">官方精选 <small class="muted">（所有人可见）</small></div>
+    <div class="section-title">{{ t('feedback.official') }} <small class="muted">{{ t('feedback.officialNote') }}</small></div>
     <div class="list">
       <div v-for="(it, i) in seedItems" :key="'s' + i" class="fb card official">
-        <div class="fb-head"><span class="who">{{ it.name }}</span><span class="badge">官方</span><span class="when muted">{{ fmt(it.date) }}</span></div>
+        <div class="fb-head"><span class="who">{{ it.name }}</span><span class="badge">{{ t('feedback.officialTag') }}</span><span class="when muted">{{ fmt(it.date) }}</span></div>
         <p class="fb-body">{{ it.content }}</p>
       </div>
-      <div v-if="!seedItems.length" class="empty muted">暂无官方意见。</div>
+      <div v-if="!seedItems.length" class="empty muted">{{ t('feedback.noOfficial') }}</div>
     </div>
 
     <!-- 本机提交 -->
-    <div class="section-title">我提交的 <small class="muted">（保存在本浏览器）</small></div>
+    <div class="section-title">{{ t('feedback.mine') }} <small class="muted">{{ t('feedback.mineNote') }}</small></div>
     <div class="list">
       <div v-for="(it, i) in localItems" :key="'l' + i" class="fb card">
         <div class="fb-head">
           <span class="who">{{ it.name }}</span>
           <span class="when muted">{{ fmt(it.date) }}</span>
-          <button class="del" @click="removeLocal(i)">删除</button>
+          <button class="del" @click="removeLocal(i)">{{ t('feedback.delete') }}</button>
         </div>
         <p class="fb-body">{{ it.content }}</p>
       </div>
-      <div v-if="!localItems.length" class="empty muted">你还没有提交意见。</div>
+      <div v-if="!localItems.length" class="empty muted">{{ t('feedback.noMine') }}</div>
     </div>
   </div>
 </template>

@@ -1,11 +1,13 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../../stores/data'
 import { goalTimeline } from '../../composables/useStats'
 import BaseChart from './BaseChart.vue'
 import { baseGrid, axisStyle, tooltipStyle } from './echarts'
 
 const store = useDataStore()
+const { t } = useI18n()
 const labels = ['1-15', '16-30', '31-45', '46-60', '61-75', '76-90+']
 
 const buckets = computed(() => goalTimeline(store.finishedMatches))
@@ -39,7 +41,7 @@ const option = computed(() => {
 
 <template>
   <BaseChart v-if="hasData" :option="option" height="300px" />
-  <div v-else class="empty muted">实时数据源未提供进球时间，暂无时段分布</div>
+  <div v-else class="empty muted">{{ t('stats.noTiming') }}</div>
 </template>
 
 <style scoped>

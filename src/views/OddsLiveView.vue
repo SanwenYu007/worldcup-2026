@@ -1,8 +1,10 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const store = useDataStore()
+const { t, locale } = useI18n()
 
 // 每场「更多玩法」展开状态（按场次编号）
 const expanded = ref(new Set())
@@ -13,8 +15,9 @@ const toggle = (k) => {
 }
 const isOpen = (k) => expanded.value.has(k)
 
+const lc = () => (locale.value === 'en' ? 'en-GB' : 'zh-CN')
 const feed = computed(() => store.oddsFeed)
-const fetchedAt = computed(() => feed.value?.fetchedAt ? new Date(feed.value.fetchedAt).toLocaleString('zh-CN') : '')
+const fetchedAt = computed(() => feed.value?.fetchedAt ? new Date(feed.value.fetchedAt).toLocaleString(lc()) : '')
 
 // 按日期分组、组内按时间排序（数据源已排序，这里再保险一次）。
 const dayGroups = computed(() => {
@@ -27,10 +30,10 @@ const dayGroups = computed(() => {
   return Object.entries(days).map(([date, matches]) => ({ date, matches }))
 })
 
-const weekday = (d) => ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date(d).getDay()] || ''
+const weekday = (d) => { const dt = new Date(d); return isNaN(dt) ? '' : dt.toLocaleDateString(lc(), { weekday: 'short' }) }
 const fmtDay = (d) => {
   const dt = new Date(d)
-  return isNaN(dt) ? d : dt.toLocaleDateString('zh-CN', { month: 'long', day: 'numeric' })
+  return isNaN(dt) ? d : dt.toLocaleDateString(lc(), { month: 'long', day: 'numeric' })
 }
 // 让球数显示为带符号数字：主队让球为负(-1/-2)，受让为正(+1/+2)，平手为 0
 const goalLineText = (l) => (l > 0 ? `+${l}` : `${l}`)
@@ -84,9 +87,10 @@ const isRange = computed(() => betCount.value > 1 && minOdds.value.toFixed(2) !=
 
 const parlayType = computed(() => {
   const n = matchCount.value
+  const en = locale.value === 'en'
   if (n === 0) return ''
-  if (n === 1) return betCount.value > 1 ? `单场${betCount.value}注` : '单关'
-  return `${n}串1` + (betCount.value > 1 ? ` 复式` : '')
+  if (n === 1) return betCount.value > 1 ? (en ? `Single ×${betCount.value}` : `单场${betCount.value}注`) : (en ? 'Single' : '单关')
+  return (en ? `${n}-fold` : `${n}串1`) + (betCount.value > 1 ? (en ? ' combo' : ' 复式') : '')
 })
 const mult = computed(() => Math.max(1, Math.floor(multiplier.value) || 1))
 const stake = computed(() => (matchCount.value ? betCount.value * UNIT * mult.value : 0))
@@ -97,21 +101,21 @@ const maxPrize = computed(() => UNIT * mult.value * maxOdds.value)
   <div class="view">
     <div class="head">
       <div>
-        <h2>体彩竞彩 · 实时赔率</h2>
-        <p class="muted">数据来源 <b>中国体育彩票</b>（竞彩足球 胜平负 / 让球胜平负），按开赛时间排序。</p>
+        <h2>{{ t('odds.title') }}</h2>
+        <p class="muted">{{ t('odds.lead') }}</p>
       </div>
-      <span class="gen muted" v-if="fetchedAt">更新于 {{ fetchedAt }}</span>
+      <span class="gen muted" v-if="fetchedAt">{{ t('common.updatedAt') }} {{ fetchedAt }}</span>
     </div>
 
     <div v-if="!dayGroups.length" class="empty card muted">
-      暂无体彩实时赔率。运行 <code>npm run fetch-odds</code> 抓取最新数据到 public/odds.json。
+      {{ t('odds.empty') }}
     </div>
 
     <div v-for="day in dayGroups" :key="day.date" class="day">
       <div class="day-head">
         <span class="d-date">{{ fmtDay(day.date) }}</span>
         <span class="d-wd">{{ weekday(day.date) }}</span>
-        <span class="d-count muted">{{ day.matches.length }} 场</span>
+        <span class="d-count muted">{{ day.matches.length }}</span>
       </div>
 
       <div class="rows">
@@ -130,44 +134,44 @@ const maxPrize = computed(() => UNIT * mult.value * maxOdds.value)
             </div>
             <!-- 右侧：胜平负 + 让球胜平负，列头 胜/平/负 -->
             <div class="odds">
-              <div class="ohead"><span></span><span>胜</span><span>平</span><span>负</span></div>
+              <div class="ohead"><span></span><span>{{ t('common.win') }}</span><span>{{ t('common.draw') }}</span><span>{{ t('common.loss') }}</span></div>
               <div class="oline" v-if="m.hhad">
-                <span class="lbl">让球<i>{{ goalLineText(m.hhad.goalLine) }}</i></span>
+                <span class="lbl">{{ t('odds.handicap') }}<i>{{ goalLineText(m.hhad.goalLine) }}</i></span>
                 <span class="cell" :class="{ sel: isPicked(m, `让球${goalLineText(m.hhad.goalLine)}·胜`) }" @click="pick(m, `让球${goalLineText(m.hhad.goalLine)}·胜`, m.hhad.h)">{{ m.hhad.h.toFixed(2) }}</span>
                 <span class="cell" :class="{ sel: isPicked(m, `让球${goalLineText(m.hhad.goalLine)}·平`) }" @click="pick(m, `让球${goalLineText(m.hhad.goalLine)}·平`, m.hhad.d)">{{ m.hhad.d.toFixed(2) }}</span>
                 <span class="cell" :class="{ sel: isPicked(m, `让球${goalLineText(m.hhad.goalLine)}·负`) }" @click="pick(m, `让球${goalLineText(m.hhad.goalLine)}·负`, m.hhad.a)">{{ m.hhad.a.toFixed(2) }}</span>
               </div>
               <div class="oline" v-if="m.had">
-                <span class="lbl">胜平负</span>
+                <span class="lbl">{{ t('schedule.oddsTitle') }}</span>
                 <span class="cell" :class="{ sel: isPicked(m, '胜平负·胜') }" @click="pick(m, '胜平负·胜', m.had.h)">{{ m.had.h.toFixed(2) }}</span>
                 <span class="cell" :class="{ sel: isPicked(m, '胜平负·平') }" @click="pick(m, '胜平负·平', m.had.d)">{{ m.had.d.toFixed(2) }}</span>
                 <span class="cell" :class="{ sel: isPicked(m, '胜平负·负') }" @click="pick(m, '胜平负·负', m.had.a)">{{ m.had.a.toFixed(2) }}</span>
               </div>
-              <div class="oline none" v-if="!m.had && !m.hhad">暂未开盘</div>
+              <div class="oline none" v-if="!m.had && !m.hhad">{{ t('odds.noOpen') }}</div>
             </div>
           </div>
 
           <!-- 更多玩法：比分 / 总进球 / 半全场 -->
           <button v-if="m.ttg || m.crs || m.hafu" class="more-btn" @click="toggle(m.matchNum)">
-            {{ isOpen(m.matchNum) ? '收起' : '更多玩法' }} · 比分 / 总进球 / 半全场
+            {{ isOpen(m.matchNum) ? t('common.back') : t('odds.moreplay') }} · {{ t('odds.score') }} / {{ t('odds.totalGoals') }} / {{ t('odds.halffull') }}
             <span :class="{ flip: isOpen(m.matchNum) }">▾</span>
           </button>
 
           <div class="more" v-if="isOpen(m.matchNum)">
             <div class="mk" v-if="m.crs">
-              <div class="mk-t">比分 <small>（按赔率从低到高）</small></div>
+              <div class="mk-t">{{ t('odds.score') }}</div>
               <div class="chips">
                 <div v-for="c in m.crs" :key="c.score" class="chip" :class="{ sel: isPicked(m, `比分·${c.score}`) }" @click="pick(m, `比分·${c.score}`, c.odds)"><b>{{ c.score }}</b><i>{{ c.odds.toFixed(2) }}</i></div>
               </div>
             </div>
             <div class="mk" v-if="m.ttg">
-              <div class="mk-t">总进球数</div>
+              <div class="mk-t">{{ t('odds.totalGoals') }}</div>
               <div class="chips ttg">
-                <div v-for="t in m.ttg" :key="t.goals" class="chip" :class="{ sel: isPicked(m, `进球·${t.goals}`) }" @click="pick(m, `进球·${t.goals}`, t.odds)"><b>{{ t.goals }}</b><i>{{ t.odds.toFixed(2) }}</i></div>
+                <div v-for="tg in m.ttg" :key="tg.goals" class="chip" :class="{ sel: isPicked(m, `进球·${tg.goals}`) }" @click="pick(m, `进球·${tg.goals}`, tg.odds)"><b>{{ tg.goals }}</b><i>{{ tg.odds.toFixed(2) }}</i></div>
               </div>
             </div>
             <div class="mk" v-if="m.hafu">
-              <div class="mk-t">半全场 <small>（半场 / 全场）</small></div>
+              <div class="mk-t">{{ t('odds.halffull') }}</div>
               <div class="chips hafu">
                 <div v-for="h in m.hafu" :key="h.combo" class="chip" :class="{ sel: isPicked(m, `半全场·${h.combo}`) }" @click="pick(m, `半全场·${h.combo}`, h.odds)"><b>{{ h.combo }}</b><i>{{ h.odds.toFixed(2) }}</i></div>
               </div>
@@ -177,17 +181,17 @@ const maxPrize = computed(() => UNIT * mult.value * maxOdds.value)
       </div>
     </div>
 
-    <p class="src muted">赔率来自 <a href="https://m.sporttery.cn/mjc/jsq/zqhhgg/" target="_blank" rel="noopener">m.sporttery.cn</a>，仅供参考。点击上方赔率即可加入下方「足球计算器」。</p>
+    <p class="src muted">{{ locale === 'en' ? 'Odds from' : '赔率来自' }} <a href="https://m.sporttery.cn/mjc/jsq/zqhhgg/" target="_blank" rel="noopener">m.sporttery.cn</a>{{ locale === 'en' ? ', for reference only.' : '，仅供参考。' }}</p>
 
     <!-- 足球计算器（混合过关）：底部悬浮 -->
     <div class="calc" v-if="selections.length">
       <div class="calc-inner container">
         <div class="c-main">
           <div class="c-top">
-            <span class="c-title">⚽ 足球计算器</span>
+            <span class="c-title">⚽ {{ t('odds.calc') }}</span>
             <span class="c-type">{{ parlayType }}</span>
-            <span class="c-count muted">{{ matchCount }} 场 · {{ betCount }} 注</span>
-            <button class="c-clear" @click="clearAll">清空</button>
+            <span class="c-count muted">{{ matchCount }} / {{ betCount }}</span>
+            <button class="c-clear" @click="clearAll">{{ t('odds.clear') }}</button>
           </div>
           <div class="c-picks">
             <span v-for="s in selections" :key="s.num + '-' + s.label" class="c-pick" @click="removePick(s.num, s.label)">
@@ -198,12 +202,12 @@ const maxPrize = computed(() => UNIT * mult.value * maxOdds.value)
         <div class="c-calc">
           <div class="c-hero">
             <span class="c-hero-num mono">{{ maxOdds.toFixed(2) }}</span>
-            <span class="c-hero-lbl">倍收益<br><small>{{ isRange ? `最低 ${minOdds.toFixed(2)} 倍 · 共 ${betCount} 注` : '（1 倍投入的回报倍数）' }}</small></span>
+            <span class="c-hero-lbl">×<br><small>{{ isRange ? `${locale === 'en' ? 'min' : '最低'} ${minOdds.toFixed(2)}` : (locale === 'en' ? '(per 1 stake)' : '（1 倍回报）') }}</small></span>
           </div>
           <div class="c-money">
-            <label>倍数 <input type="number" min="1" v-model.number="multiplier" /></label>
-            <div class="c-line"><span>投入（{{ betCount }}注×{{ mult }}倍）</span><b class="mono">{{ stake }} 元</b></div>
-            <div class="c-line hl"><span>最高可中</span><b class="mono">{{ maxPrize.toFixed(2) }} 元</b></div>
+            <label>{{ t('odds.multiplier') }} <input type="number" min="1" v-model.number="multiplier" /></label>
+            <div class="c-line"><span>{{ t('odds.stake') }}</span><b class="mono">{{ stake }} {{ locale === 'en' ? '¥' : '元' }}</b></div>
+            <div class="c-line hl"><span>{{ t('odds.maxWin') }}</span><b class="mono">{{ maxPrize.toFixed(2) }} {{ locale === 'en' ? '¥' : '元' }}</b></div>
           </div>
         </div>
       </div>

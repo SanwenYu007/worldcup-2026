@@ -1,10 +1,12 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import { groupStandings } from '../composables/useStats'
 
 const props = defineProps({ group: { type: String, required: true } })
 const store = useDataStore()
+const { t } = useI18n()
 
 const rows = computed(() =>
   groupStandings(props.group, store.groups[props.group], store.matches)
@@ -13,10 +15,10 @@ const rows = computed(() =>
 
 <template>
   <div class="standings card">
-    <div class="head">{{ group }} 组</div>
+    <div class="head">{{ group }} {{ t('common.group') }}</div>
     <table>
       <thead>
-        <tr><th>#</th><th class="l">球队</th><th>赛</th><th>胜</th><th>平</th><th>负</th><th>净</th><th>分</th></tr>
+        <tr><th>{{ t('standings.rank') }}</th><th class="l">{{ t('standings.team') }}</th><th>{{ t('standings.played') }}</th><th>{{ t('standings.win') }}</th><th>{{ t('standings.draw') }}</th><th>{{ t('standings.loss') }}</th><th>{{ t('standings.gd') }}</th><th>{{ t('standings.pts') }}</th></tr>
       </thead>
       <tbody>
         <tr v-for="(r, i) in rows" :key="r.team.code" :class="{ qualify: i < 2 }">

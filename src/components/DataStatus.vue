@@ -1,22 +1,24 @@
 <script setup>
 // 数据可信度标识：展示赛程/赔率/AI预测各自的来源与更新时间，让用户清楚数据是否新鲜、是真实还是示例。
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const store = useDataStore()
-const fmt = (d) => (d ? new Date(d).toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }) : '—')
+const { t, locale } = useI18n()
+const fmt = (d) => (d ? new Date(d).toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }) : '—')
 
 const items = computed(() => [
   {
-    label: '赛程比分', time: store.meta?.fetchedAt,
-    tag: store.source === 'live' ? '真实数据' : '示例数据', live: store.source === 'live'
+    label: t('dataStatus.schedule'), time: store.meta?.fetchedAt,
+    tag: store.source === 'live' ? t('common.realData') : t('common.sample'), live: store.source === 'live'
   },
   {
-    label: '体彩赔率', time: store.oddsFeed?.fetchedAt,
-    tag: store.oddsSource === 'sporttery' ? '体彩实时' : '模型赔率', live: store.oddsSource === 'sporttery'
+    label: t('dataStatus.odds'), time: store.oddsFeed?.fetchedAt,
+    tag: store.oddsSource === 'sporttery' ? t('dataStatus.sportteryLive') : t('dataStatus.modelOdds'), live: store.oddsSource === 'sporttery'
   },
   {
-    label: 'AI 预测', time: store.predictions?.generatedAt,
+    label: t('dataStatus.predictions'), time: store.predictions?.generatedAt,
     tag: store.predictions?.modelLabel || '—',
     live: !!store.predictions?.generatedAt && store.predictions?.model !== 'seed'
   }
@@ -29,7 +31,7 @@ const items = computed(() => [
       <span class="ds-dot" :class="{ on: it.live }"></span>
       <div class="ds-text">
         <div class="ds-top"><b>{{ it.label }}</b><span class="ds-tag" :class="{ live: it.live }">{{ it.tag }}</span></div>
-        <div class="ds-time">更新于 {{ fmt(it.time) }}</div>
+        <div class="ds-time">{{ t('common.updatedAt') }} {{ fmt(it.time) }}</div>
       </div>
     </div>
   </div>

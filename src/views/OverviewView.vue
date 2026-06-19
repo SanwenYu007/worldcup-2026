@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import { keyNumbers } from '../composables/useStats'
 import StatCard from '../components/StatCard.vue'
@@ -10,14 +11,15 @@ import StrengthScatter from '../components/charts/StrengthScatter.vue'
 import GoalTimeline from '../components/charts/GoalTimeline.vue'
 
 const store = useDataStore()
+const { t } = useI18n()
 
 const stages = [
-  { key: 'group', name: '小组赛', start: '2026-06-11' },
-  { key: 'r32', name: '32 强', start: '2026-06-28' },
-  { key: 'r16', name: '16 强', start: '2026-07-04' },
-  { key: 'qf', name: '1/4', start: '2026-07-09' },
-  { key: 'sf', name: '半决赛', start: '2026-07-14' },
-  { key: 'final', name: '决赛', start: '2026-07-19' }
+  { key: 'group', start: '2026-06-11' },
+  { key: 'r32', start: '2026-06-28' },
+  { key: 'r16', start: '2026-07-04' },
+  { key: 'qf', start: '2026-07-09' },
+  { key: 'sf', start: '2026-07-14' },
+  { key: 'final', start: '2026-07-19' }
 ]
 const currentStageIdx = computed(() => {
   const now = store.now.getTime()
@@ -49,13 +51,13 @@ const biggest = computed(() => kn.value.biggest)
   <!-- Hero -->
   <section class="hero card">
     <div class="hero-main">
-      <div class="badge live" style="margin-bottom:12px">小组赛进行中</div>
+      <div class="badge live" style="margin-bottom:12px">{{ t('overview.groupStage') }}</div>
       <h1>2026 FIFA 世界杯</h1>
-      <p class="muted">{{ store.meta.host }} · {{ store.meta.teamCount }} 支球队 · {{ store.meta.totalMatches }} 场比赛</p>
+      <p class="muted">{{ t('overview.host') }} · {{ store.meta.teamCount }}{{ t('overview.teamsCount') }} · {{ store.meta.totalMatches }}{{ t('overview.matchesCount') }}</p>
       <div class="progress">
         <div v-for="(s, i) in stages" :key="s.key" class="stage" :class="{ done: i < currentStageIdx, active: i === currentStageIdx }">
           <span class="dot" />
-          <span class="stage-name">{{ s.name }}</span>
+          <span class="stage-name">{{ t('overview.stages.' + s.key) }}</span>
         </div>
       </div>
     </div>
@@ -66,16 +68,16 @@ const biggest = computed(() => kn.value.biggest)
 
   <!-- 关键数字 -->
   <div class="grid stats-grid">
-    <StatCard icon="⚽" :value="kn.totalGoals" label="总进球数" :sub="`已赛 ${kn.playedCount} 场`" />
-    <StatCard icon="📊" :value="kn.avgGoals" label="场均进球" accent="var(--accent)" />
-    <StatCard icon="🤝" :value="kn.draws" label="平局场次" accent="#5b8def" />
+    <StatCard icon="⚽" :value="kn.totalGoals" :label="t('overview.totalGoals')" :sub="`${t('overview.played')} ${kn.playedCount}`" />
+    <StatCard icon="📊" :value="kn.avgGoals" :label="t('overview.avgGoals')" accent="var(--accent)" />
+    <StatCard icon="🤝" :value="kn.draws" :label="t('overview.draws')" accent="#5b8def" />
     <StatCard icon="💥" :value="biggest ? `${biggest.homeGoals}:${biggest.awayGoals}` : '-'"
-      label="最大分差" :sub="biggest ? `${store.getTeam(biggest.home)?.name} vs ${store.getTeam(biggest.away)?.name}` : ''" accent="var(--danger)" />
+      :label="t('overview.biggestWin')" :sub="biggest ? `${store.getTeam(biggest.home)?.name} vs ${store.getTeam(biggest.away)?.name}` : ''" accent="var(--danger)" />
   </div>
 
   <!-- 焦点比赛 -->
-  <div class="section-title">焦点比赛
-    <RouterLink to="/schedule" class="more">全部赛程 →</RouterLink>
+  <div class="section-title">{{ t('overview.spotlight') }}
+    <RouterLink to="/schedule" class="more">{{ t('overview.allSchedule') }}</RouterLink>
   </div>
   <div class="grid match-grid">
     <MatchCard v-for="m in spotlightMatches" :key="m.id" :match="m" />
@@ -84,15 +86,15 @@ const biggest = computed(() => kn.value.biggest)
   <!-- 图表概览 -->
   <div class="grid two-col">
     <div>
-      <div class="section-title">球队实力分布
-        <RouterLink to="/stats" class="more">详情 →</RouterLink>
+      <div class="section-title">{{ t('overview.strengthDist') }}
+        <RouterLink to="/stats" class="more">{{ t('overview.detail') }}</RouterLink>
       </div>
       <div class="card pad"><StrengthScatter /></div>
     </div>
     <div>
-      <div class="section-title">进球时段分布</div>
+      <div class="section-title">{{ t('overview.goalTiming') }}</div>
       <div class="card pad"><GoalTimeline /></div>
-      <div class="section-title">最新战报</div>
+      <div class="section-title">{{ t('overview.latest') }}</div>
       <div class="grid recent">
         <MatchCard v-for="m in recentResults" :key="m.id" :match="m" />
       </div>
