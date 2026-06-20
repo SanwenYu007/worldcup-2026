@@ -36,10 +36,20 @@ const age = (dob) => {
   return Math.floor((Date.now() - d.getTime()) / (365.25 * 86400000))
 }
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 async function api(path) {
-  const res = await fetch(`${BASE}${path}`, { headers: { 'X-Auth-Token': TOKEN } })
-  if (!res.ok) throw new Error(`${path} → HTTP ${res.status}`)
-  return res.json()
+  // football-data 免费版限流 10 次/分；update.sh 中紧接 fetch-data 调用易触发 429，做指数退避重试。
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const res = await fetch(`${BASE}${path}`, { headers: { 'X-Auth-Token': TOKEN } })
+    if (res.ok) return res.json()
+    if (res.status === 429 && attempt < 3) {
+      const wait = 15000 * (attempt + 1)
+      console.log(`  [429] 触发限流，${wait / 1000}s 后重试…`)
+      await sleep(wait)
+      continue
+    }
+    throw new Error(`${path} → HTTP ${res.status}`)
+  }
 }
 
 async function main() {
