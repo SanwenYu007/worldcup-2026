@@ -9,7 +9,7 @@ import Bracket from '../components/Bracket.vue'
 const store = useDataStore()
 const { t } = useI18n()
 const tab = ref('group') // 'group' | 'knockout'
-const activeGroup = ref('A')
+const activeGroup = ref('ALL') // 'ALL' = 全部小组一览 | 'A'..'L' = 单组详情
 const groupKeys = 'ABCDEFGHIJKL'.split('')
 const query = ref('') // 球队搜索
 const filterMode = ref('all') // all | upcoming | today
@@ -43,6 +43,7 @@ const groupMatchList = computed(() => {
 
   <template v-if="tab === 'group'">
     <div class="group-pills" v-show="!query">
+      <button class="all-pill" :class="{ on: activeGroup === 'ALL' }" @click="activeGroup = 'ALL'">{{ t('schedule.allGroups') }}</button>
       <button v-for="g in groupKeys" :key="g" :class="{ on: activeGroup === g }" @click="activeGroup = g">{{ g }}</button>
       <span class="odds-src" :class="store.oddsSource">
         {{ store.oddsSource === 'sporttery' ? t('schedule.sportteryOdds') : t('schedule.modelOdds') }}
@@ -51,12 +52,23 @@ const groupMatchList = computed(() => {
 
     <div class="filters">
       <input class="search" v-model="query" :placeholder="t('schedule.searchTeam')" />
-      <button :class="{ on: filterMode === 'all' }" @click="filterMode = 'all'">{{ t('common.all') }}</button>
-      <button :class="{ on: filterMode === 'upcoming' }" @click="filterMode = 'upcoming'">{{ t('common.upcoming') }}</button>
-      <button :class="{ on: filterMode === 'today' }" @click="filterMode = 'today'">{{ t('common.today') }}</button>
+      <template v-if="!(activeGroup === 'ALL' && !query)">
+        <button :class="{ on: filterMode === 'all' }" @click="filterMode = 'all'">{{ t('common.all') }}</button>
+        <button :class="{ on: filterMode === 'upcoming' }" @click="filterMode = 'upcoming'">{{ t('common.upcoming') }}</button>
+        <button :class="{ on: filterMode === 'today' }" @click="filterMode = 'today'">{{ t('common.today') }}</button>
+      </template>
     </div>
 
-    <div class="grid layout" :class="{ single: query }">
+    <!-- 全部小组一览：12 个小组积分榜同屏 -->
+    <template v-if="activeGroup === 'ALL' && !query">
+      <p class="all-hint muted">{{ t('schedule.allGroupsHint') }}</p>
+      <div class="grid all-groups">
+        <GroupStandings v-for="g in groupKeys" :key="g" :group="g" class="ag-card" @click="activeGroup = g" />
+      </div>
+    </template>
+
+    <!-- 单组详情 / 搜索结果：积分榜 + 赔率赛程 -->
+    <div v-else class="grid layout" :class="{ single: query }">
       <GroupStandings v-if="!query" :group="activeGroup" />
       <div>
         <div class="section-title" style="margin-top:0">{{ query ? `“${query}”` : activeGroup + ' ' + t('common.group') }} · {{ t('schedule.oddsTitle') }}</div>
@@ -88,6 +100,13 @@ const groupMatchList = computed(() => {
   background: var(--card); color: var(--text-dim); font-weight: 700; transition: all 0.15s;
 }
 .group-pills button.on { background: var(--accent); color: #2a1d00; border-color: transparent; }
+.group-pills .all-pill { width: auto; padding: 0 14px; font-size: 0.84rem; }
+.all-hint { font-size: 0.82rem; margin: -6px 0 14px; }
+.all-groups { grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: start; }
+.all-groups .ag-card { cursor: pointer; transition: border-color 0.15s, transform 0.1s; }
+.all-groups .ag-card:hover { border-color: var(--primary-dim); transform: translateY(-2px); }
+@media (max-width: 900px) { .all-groups { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .all-groups { grid-template-columns: 1fr; } }
 .odds-src { margin-left: auto; align-self: center; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-mute); }
 .odds-src.sporttery { color: var(--primary); border-color: var(--primary-dim); }
 .page-title { font-size: 1.4rem; font-weight: 800; margin: 24px 0 14px; }

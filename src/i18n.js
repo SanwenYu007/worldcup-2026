@@ -18,7 +18,8 @@ const messages = {
       stages: { group: '小组赛', r32: '32 强', r16: '16 强', qf: '1/4', sf: '半决赛', final: '决赛' }
     },
     dataStatus: { schedule: '赛程比分', odds: '体彩赔率', predictions: 'AI 预测', sportteryLive: '体彩实时', modelOdds: '模型赔率' },
-    schedule: { title: '完整赛程 · 胜平负赔率与积分榜', groupTab: '小组赛', knockoutTab: '淘汰赛', searchTeam: '搜索球队（跨小组）…', oddsTitle: '胜平负赔率', bracketTitle: '淘汰赛对阵树', sportteryOdds: '体彩实时赔率', modelOdds: '模型赔率', oddsClosed: '赛后赔率已截止' },
+    schedule: { title: '完整赛程 · 胜平负赔率与积分榜', groupTab: '小组赛', knockoutTab: '淘汰赛', searchTeam: '搜索球队（跨小组）…', oddsTitle: '胜平负赔率', bracketTitle: '淘汰赛对阵树', sportteryOdds: '体彩实时赔率', modelOdds: '模型赔率', oddsClosed: '赛后赔率已截止', allGroups: '全部小组', allGroupsHint: '一览 12 个小组积分与得分（点小组查看赛程赔率）' },
+    teamTip: { groupGames: '小组赛战绩', tbd: '待赛', record: '战绩' },
     standings: { rank: '#', team: '球队', played: '赛', win: '胜', draw: '平', loss: '负', gd: '净', pts: '分' },
     teams: {
       title: '参赛球队 · 阵容名单', lead: '48 支参赛队的徽标、26 人大名单与球员信息。点击球队查看详情。', updatedAt: '资料更新于',
@@ -37,7 +38,9 @@ const messages = {
       disclaimer: '⚠️ 以上由赔率计算得出，仅供娱乐参考，不构成投注建议，请理性对待。',
       singleTitle: '单场推荐（按隐含胜率排序）', recommend: '推荐', winProb: '隐含胜率', odd: '赔率',
       safeTitle: '稳健串关方案', combinedOdds: '综合赔率', hitRate: '全中概率', return1x: '1 倍投入回报', legs: '场', noData: '暂无可分析的实时赔率，请稍后再看。',
-      pick: '推荐', expReturn: '期望回报'
+      pick: '推荐', expReturn: '期望回报',
+      safeSub: '隐含胜率高、爆冷概率低', upsetTitle: '冷门预警', upsetSub: '爆冷概率高的场次，串关建议规避、可小注博冷门',
+      upsetProb: '爆冷概率', upsetSide: '冷门方向', payout: '博冷回报', riskTag: '冷门风险', valueTitle: '以小博大（高赔潜力）', valueSub: '隐含概率不低但赔率偏高，性价比之选'
     },
     footer: { subtitle: '作品集演示 · Vue 3 + ECharts' }
   },
@@ -57,7 +60,8 @@ const messages = {
       stages: { group: 'Groups', r32: 'R32', r16: 'R16', qf: 'QF', sf: 'SF', final: 'Final' }
     },
     dataStatus: { schedule: 'Schedule & scores', odds: 'Lottery odds', predictions: 'AI predictions', sportteryLive: 'Sporttery live', modelOdds: 'Model odds' },
-    schedule: { title: 'Full Schedule · Odds & Standings', groupTab: 'Groups', knockoutTab: 'Knockout', searchTeam: 'Search team (all groups)…', oddsTitle: 'Match Odds', bracketTitle: 'Knockout Bracket', sportteryOdds: 'Sporttery live odds', modelOdds: 'Model odds', oddsClosed: 'Odds closed' },
+    schedule: { title: 'Full Schedule · Odds & Standings', groupTab: 'Groups', knockoutTab: 'Knockout', searchTeam: 'Search team (all groups)…', oddsTitle: 'Match Odds', bracketTitle: 'Knockout Bracket', sportteryOdds: 'Sporttery live odds', modelOdds: 'Model odds', oddsClosed: 'Odds closed', allGroups: 'All groups', allGroupsHint: 'All 12 groups at a glance (click a group for fixtures & odds)' },
+    teamTip: { groupGames: 'Group record', tbd: 'Upcoming', record: 'Record' },
     standings: { rank: '#', team: 'Team', played: 'P', win: 'W', draw: 'D', loss: 'L', gd: 'GD', pts: 'Pts' },
     teams: {
       title: 'Teams · Squads', lead: 'Crests, 26-man squads and player info for all 48 teams. Tap a team for details.', updatedAt: 'Updated',
@@ -75,7 +79,9 @@ const messages = {
       disclaimer: '⚠️ Derived from odds, for entertainment only — not betting advice. Please be responsible.',
       singleTitle: 'Single picks (by implied win rate)', recommend: 'Pick', winProb: 'Implied win', odd: 'Odd',
       safeTitle: 'Safe parlay combos', combinedOdds: 'Combined odds', hitRate: 'Hit rate', return1x: 'Return per 1 stake', legs: 'legs', noData: 'No live odds to analyze yet, check back later.',
-      pick: 'Pick', expReturn: 'Expected return'
+      pick: 'Pick', expReturn: 'Expected return',
+      safeSub: 'High implied win rate, low upset risk', upsetTitle: 'Upset alerts', upsetSub: 'High surprise risk — avoid in parlays, or stake small on the underdog',
+      upsetProb: 'Upset chance', upsetSide: 'Upset side', payout: 'Upset payout', riskTag: 'Upset risk', valueTitle: 'Value longshots', valueSub: 'Decent implied odds but high payout — best value'
     },
     footer: { subtitle: 'Portfolio demo · Vue 3 + ECharts' }
   }

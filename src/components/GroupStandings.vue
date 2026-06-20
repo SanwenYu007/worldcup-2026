@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import { groupStandings } from '../composables/useStats'
+import TeamTip from './TeamTip.vue'
 
 const props = defineProps({ group: { type: String, required: true } })
 const store = useDataStore()
@@ -23,7 +24,7 @@ const rows = computed(() =>
       <tbody>
         <tr v-for="(r, i) in rows" :key="r.team.code" :class="{ qualify: i < 2 }">
           <td>{{ i + 1 }}</td>
-          <td class="l"><span class="flag">{{ r.team.flag }}</span>{{ r.team.name }}</td>
+          <td class="l"><TeamTip :code="r.team.code" /></td>
           <td>{{ r.played }}</td>
           <td>{{ r.win }}</td>
           <td>{{ r.draw }}</td>
