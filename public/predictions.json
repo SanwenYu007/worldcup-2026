@@ -1,54 +1,9 @@
 {
   "model": "gpt-5.5",
   "modelLabel": "ChatGPT (gpt-5.5)",
-  "generatedAt": "2026-06-19T19:43:58.981Z",
+  "generatedAt": "2026-06-20T08:48:50.429Z",
   "horizonDays": 2,
   "predictions": [
-    {
-      "matchId": "537342",
-      "home": "SCO",
-      "away": "MAR",
-      "homeName": "苏格兰",
-      "awayName": "摩洛哥",
-      "date": "2026-06-19T22:00:00Z",
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "outcome": "away",
-      "confidence": 0.58,
-      "reasoning": "摩洛哥实力值高于苏格兰，且近期逼平巴西体现出较强对抗能力。苏格兰虽取胜但进攻输出有限，预计摩洛哥小胜。"
-    },
-    {
-      "matchId": "537341",
-      "home": "BRA",
-      "away": "HAI",
-      "homeName": "巴西",
-      "awayName": "海地",
-      "date": "2026-06-20T00:30:00Z",
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "outcome": "home",
-      "confidence": 0.86,
-      "reasoning": "巴西实力明显高出海地，整体攻防质量差距很大。海地上一场不敌苏格兰，面对更强对手很难守住。"
-    },
-    {
-      "matchId": "537347",
-      "home": "TUR",
-      "away": "PAR",
-      "homeName": "土耳其",
-      "awayName": "巴拉圭",
-      "date": "2026-06-20T03:00:00Z",
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "outcome": "home",
-      "confidence": 0.54,
-      "reasoning": "土耳其实力略高于巴拉圭，双方近期都遭遇失利但巴拉圭防线失球更多。主队有望凭借整体优势险胜。"
-    },
     {
       "matchId": "537359",
       "home": "NED",
@@ -61,8 +16,8 @@
         "away": 1
       },
       "outcome": "home",
-      "confidence": 0.68,
-      "reasoning": "荷兰实力明显强于瑞典，尽管瑞典近期大胜，但对手强度有限。荷兰进攻稳定，预计主场优势下取胜。"
+      "confidence": 0.67,
+      "reasoning": "荷兰实力值明显高于瑞典，且面对日本仍能打入2球，主场优势较大。瑞典上轮大胜提升信心，但整体强度差距下更可能小负。"
     },
     {
       "matchId": "537353",
@@ -76,8 +31,8 @@
         "away": 0
       },
       "outcome": "home",
-      "confidence": 0.84,
-      "reasoning": "德国实力远高于科特迪瓦，上一场7-1大胜显示出极强火力。科特迪瓦虽有胜绩，但面对德国压力会明显提升。"
+      "confidence": 0.78,
+      "reasoning": "德国实力值大幅领先，且上轮7-1展现出极强进攻状态。科特迪瓦虽赢球但进攻产出有限，面对德国防线压力较大。"
     },
     {
       "matchId": "537354",
@@ -91,8 +46,8 @@
         "away": 0
       },
       "outcome": "home",
-      "confidence": 0.72,
-      "reasoning": "厄瓜多尔实力高于库拉索，且库拉索上一场大比分失利暴露防守问题。厄瓜多尔有望控制比赛并零封取胜。"
+      "confidence": 0.7,
+      "reasoning": "厄瓜多尔实力高于库拉索，且库拉索上轮1-7惨败暴露防守问题。厄瓜多尔需要反弹，主场更有机会控制比赛。"
     },
     {
       "matchId": "537360",
@@ -106,8 +61,8 @@
         "away": 3
       },
       "outcome": "away",
-      "confidence": 0.76,
-      "reasoning": "日本实力显著强于突尼斯，上一场能与荷兰战平说明竞争力较强。突尼斯刚遭遇大败，防线状态不佳。"
+      "confidence": 0.74,
+      "reasoning": "日本实力值显著高于突尼斯，并且上轮能与荷兰2-2战平，攻防韧性较好。突尼斯刚遭大败，防线稳定性不足。"
     },
     {
       "matchId": "537371",
@@ -117,12 +72,12 @@
       "awayName": "沙特",
       "date": "2026-06-21T16:00:00Z",
       "score": {
-        "home": 3,
+        "home": 2,
         "away": 0
       },
       "outcome": "home",
-      "confidence": 0.87,
-      "reasoning": "西班牙实力远高于沙特，尽管上一场被逼平，但整体控球和创造机会能力仍占优。沙特防守压力巨大，爆冷难度较高。"
+      "confidence": 0.79,
+      "reasoning": "西班牙实力优势巨大，虽然上轮被零封，但整体控球和创造机会能力仍明显强于沙特。沙特防守有韧性，但客场抗压难度较高。"
     },
     {
       "matchId": "537365",
@@ -133,11 +88,41 @@
       "date": "2026-06-21T19:00:00Z",
       "score": {
         "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "confidence": 0.68,
+      "reasoning": "比利时实力值高于伊朗，主场进攻配置更具优势。伊朗上轮丢2球显示防守并非稳固，但其进攻能力足以制造一定威胁。"
+    },
+    {
+      "matchId": "537372",
+      "home": "URU",
+      "away": "CPV",
+      "homeName": "乌拉圭",
+      "awayName": "佛得角",
+      "date": "2026-06-21T22:00:00Z",
+      "score": {
+        "home": 1,
         "away": 0
       },
       "outcome": "home",
-      "confidence": 0.75,
-      "reasoning": "比利时实力明显高于伊朗，近期虽只收获平局但整体阵容质量更强。伊朗防守稳定性一般，预计比利时掌握主动并取胜。"
+      "confidence": 0.63,
+      "reasoning": "乌拉圭实力领先佛得角，且主场具备更强身体对抗和比赛掌控力。佛得角上轮逼平西班牙说明防守不错，因此比分可能偏小。"
+    },
+    {
+      "matchId": "537366",
+      "home": "NZL",
+      "away": "EGY",
+      "homeName": "新西兰",
+      "awayName": "埃及",
+      "date": "2026-06-22T01:00:00Z",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "outcome": "away",
+      "confidence": 0.58,
+      "reasoning": "埃及实力值略高于新西兰，上轮战平比利时体现出不错的防守和抗衡能力。新西兰进攻有亮点，但整体稳定性稍逊。"
     }
   ]
 }
