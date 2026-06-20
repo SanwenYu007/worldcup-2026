@@ -24,9 +24,12 @@ const rows = computed(() => {
         outcomeHit: actualOutcome === p.outcome
       }
     }
-    return { p, match, result }
+    const lineup = match ? store.getLineup(match) : (store.lineups?.lineups || []).find((l) => l.matchId === p.matchId)
+    return { p, match, result, lineup }
   })
 })
+
+const noteOf = (l) => (l?.note ? (l.note[locale.value] || l.note.zh || l.note.en || '') : '')
 
 const lc = () => (locale.value === 'en' ? 'en-GB' : 'zh-CN')
 const fmtDate = (d) => new Date(d).toLocaleString(lc(), { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
@@ -84,6 +87,21 @@ const accuracy = computed(() => {
         </div>
         <div class="conf-bar"><span :style="{ width: r.p.confidence * 100 + '%' }" /></div>
         <p class="reason muted">{{ r.p.reasoning }}</p>
+
+        <details v-if="r.lineup" class="lineup">
+          <summary>{{ t('teams.lineupTitle') }}<span class="fmt" v-if="r.lineup.homeFormation"> · {{ r.lineup.homeFormation }} / {{ r.lineup.awayFormation }}</span></summary>
+          <div class="xi-grid">
+            <div class="xi">
+              <div class="xi-tm">{{ locale === 'en' ? (r.p.home || r.p.homeName) : r.p.homeName }}</div>
+              <ol><li v-for="(n, i) in r.lineup.homeXI" :key="'h'+i">{{ n }}</li></ol>
+            </div>
+            <div class="xi">
+              <div class="xi-tm">{{ locale === 'en' ? (r.p.away || r.p.awayName) : r.p.awayName }}</div>
+              <ol><li v-for="(n, i) in r.lineup.awayXI" :key="'a'+i">{{ n }}</li></ol>
+            </div>
+          </div>
+          <p class="xi-note muted" v-if="noteOf(r.lineup)">{{ noteOf(r.lineup) }}</p>
+        </details>
       </div>
     </div>
   </div>
@@ -117,5 +135,14 @@ const accuracy = computed(() => {
 .conf-bar { height: 5px; background: var(--bg-soft); border-radius: 4px; overflow: hidden; margin-bottom: 10px; }
 .conf-bar span { display: block; height: 100%; background: linear-gradient(90deg, #5b8def, #2dd4a7); }
 .reason { font-size: 0.8rem; line-height: 1.5; }
+.lineup { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 8px; }
+.lineup summary { cursor: pointer; font-size: 0.8rem; font-weight: 600; color: var(--text-dim); }
+.lineup summary:hover { color: var(--text); }
+.lineup .fmt { color: var(--text-mute); font-weight: 400; }
+.xi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+.xi-tm { font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+.xi ol { margin: 0; padding-left: 1.3em; }
+.xi li { font-size: 0.76rem; line-height: 1.55; color: var(--text-dim); }
+.xi-note { font-size: 0.76rem; margin-top: 8px; line-height: 1.5; }
 @media (max-width: 760px) { .list { grid-template-columns: 1fr; } }
 </style>

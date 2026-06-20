@@ -43,6 +43,36 @@ export const useDataStore = defineStore('data', () => {
     await tryLoadPredictions()
     // 加载球队资料与名单（来自 public/teams.json）
     await tryLoadTeams()
+    // 加载首发阵容预测（来自 public/lineups.json）
+    await tryLoadLineups()
+  }
+
+  // 加载首发阵容预测。
+  const lineups = ref(null)
+  async function tryLoadLineups() {
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}lineups.json`, { cache: 'no-cache' })
+      if (res.ok) lineups.value = await res.json()
+    } catch {
+      lineups.value = null
+    }
+  }
+  // 按 matchId 或队名匹配首发阵容。
+  const lineupMap = computed(() => {
+    const map = new Map()
+    if (!lineups.value?.lineups) return map
+    const norm = (s) => (s || '').replace(/\s/g, '')
+    lineups.value.lineups.forEach((l) => {
+      if (l.matchId) map.set(`id:${l.matchId}`, l)
+      map.set(`nm:${norm(l.homeName)}__${norm(l.awayName)}`, l)
+    })
+    return map
+  })
+  function getLineup(match) {
+    const map = lineupMap.value
+    if (map.has(`id:${match.id}`)) return map.get(`id:${match.id}`)
+    const norm = (s) => (s || '').replace(/\s/g, '')
+    return map.get(`nm:${norm(getTeam(match.home)?.name)}__${norm(getTeam(match.away)?.name)}`) || null
   }
 
   // 加载球队资料 + 大名单。
@@ -142,7 +172,7 @@ export const useDataStore = defineStore('data', () => {
 
   return {
     teams, matches, groups, meta, now, source, loading, oddsSource, oddsFeed,
-    predictions, teamsFull, finishedMatches, liveMatches, groupMatches, knockoutMatches,
-    getTeam, tryLoadLive, getPrediction, shouldShowOdds
+    predictions, teamsFull, lineups, finishedMatches, liveMatches, groupMatches, knockoutMatches,
+    getTeam, tryLoadLive, getPrediction, getLineup, shouldShowOdds
   }
 })

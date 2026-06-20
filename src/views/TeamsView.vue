@@ -72,7 +72,7 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
               <div class="p-name">{{ p.name }}</div>
               <div class="p-meta muted">{{ g.label }}<template v-if="p.age"> · {{ p.age }}{{ t('teams.age') }}</template></div>
               <div class="p-nat muted">{{ p.nationality }}</div>
-              <div v-if="p.bio" class="p-bio"><span class="bio-tag">{{ t('teams.aiBio') }}</span>{{ p.bio }}</div>
+              <div v-if="p.bio && (p.bio[locale] || p.bio.zh)" class="p-bio"><span class="bio-tag">{{ t('teams.aiBio') }}</span>{{ p.bio[locale] || p.bio.zh || p.bio.en }}</div>
             </div>
           </div>
         </div>

@@ -55,12 +55,24 @@ async function main() {
     })
   } catch { /* 无 live.json 则不带分组 */ }
 
+  // 读取旧 teams.json，保留已生成的球员简介(bio)/照片(photo)，避免每次重写后被 enrich-players 重复调用。
+  const prevBio = new Map() // key: `${code}::${name}` → { bio, photo }
+  try {
+    const prev = JSON.parse(await readFile(OUT, 'utf8'))
+    ;(prev.teams || []).forEach((tm) => {
+      ;(tm.squad || []).forEach((p) => {
+        if (p.bio || p.photo) prevBio.set(`${tm.code}::${p.name}`, { bio: p.bio, photo: p.photo })
+      })
+    })
+  } catch { /* 无旧文件则跳过 */ }
+
   console.log('→ 拉取 2026 世界杯参赛队与名单…')
   const data = await api('/competitions/WC/teams')
   const teams = (data.teams || []).map((t) => {
     const code = t.tla
     const squad = (t.squad || []).map((p) => {
       const c = posCategory(p.position)
+      const kept = prevBio.get(`${code}::${p.name}`)
       return {
         name: p.name,
         position: p.position || '',
@@ -68,7 +80,8 @@ async function main() {
         age: age(p.dateOfBirth),
         dob: p.dateOfBirth || null,
         nationality: p.nationality || '',
-        photo: null // 预留：后续由照片 API 填充
+        photo: kept?.photo || null, // 预留：后续由照片 API 填充
+        ...(kept?.bio ? { bio: kept.bio } : {}) // 保留已生成的 AI 简介
       }
     }).sort((a, b) => a.posOrder - b.posOrder)
     return {
