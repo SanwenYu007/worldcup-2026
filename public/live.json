@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-20T13:51:22.385Z"
+    "fetchedAt": "2026-06-20T19:18:08.995Z"
   },
   "teams": [
     {
@@ -3586,9 +3586,9 @@
       "away": "SWE",
       "homeName": "Netherlands",
       "awayName": "Sweden",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 5,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
