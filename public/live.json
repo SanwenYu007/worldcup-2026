@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-20T19:18:08.995Z"
+    "fetchedAt": "2026-06-21T03:37:39.112Z"
   },
   "teams": [
     {
@@ -267,8 +267,8 @@
       "group": "H"
     },
     {
-      "id": "URY",
-      "code": "URY",
+      "id": "URU",
+      "code": "URU",
       "name": "乌拉圭",
       "flag": "🇺🇾",
       "rating": 1820,
@@ -1819,7 +1819,7 @@
       "matchday": 1,
       "date": "2026-06-15T22:00:00Z",
       "home": "KSA",
-      "away": "URY",
+      "away": "URU",
       "homeName": "Saudi Arabia",
       "awayName": "Uruguay",
       "status": "finished",
@@ -3684,9 +3684,9 @@
       "away": "CIV",
       "homeName": "Germany",
       "awayName": "Ivory Coast",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -3782,9 +3782,9 @@
       "away": "CUW",
       "homeName": "Ecuador",
       "awayName": "Curaçao",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 0,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -4170,7 +4170,7 @@
       "group": "H",
       "matchday": 2,
       "date": "2026-06-21T22:00:00Z",
-      "home": "URY",
+      "home": "URU",
       "away": "CPV",
       "homeName": "Uruguay",
       "awayName": "Cape Verde Islands",
@@ -6522,7 +6522,7 @@
       "group": "H",
       "matchday": 3,
       "date": "2026-06-27T00:00:00Z",
-      "home": "URY",
+      "home": "URU",
       "away": "ESP",
       "homeName": "Uruguay",
       "awayName": "Spain",
