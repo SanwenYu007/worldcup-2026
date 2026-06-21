@@ -4,6 +4,7 @@ import { RouterView, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useDataStore } from './stores/data'
 import { setLocale } from './i18n'
+import { theme, toggleTheme } from './theme'
 
 const store = useDataStore()
 const { t, locale } = useI18n()
@@ -40,7 +41,8 @@ onUnmounted(() => store.stopAutoRefresh())
         <RouterLink to="/stats" active-class="active">{{ t('nav.stats') }}</RouterLink>
         <RouterLink to="/feedback" active-class="active">{{ t('nav.feedback') }}</RouterLink>
       </nav>
-      <button class="lang-btn" @click="toggleLang">{{ locale === 'zh' ? 'EN' : '中' }}</button>
+      <button class="icon-btn theme-btn" @click="toggleTheme" :aria-label="theme === 'dark' ? '切换到浅色主题' : '切换到深色主题'" :title="theme === 'dark' ? '浅色' : '深色'">{{ theme === 'dark' ? '☀' : '☾' }}</button>
+      <button class="lang-btn" @click="toggleLang" :aria-label="locale === 'zh' ? 'Switch to English' : '切换到中文'">{{ locale === 'zh' ? 'EN' : '中' }}</button>
       <span class="src-tag" :class="store.source" :title="updatedAt ? t('common.updatedAt') + ' ' + updatedAt : ''">
         <span v-if="store.liveMatches.length" class="live-dot" />
         {{ store.source === 'live' ? t('common.live') : t('common.sample') }}
@@ -64,7 +66,7 @@ onUnmounted(() => store.stopAutoRefresh())
 .topbar {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(11, 16, 32, 0.78);
+  background: var(--topbar-bg);
   border-bottom: 1px solid var(--border);
 }
 .bar-inner { display: flex; align-items: center; gap: 18px; height: 60px; }
@@ -79,11 +81,12 @@ onUnmounted(() => store.stopAutoRefresh())
 }
 .nav a:hover { color: var(--text); background: var(--card); }
 .nav a.active { color: #06231b; background: var(--primary); }
-.lang-btn {
-  margin-left: auto; flex-shrink: 0; font-size: 0.78rem; font-weight: 700; width: 34px; height: 30px;
+.lang-btn, .icon-btn {
+  flex-shrink: 0; font-size: 0.78rem; font-weight: 700; width: 34px; height: 30px;
   border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text-dim);
 }
-.lang-btn:hover { color: var(--text); border-color: var(--primary-dim); }
+.theme-btn { margin-left: auto; font-size: 1rem; line-height: 1; }
+.lang-btn:hover, .icon-btn:hover { color: var(--text); border-color: var(--primary-dim); }
 .src-tag {
   display: inline-flex; align-items: center; gap: 5px;
   font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;

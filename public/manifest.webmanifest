@@ -1,0 +1,19 @@
+{
+  "name": "2026 世界杯 · 赛程 · AI 预测",
+  "short_name": "2026 World Cup",
+  "description": "2026 FIFA 世界杯赛程比分、积分榜、出线形势、AI 预测与夺冠推演、实时赔率与投注策略。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b1020'/><text x='50' y='50' font-size='62' text-anchor='middle' dominant-baseline='central'>⚽</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

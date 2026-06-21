@@ -21,6 +21,19 @@ const filtered = computed(() => {
 
 const current = computed(() => teams.value.find((t) => t.code === selected.value) || null)
 
+// 关注球队：localStorage 持久化，关注的置顶
+const FAV_KEY = 'wc2026-fav'
+const favorites = ref(JSON.parse((typeof localStorage !== 'undefined' && localStorage.getItem(FAV_KEY)) || '[]'))
+const isFav = (code) => favorites.value.includes(code)
+function toggleFav(code) {
+  const i = favorites.value.indexOf(code)
+  if (i >= 0) favorites.value.splice(i, 1)
+  else favorites.value.push(code)
+  if (typeof localStorage !== 'undefined') localStorage.setItem(FAV_KEY, JSON.stringify(favorites.value))
+}
+// 列表：关注置顶
+const sortedList = computed(() => [...filtered.value].sort((a, b) => (isFav(b.code) ? 1 : 0) - (isFav(a.code) ? 1 : 0)))
+
 // 选中球队的名单按位置分组
 const POS = ['GK', 'DEF', 'MID', 'FWD', 'OTH']
 const squadByPos = computed(() => {
@@ -92,11 +105,12 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
       <div v-if="!teams.length" class="empty card muted">{{ t('teams.loading') }}</div>
 
       <div class="grid team-grid">
-        <button v-for="tm in filtered" :key="tm.code" class="team-card card" @click="selected = tm.code">
+        <div v-for="tm in sortedList" :key="tm.code" class="team-card card" :class="{ fav: isFav(tm.code) }" role="button" tabindex="0" @click="selected = tm.code" @keydown.enter="selected = tm.code">
+          <span class="fav-star" :class="{ on: isFav(tm.code) }" role="button" :aria-label="isFav(tm.code) ? '取消关注' : '关注'" @click.stop="toggleFav(tm.code)" @keydown.enter.stop="toggleFav(tm.code)" tabindex="0">{{ isFav(tm.code) ? '★' : '☆' }}</span>
           <img v-if="tm.crest" class="crest" :src="tm.crest" :alt="tm.cnName" />
           <div class="tc-name">{{ dName(tm) }}</div>
           <div class="tc-sub muted">{{ tm.group ? tm.group + ' ' + t('common.group') : '' }} · {{ tm.squad.length }}</div>
-        </button>
+        </div>
       </div>
     </template>
   </div>
@@ -112,8 +126,12 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
 .empty { padding: 28px; text-align: center; }
 
 .team-grid { grid-template-columns: repeat(6, 1fr); gap: 12px; }
-.team-card { padding: 16px 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.15s, border-color 0.15s; background: var(--card); }
+.team-card { position: relative; padding: 16px 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.15s, border-color 0.15s; background: var(--card); }
 .team-card:hover { transform: translateY(-3px); border-color: var(--primary-dim); }
+.team-card.fav { border-color: rgba(255,209,102,0.5); }
+.fav-star { position: absolute; top: 6px; right: 8px; font-size: 1rem; line-height: 1; color: var(--text-mute); opacity: 0.5; transition: opacity 0.15s, color 0.15s; }
+.fav-star:hover { opacity: 1; }
+.fav-star.on { color: var(--accent); opacity: 1; }
 .crest { width: 52px; height: 52px; object-fit: contain; }
 .tc-name { font-weight: 700; font-size: 0.9rem; text-align: center; }
 .tc-sub { font-size: 0.7rem; }

@@ -1,20 +1,18 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
 const store = useDataStore()
+const { t } = useI18n()
 
-const rounds = [
-  { key: 'r16', name: '16 强' },
-  { key: 'qf', name: '1/4 决赛' },
-  { key: 'sf', name: '半决赛' },
-  { key: 'final', name: '决赛' }
-]
+const roundKeys = ['r16', 'qf', 'sf', 'final']
 
 const columns = computed(() =>
-  rounds.map((r) => ({
-    ...r,
-    matches: store.knockoutMatches.filter((m) => m.stage === r.key)
+  roundKeys.map((key) => ({
+    key,
+    name: t('overview.stages.' + key),
+    matches: store.knockoutMatches.filter((m) => m.stage === key)
   }))
 )
 </script>
@@ -27,11 +25,11 @@ const columns = computed(() =>
         <div class="col-matches" :class="col.key">
           <div v-for="m in col.matches" :key="m.id" class="ko-match">
             <div class="ko-team">
-              <span>{{ store.getTeam(m.home)?.name || m.homeLabel || '待定' }}</span>
+              <span>{{ store.getTeam(m.home)?.name || m.homeLabel || t('common.tbd') }}</span>
               <span class="mono">{{ m.homeGoals ?? '-' }}</span>
             </div>
             <div class="ko-team">
-              <span>{{ store.getTeam(m.away)?.name || m.awayLabel || '待定' }}</span>
+              <span>{{ store.getTeam(m.away)?.name || m.awayLabel || t('common.tbd') }}</span>
               <span class="mono">{{ m.awayGoals ?? '-' }}</span>
             </div>
           </div>
