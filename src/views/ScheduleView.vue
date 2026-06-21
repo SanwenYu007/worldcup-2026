@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 import OddsRow from '../components/OddsRow.vue'
 import GroupStandings from '../components/GroupStandings.vue'
+import GroupQualify from '../components/GroupQualify.vue'
 import Bracket from '../components/Bracket.vue'
 
 const store = useDataStore()
@@ -69,7 +70,10 @@ const groupMatchList = computed(() => {
 
     <!-- 单组详情 / 搜索结果：积分榜 + 赔率赛程 -->
     <div v-else class="grid layout" :class="{ single: query }">
-      <GroupStandings v-if="!query" :group="activeGroup" />
+      <div v-if="!query">
+        <GroupStandings :group="activeGroup" />
+        <GroupQualify :group="activeGroup" />
+      </div>
       <div>
         <div class="section-title" style="margin-top:0">{{ query ? `“${query}”` : activeGroup + ' ' + t('common.group') }} · {{ t('schedule.oddsTitle') }}</div>
         <div class="grid matches">

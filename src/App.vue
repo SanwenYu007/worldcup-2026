@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted, computed } from 'vue'
 import { RouterView, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useDataStore } from './stores/data'
@@ -9,10 +9,16 @@ const store = useDataStore()
 const { t, locale } = useI18n()
 const toggleLang = () => setLocale(locale.value === 'zh' ? 'en' : 'zh')
 
-onMounted(() => {
+const updatedAt = computed(() => store.lastUpdated
+  ? store.lastUpdated.toLocaleTimeString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { hour: '2-digit', minute: '2-digit' })
+  : '')
+
+onMounted(async () => {
   // 非阻塞尝试加载真实数据；失败则继续用示例数据
-  store.tryLoadLive()
+  await store.tryLoadLive()
+  store.startAutoRefresh() // 比赛日实时自动刷新
 })
+onUnmounted(() => store.stopAutoRefresh())
 </script>
 
 <template>
@@ -29,13 +35,16 @@ onMounted(() => {
         <RouterLink to="/timeline" active-class="active">{{ t('nav.timeline') }}</RouterLink>
         <RouterLink to="/odds" active-class="active">{{ t('nav.odds') }}</RouterLink>
         <RouterLink to="/predictions" active-class="active">{{ t('nav.predictions') }}</RouterLink>
+        <RouterLink to="/champion" active-class="active">{{ t('nav.champion') }}</RouterLink>
         <RouterLink to="/strategy" active-class="active">{{ t('nav.strategy') }}</RouterLink>
         <RouterLink to="/stats" active-class="active">{{ t('nav.stats') }}</RouterLink>
         <RouterLink to="/feedback" active-class="active">{{ t('nav.feedback') }}</RouterLink>
       </nav>
       <button class="lang-btn" @click="toggleLang">{{ locale === 'zh' ? 'EN' : '中' }}</button>
-      <span class="src-tag" :class="store.source">
+      <span class="src-tag" :class="store.source" :title="updatedAt ? t('common.updatedAt') + ' ' + updatedAt : ''">
+        <span v-if="store.liveMatches.length" class="live-dot" />
         {{ store.source === 'live' ? t('common.live') : t('common.sample') }}
+        <small v-if="updatedAt" class="upd">{{ updatedAt }}</small>
       </span>
     </div>
   </header>
@@ -76,10 +85,14 @@ onMounted(() => {
 }
 .lang-btn:hover { color: var(--text); border-color: var(--primary-dim); }
 .src-tag {
+  display: inline-flex; align-items: center; gap: 5px;
   font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;
   border: 1px solid var(--border); color: var(--text-mute);
 }
 .src-tag.live { color: var(--primary); border-color: var(--primary-dim); }
+.src-tag .upd { color: var(--text-mute); font-weight: 600; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,0.6); animation: pulse 1.6s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(239,68,68,0.55); } 70% { box-shadow: 0 0 0 6px rgba(239,68,68,0); } 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); } }
 .footer {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   padding: 28px 20px 40px; font-size: 0.82rem; color: var(--text-mute);

@@ -12,6 +12,7 @@ export const useDataStore = defineStore('data', () => {
   const now = ref(NOW)
   const source = ref('sample') // 'sample' | 'live'
   const loading = ref(false)
+  const lastUpdated = ref(null) // 最近一次成功拉取真实数据的时间
   const predictions = ref(null) // AI 预测（来自 public/predictions.json）
 
   async function tryLoadLive() {
@@ -30,6 +31,7 @@ export const useDataStore = defineStore('data', () => {
         teams.value.forEach((t) => { if (t.group) (g[t.group] ||= []).push(t) })
         if (Object.keys(g).length) groups.value = g
         source.value = 'live'
+        lastUpdated.value = new Date()
       }
     } catch {
       // 兜底：保持示例数据，演示不白屏
@@ -161,6 +163,35 @@ export const useDataStore = defineStore('data', () => {
     }
   }
 
+  // 比赛日实时自动刷新：只重拉 live.json + 赔率 + AI 预测（不重拉 375KB 的 teams.json）。
+  // 有进行中的比赛时 60s 一次，否则 5 分钟一次；页面隐藏时跳过。
+  let refreshTimer = null
+  async function refreshLive() {
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}live.json`, { cache: 'no-cache' })
+      if (!res.ok) return
+      const data = await res.json()
+      if (!data?.matches?.length) return
+      // 原地更新比分/状态，保留已合并的真实赔率结构由 overlay 重新覆盖
+      matches.value = data.matches
+      teams.value = data.teams || teams.value
+      source.value = 'live'
+      lastUpdated.value = new Date()
+      await tryOverlayOdds()
+      await tryLoadPredictions()
+    } catch { /* 忽略单次刷新失败 */ }
+  }
+  function scheduleRefresh() {
+    clearTimeout(refreshTimer)
+    const delay = liveMatches.value.length ? 60000 : 300000
+    refreshTimer = setTimeout(async () => {
+      if (typeof document === 'undefined' || !document.hidden) await refreshLive()
+      scheduleRefresh()
+    }, delay)
+  }
+  function startAutoRefresh() { if (!refreshTimer) scheduleRefresh() }
+  function stopAutoRefresh() { clearTimeout(refreshTimer); refreshTimer = null }
+
   const finishedMatches = computed(() => matches.value.filter((m) => m.status === 'finished'))
   const liveMatches = computed(() => matches.value.filter((m) => m.status === 'live'))
   const groupMatches = computed(() => matches.value.filter((m) => m.stage === 'group'))
@@ -172,7 +203,8 @@ export const useDataStore = defineStore('data', () => {
 
   return {
     teams, matches, groups, meta, now, source, loading, oddsSource, oddsFeed,
-    predictions, teamsFull, lineups, finishedMatches, liveMatches, groupMatches, knockoutMatches,
-    getTeam, tryLoadLive, getPrediction, getLineup, shouldShowOdds
+    predictions, teamsFull, lineups, lastUpdated, finishedMatches, liveMatches, groupMatches, knockoutMatches,
+    getTeam, tryLoadLive, getPrediction, getLineup, shouldShowOdds,
+    refreshLive, startAutoRefresh, stopAutoRefresh
   }
 })

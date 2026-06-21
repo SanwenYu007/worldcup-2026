@@ -3,7 +3,7 @@ import { createI18n } from 'vue-i18n'
 // 中英双语词条。t('key') 取当前语言文案。
 const messages = {
   zh: {
-    nav: { overview: '总览', schedule: '赛程', teams: '球队', timeline: '时间表', odds: '实时赔率', predictions: 'AI预测', strategy: '投注策略', stats: '数据', feedback: '意见' },
+    nav: { overview: '总览', schedule: '赛程', teams: '球队', timeline: '时间表', odds: '实时赔率', predictions: 'AI预测', champion: '夺冠预测', strategy: '投注策略', stats: '数据', feedback: '意见' },
     common: {
       live: '实时数据', sample: '示例数据', realData: '真实数据', updatedAt: '更新于', source: '数据来源',
       win: '胜', draw: '平', loss: '负', vs: 'VS', finished: '完场', inplay: '进行中', upcoming: '未开赛',
@@ -42,10 +42,21 @@ const messages = {
       safeSub: '隐含胜率高、爆冷概率低', upsetTitle: '冷门预警', upsetSub: '爆冷概率高的场次，串关建议规避、可小注博冷门',
       upsetProb: '爆冷概率', upsetSide: '冷门方向', payout: '博冷回报', riskTag: '冷门风险', valueTitle: '以小博大（高赔潜力）', valueSub: '隐含概率不低但赔率偏高，性价比之选'
     },
+    champion: {
+      title: 'AI 夺冠推演', lead: '基于球队实力值，蒙特卡洛模拟剩余小组赛与淘汰赛 {n} 次，估算各队夺冠与晋级概率。',
+      computing: '正在模拟 {n} 次赛事进程…', titleProb: '夺冠概率', reachFinal: '进决赛', reachSemi: '进四强',
+      model: '⚠️ 纯模型推演（实力值 + Elo 胜率 + 标准种子淘汰赛），仅供参考，不代表真实结果。', rank: '排名'
+    },
+    qualify: {
+      title: '出线形势', lead: '枚举本组剩余比赛的全部结果组合，统计每队进入前二的场景占比。',
+      clinched: '已出线', eliminated: '已出局', alive: '出线中', chance: '出线场景', rem: '剩余', empty: '本组比赛尚未开始或暂无数据。'
+    },
+    match: {
+      back: '← 返回', prediction: 'AI 预测', lineup: '预测首发', odds: '胜平负赔率', form: '近期战绩', noForm: '暂无近期战绩', noLineup: '暂无首发预测', noOdds: '暂无赔率', vsRecord: '交锋/近况', notFound: '未找到该比赛。', kickoff: '开赛' },
     footer: { subtitle: '作品集演示 · Vue 3 + ECharts' }
   },
   en: {
-    nav: { overview: 'Overview', schedule: 'Schedule', teams: 'Teams', timeline: 'Timeline', odds: 'Live Odds', predictions: 'AI Picks', strategy: 'Strategy', stats: 'Stats', feedback: 'Feedback' },
+    nav: { overview: 'Overview', schedule: 'Schedule', teams: 'Teams', timeline: 'Timeline', odds: 'Live Odds', predictions: 'AI Picks', champion: 'Title Odds', strategy: 'Strategy', stats: 'Stats', feedback: 'Feedback' },
     common: {
       live: 'Live data', sample: 'Sample data', realData: 'Real data', updatedAt: 'Updated', source: 'Source',
       win: 'W', draw: 'D', loss: 'L', vs: 'VS', finished: 'FT', inplay: 'Live', upcoming: 'Upcoming',
@@ -83,6 +94,17 @@ const messages = {
       safeSub: 'High implied win rate, low upset risk', upsetTitle: 'Upset alerts', upsetSub: 'High surprise risk — avoid in parlays, or stake small on the underdog',
       upsetProb: 'Upset chance', upsetSide: 'Upset side', payout: 'Upset payout', riskTag: 'Upset risk', valueTitle: 'Value longshots', valueSub: 'Decent implied odds but high payout — best value'
     },
+    champion: {
+      title: 'AI Title Projection', lead: 'Monte-Carlo simulation of remaining group & knockout games ({n} runs) from team ratings, estimating title and advancement odds.',
+      computing: 'Simulating {n} tournament runs…', titleProb: 'Title odds', reachFinal: 'Final', reachSemi: 'Semis',
+      model: '⚠️ Pure model projection (ratings + Elo win prob + standard seeded bracket), for reference only — not a real forecast.', rank: 'Rank'
+    },
+    qualify: {
+      title: 'Qualification outlook', lead: 'Enumerating every outcome of the remaining group games, counting the share of scenarios each team finishes top two.',
+      clinched: 'Through', eliminated: 'Out', alive: 'In contention', chance: 'Scenarios', rem: 'Left', empty: 'Group not started or no data yet.'
+    },
+    match: {
+      back: '← Back', prediction: 'AI prediction', lineup: 'Predicted XI', odds: '1X2 odds', form: 'Recent form', noForm: 'No recent results', noLineup: 'No lineup prediction', noOdds: 'No odds', vsRecord: 'Form / H2H', notFound: 'Match not found.', kickoff: 'Kickoff' },
     footer: { subtitle: 'Portfolio demo · Vue 3 + ECharts' }
   }
 }

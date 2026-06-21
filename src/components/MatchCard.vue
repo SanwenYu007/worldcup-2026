@@ -27,7 +27,7 @@ function won(side) {
 </script>
 
 <template>
-  <div class="match card" :class="match.status">
+  <router-link class="match card" :to="`/match/${match.id}`" :class="match.status">
     <div class="meta">
       <span class="badge" :class="match.status">{{ statusLabel[match.status] }}
         <template v-if="match.status === 'live'"> · {{ match.minute }}'</template>
@@ -49,7 +49,7 @@ function won(side) {
       </div>
     </div>
     <div class="venue muted" v-if="match.venue">📍 {{ match.venue }}</div>
-  </div>
+  </router-link>
 </template>
 
 <style scoped>

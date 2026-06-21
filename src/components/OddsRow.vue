@@ -60,8 +60,8 @@ const lineLabel = computed(() => {
       </span>
     </div>
 
-    <!-- 对阵 + 比分 -->
-    <div class="teams">
+    <!-- 对阵 + 比分（点击进入比赛详情） -->
+    <router-link class="teams" :to="`/match/${match.id}`">
       <div class="t home">
         <span class="flag">{{ home?.flag || '🏳️' }}</span>
         <span class="nm">{{ home?.name || match.homeLabel || t('common.tbd') }}</span>
@@ -75,7 +75,7 @@ const lineLabel = computed(() => {
         <span class="flag">{{ away?.flag || '🏳️' }}</span>
         <span class="nm">{{ away?.name || match.awayLabel || t('common.tbd') }}</span>
       </div>
-    </div>
+    </router-link>
 
     <!-- AI 预测 -->
     <div class="ai-pred" v-if="pred" :class="{ done: match.status === 'finished' }">
@@ -142,7 +142,8 @@ const lineLabel = computed(() => {
 .status.finished { color: var(--primary); }
 .status.live { color: var(--live); }
 
-.teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; margin-bottom: 12px; }
+.teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; margin-bottom: 12px; border-radius: 8px; padding: 4px; transition: background 0.15s; }
+.teams:hover { background: var(--bg-soft); }
 .t { display: flex; align-items: center; gap: 7px; min-width: 0; }
 .t.away { justify-content: flex-end; text-align: right; }
 .flag { font-size: 1.3rem; }
