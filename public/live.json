@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-22T11:44:59.599Z"
+    "fetchedAt": "2026-06-22T16:46:47.528Z"
   },
   "teams": [
     {
@@ -159,12 +159,12 @@
       "group": "E"
     },
     {
-      "id": "CUW",
-      "code": "CUW",
-      "name": "库拉索",
-      "flag": "🇨🇼",
-      "rating": 1380,
-      "conf": "CONCACAF",
+      "id": "CUR",
+      "code": "CUR",
+      "name": "Curaçao",
+      "flag": "🏳️",
+      "rating": 1550,
+      "conf": "INT",
       "group": "E"
     },
     {
@@ -267,8 +267,8 @@
       "group": "H"
     },
     {
-      "id": "URU",
-      "code": "URU",
+      "id": "URY",
+      "code": "URY",
       "name": "乌拉圭",
       "flag": "🇺🇾",
       "rating": 1820,
@@ -1231,7 +1231,7 @@
       "matchday": 1,
       "date": "2026-06-14T17:00:00Z",
       "home": "GER",
-      "away": "CUW",
+      "away": "CUR",
       "homeName": "Germany",
       "awayName": "Curaçao",
       "status": "finished",
@@ -1240,82 +1240,82 @@
       "events": [],
       "odds": {
         "had": {
-          "h": 1.01,
-          "d": 11.43,
-          "a": 54.11
+          "h": 1.09,
+          "d": 7.22,
+          "a": 18.87
         },
         "hhad": {
           "goalLine": -2,
-          "h": 1.79,
-          "d": 3.97,
-          "a": 3.35
+          "h": 2.36,
+          "d": 3.88,
+          "a": 2.34
         },
         "ttg": [
           {
             "goals": "0",
-            "odds": 21.43
+            "odds": 19
           },
           {
             "goals": "1",
-            "odds": 6.76
+            "odds": 6.23
           },
           {
             "goals": "2",
-            "odds": 4.26
+            "odds": 4.09
           },
           {
             "goals": "3",
-            "odds": 4.04
+            "odds": 4.02
           },
           {
             "goals": "4",
-            "odds": 5.09
+            "odds": 5.27
           },
           {
             "goals": "5",
-            "odds": 8.03
+            "odds": 8.64
           },
           {
             "goals": "6",
-            "odds": 15.2
+            "odds": 17
           },
           {
             "goals": "7+",
-            "odds": 22.71
+            "odds": 25.95
           }
         ],
         "crs": [
           {
             "score": "2:0",
-            "odds": 5.03
+            "odds": 5.71
           },
           {
             "score": "3:0",
-            "odds": 5.16
-          },
-          {
-            "score": "4:0",
-            "odds": 7.07
+            "odds": 6.64
           },
           {
             "score": "1:0",
-            "odds": 7.34
+            "odds": 7.37
           },
           {
-            "score": "5:0",
-            "odds": 12.11
+            "score": "4:0",
+            "odds": 10.29
           },
           {
             "score": "2:1",
-            "odds": 20.1
+            "odds": 12.15
           },
           {
             "score": "3:1",
-            "odds": 20.65
+            "odds": 14.13
+          },
+          {
+            "score": "1:1",
+            "odds": 15.67
           },
           {
             "score": "0:0",
-            "odds": 21.43
+            "odds": 19
           }
         ]
       },
@@ -1819,7 +1819,7 @@
       "matchday": 1,
       "date": "2026-06-15T22:00:00Z",
       "home": "KSA",
-      "away": "URU",
+      "away": "URY",
       "homeName": "Saudi Arabia",
       "awayName": "Uruguay",
       "status": "finished",
@@ -3779,7 +3779,7 @@
       "matchday": 2,
       "date": "2026-06-21T00:00:00Z",
       "home": "ECU",
-      "away": "CUW",
+      "away": "CUR",
       "homeName": "Ecuador",
       "awayName": "Curaçao",
       "status": "finished",
@@ -3788,15 +3788,15 @@
       "events": [],
       "odds": {
         "had": {
-          "h": 1.31,
-          "d": 4.89,
-          "a": 7.14
+          "h": 1.67,
+          "d": 4,
+          "a": 3.82
         },
         "hhad": {
-          "goalLine": -1,
-          "h": 1.99,
-          "d": 3.8,
-          "a": 2.9
+          "goalLine": 0,
+          "h": 1.67,
+          "d": 4,
+          "a": 3.82
         },
         "ttg": [
           {
@@ -3829,41 +3829,41 @@
           },
           {
             "goals": "7+",
-            "odds": 25.29
+            "odds": 25.04
           }
         ],
         "crs": [
           {
-            "score": "2:0",
-            "odds": 7.71
-          },
-          {
-            "score": "1:0",
-            "odds": 8.56
+            "score": "1:1",
+            "odds": 8.64
           },
           {
             "score": "2:1",
-            "odds": 9.29
+            "odds": 9.19
           },
           {
-            "score": "1:1",
-            "odds": 10.31
+            "score": "1:0",
+            "odds": 10.11
           },
           {
-            "score": "3:0",
-            "odds": 10.42
+            "score": "2:0",
+            "odds": 10.75
           },
           {
             "score": "3:1",
-            "odds": 12.56
+            "odds": 14.67
           },
           {
-            "score": "4:0",
-            "odds": 18.78
+            "score": "1:2",
+            "odds": 14.77
           },
           {
-            "score": "0:0",
-            "odds": 19
+            "score": "2:2",
+            "odds": 15.71
+          },
+          {
+            "score": "0:1",
+            "odds": 16.24
           }
         ]
       },
@@ -4170,7 +4170,7 @@
       "group": "H",
       "matchday": 2,
       "date": "2026-06-21T22:00:00Z",
-      "home": "URU",
+      "home": "URY",
       "away": "CPV",
       "homeName": "Uruguay",
       "awayName": "Cape Verde Islands",
@@ -5836,7 +5836,7 @@
       "group": "E",
       "matchday": 3,
       "date": "2026-06-25T20:00:00Z",
-      "home": "CUW",
+      "home": "CUR",
       "away": "CIV",
       "homeName": "Curaçao",
       "awayName": "Ivory Coast",
@@ -5846,15 +5846,15 @@
       "events": [],
       "odds": {
         "had": {
-          "h": 2.83,
-          "d": 3.78,
-          "a": 2.03
+          "h": 1.93,
+          "d": 3.82,
+          "a": 3.03
         },
         "hhad": {
           "goalLine": 0,
-          "h": 2.83,
-          "d": 3.78,
-          "a": 2.03
+          "h": 1.93,
+          "d": 3.82,
+          "a": 3.03
         },
         "ttg": [
           {
@@ -5887,41 +5887,41 @@
           },
           {
             "goals": "7+",
-            "odds": 24.99
+            "odds": 25
           }
         ],
         "crs": [
           {
             "score": "1:1",
-            "odds": 8.25
-          },
-          {
-            "score": "1:2",
-            "odds": 9.88
-          },
-          {
-            "score": "0:1",
-            "odds": 11.38
+            "odds": 8.31
           },
           {
             "score": "2:1",
-            "odds": 11.95
-          },
-          {
-            "score": "0:2",
-            "odds": 13.63
+            "odds": 9.66
           },
           {
             "score": "1:0",
-            "odds": 13.77
+            "odds": 11.05
+          },
+          {
+            "score": "1:2",
+            "odds": 12.49
+          },
+          {
+            "score": "2:0",
+            "odds": 12.85
+          },
+          {
+            "score": "0:1",
+            "odds": 14.29
           },
           {
             "score": "2:2",
-            "odds": 14.31
+            "odds": 14.53
           },
           {
-            "score": "1:3",
-            "odds": 17.74
+            "score": "3:1",
+            "odds": 16.85
           }
         ]
       },
@@ -6522,7 +6522,7 @@
       "group": "H",
       "matchday": 3,
       "date": "2026-06-27T00:00:00Z",
-      "home": "URU",
+      "home": "URY",
       "away": "ESP",
       "homeName": "Uruguay",
       "awayName": "Spain",
