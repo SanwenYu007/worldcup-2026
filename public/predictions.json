@@ -1,39 +1,9 @@
 {
   "model": "gpt-5.5",
   "modelLabel": "ChatGPT (gpt-5.5)",
-  "generatedAt": "2026-06-21T19:24:17.341Z",
+  "generatedAt": "2026-06-22T03:41:52.262Z",
   "horizonDays": 2,
   "predictions": [
-    {
-      "matchId": "537372",
-      "home": "URU",
-      "away": "CPV",
-      "homeName": "乌拉圭",
-      "awayName": "佛得角",
-      "date": "2026-06-21T22:00:00Z",
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "outcome": "home",
-      "confidence": 0.78,
-      "reasoning": "乌拉圭实力值明显高于佛得角，整体攻防稳定性更强。佛得角近期能逼平西班牙有韧性，但面对乌拉圭预计进攻空间有限。"
-    },
-    {
-      "matchId": "537366",
-      "home": "NZL",
-      "away": "EGY",
-      "homeName": "新西兰",
-      "awayName": "埃及",
-      "date": "2026-06-22T01:00:00Z",
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "outcome": "away",
-      "confidence": 0.58,
-      "reasoning": "埃及实力值高于新西兰，近期逼平比利时显示出较强竞争力。新西兰虽有进球能力，但防守端不够稳，客队小胜机会更大。"
-    },
     {
       "matchId": "537399",
       "home": "ARG",
@@ -43,11 +13,11 @@
       "date": "2026-06-22T17:00:00Z",
       "score": {
         "home": 3,
-        "away": 1
+        "away": 0
       },
       "outcome": "home",
       "confidence": 0.84,
-      "reasoning": "阿根廷实力值优势巨大，近期3-0取胜状态出色。奥地利同样有不错进攻表现，但面对阿根廷防线压力较大。"
+      "reasoning": "阿根廷实力值高出奥地利450，且近期3-0取胜状态出色。奥地利虽有胜绩，但面对顶级强队防线压力很大。"
     },
     {
       "matchId": "537393",
@@ -61,8 +31,8 @@
         "away": 0
       },
       "outcome": "home",
-      "confidence": 0.89,
-      "reasoning": "法国实力远高于伊拉克，近期击败塞内加尔展现稳定火力。伊拉克刚遭挪威大比分击败，防守问题明显。"
+      "confidence": 0.9,
+      "reasoning": "法国实力明显碾压伊拉克，近期进攻端稳定，伊拉克刚以1-4负于挪威暴露防守问题。预计法国主场大胜。"
     },
     {
       "matchId": "537394",
@@ -73,11 +43,11 @@
       "date": "2026-06-23T00:00:00Z",
       "score": {
         "home": 2,
-        "away": 2
+        "away": 1
       },
-      "outcome": "draw",
-      "confidence": 0.45,
-      "reasoning": "两队实力值同为1700，整体差距很小。挪威近期大胜状态更佳，但塞内加尔具备反击和身体对抗优势，平局可能性较高。"
+      "outcome": "home",
+      "confidence": 0.56,
+      "reasoning": "两队实力值相同，但挪威刚4-1大胜伊拉克，进攻状态优于刚输给法国的塞内加尔。主场因素使挪威略占优势。"
     },
     {
       "matchId": "537400",
@@ -91,8 +61,8 @@
         "away": 2
       },
       "outcome": "away",
-      "confidence": 0.56,
-      "reasoning": "阿尔及利亚实力值高于约旦，虽然近期不敌阿根廷，但对手强度较高。约旦防守端同样暴露问题，阿尔及利亚更有机会反弹。"
+      "confidence": 0.58,
+      "reasoning": "阿尔及利亚实力值高于约旦，虽然刚负于阿根廷，但对手强度很高。约旦防守同样不稳，阿尔及利亚客场小胜机会更大。"
     },
     {
       "matchId": "537405",
@@ -107,7 +77,52 @@
       },
       "outcome": "home",
       "confidence": 0.86,
-      "reasoning": "葡萄牙实力值明显领先乌兹别克斯坦，阵容质量和进攻端优势突出。乌兹别克斯坦近期失球较多，面对强队预计难以抵挡。"
+      "reasoning": "葡萄牙实力远高于乌兹别克斯坦，尽管上轮战平刚果（金），整体控制力仍明显占优。乌兹别克斯坦防守端近期失球偏多。"
+    },
+    {
+      "matchId": "537411",
+      "home": "ENG",
+      "away": "GHA",
+      "homeName": "英格兰",
+      "awayName": "加纳",
+      "date": "2026-06-23T20:00:00Z",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "outcome": "home",
+      "confidence": 0.82,
+      "reasoning": "英格兰实力优势显著，近期4-2击败克罗地亚展现强火力。加纳虽取胜但进攻产出有限，难以持续抵挡英格兰压制。"
+    },
+    {
+      "matchId": "537412",
+      "home": "PAN",
+      "away": "CRO",
+      "homeName": "美墨加附加",
+      "awayName": "克罗地亚",
+      "date": "2026-06-23T23:00:00Z",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "outcome": "away",
+      "confidence": 0.8,
+      "reasoning": "克罗地亚实力值高出美墨加附加450，虽刚负于英格兰但进攻仍有2球表现。美墨加附加进攻乏力，主场也难以弥补差距。"
+    },
+    {
+      "matchId": "537406",
+      "home": "COL",
+      "away": "COD",
+      "homeName": "哥伦比亚",
+      "awayName": "刚果(金)",
+      "date": "2026-06-24T02:00:00Z",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "confidence": 0.6,
+      "reasoning": "哥伦比亚实力高于刚果（金），且近期3-1击败乌兹别克斯坦状态不错。刚果（金）战平葡萄牙显示韧性，但客场仍略处下风。"
     }
   ]
 }
