@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-23T14:42:28.911Z"
+    "fetchedAt": "2026-06-23T19:54:49.176Z"
   },
   "teams": [
     {
@@ -4762,9 +4762,9 @@
       "away": "UZB",
       "homeName": "Portugal",
       "awayName": "Uzbekistan",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 5,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
