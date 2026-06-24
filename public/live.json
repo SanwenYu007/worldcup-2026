@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-24T08:59:28.439Z"
+    "fetchedAt": "2026-06-24T14:20:09.203Z"
   },
   "teams": [
     {
@@ -267,8 +267,8 @@
       "group": "H"
     },
     {
-      "id": "URU",
-      "code": "URU",
+      "id": "URY",
+      "code": "URY",
       "name": "乌拉圭",
       "flag": "🇺🇾",
       "rating": 1820,
@@ -1819,7 +1819,7 @@
       "matchday": 1,
       "date": "2026-06-15T22:00:00Z",
       "home": "KSA",
-      "away": "URU",
+      "away": "URY",
       "homeName": "Saudi Arabia",
       "awayName": "Uruguay",
       "status": "finished",
@@ -4170,7 +4170,7 @@
       "group": "H",
       "matchday": 2,
       "date": "2026-06-21T22:00:00Z",
-      "home": "URU",
+      "home": "URY",
       "away": "CPV",
       "homeName": "Uruguay",
       "awayName": "Cape Verde Islands",
@@ -6522,7 +6522,7 @@
       "group": "H",
       "matchday": 3,
       "date": "2026-06-27T00:00:00Z",
-      "home": "URU",
+      "home": "URY",
       "away": "ESP",
       "homeName": "Uruguay",
       "awayName": "Spain",
