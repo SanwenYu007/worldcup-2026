@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-24T02:47:11.662Z"
+    "fetchedAt": "2026-06-24T08:59:28.439Z"
   },
   "teams": [
     {
@@ -5056,8 +5056,8 @@
       "away": "COD",
       "homeName": "Colombia",
       "awayName": "Congo DR",
-      "status": "scheduled",
-      "homeGoals": 0,
+      "status": "finished",
+      "homeGoals": 1,
       "awayGoals": 0,
       "events": [],
       "odds": {
