@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-28T13:26:17.187Z"
+    "fetchedAt": "2026-06-28T19:11:50.070Z"
   },
   "teams": [
     {
@@ -7506,9 +7506,9 @@
       "away": "CAN",
       "homeName": "South Africa",
       "awayName": "Canada",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 0,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
