@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-29T02:58:07.268Z"
+    "fetchedAt": "2026-06-29T10:47:50.149Z"
   },
   "teams": [
     {
@@ -9070,9 +9070,9 @@
       "group": null,
       "matchday": null,
       "date": "2026-07-04T17:00:00Z",
-      "home": null,
+      "home": "CAN",
       "away": null,
-      "homeName": null,
+      "homeName": "Canada",
       "awayName": null,
       "status": "scheduled",
       "homeGoals": null,
