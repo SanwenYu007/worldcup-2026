@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-30T14:08:40.765Z"
+    "fetchedAt": "2026-06-30T19:49:45.511Z"
   },
   "teams": [
     {
@@ -7898,9 +7898,9 @@
       "away": "NOR",
       "homeName": "Ivory Coast",
       "awayName": "Norway",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
