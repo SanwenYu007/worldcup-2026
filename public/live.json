@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-29T19:50:33.145Z"
+    "fetchedAt": "2026-06-30T02:51:32.912Z"
   },
   "teams": [
     {
@@ -7702,9 +7702,9 @@
       "away": "PAR",
       "homeName": "Germany",
       "awayName": "Paraguay",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 5,
       "events": [],
       "odds": {
         "had": {
@@ -7800,9 +7800,9 @@
       "away": "MAR",
       "homeName": "Netherlands",
       "awayName": "Morocco",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 1,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
