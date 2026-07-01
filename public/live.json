@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-06-30T19:49:45.511Z"
+    "fetchedAt": "2026-07-01T02:57:02.789Z"
   },
   "teams": [
     {
@@ -7996,9 +7996,9 @@
       "away": "SWE",
       "homeName": "France",
       "awayName": "Sweden",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -8094,9 +8094,9 @@
       "away": "ECU",
       "homeName": "Mexico",
       "awayName": "Ecuador",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 2,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
