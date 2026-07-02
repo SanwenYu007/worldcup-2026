@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-01T19:46:43.451Z"
+    "fetchedAt": "2026-07-02T02:47:40.962Z"
   },
   "teams": [
     {
@@ -8290,9 +8290,9 @@
       "away": "SEN",
       "homeName": "Belgium",
       "awayName": "Senegal",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
@@ -8388,9 +8388,9 @@
       "away": "BIH",
       "homeName": "United States",
       "awayName": "Bosnia-Herzegovina",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
