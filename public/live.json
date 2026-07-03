@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-03T13:52:18.826Z"
+    "fetchedAt": "2026-07-03T19:12:00.551Z"
   },
   "teams": [
     {
@@ -8780,9 +8780,9 @@
       "away": "EGY",
       "homeName": "Australia",
       "awayName": "Egypt",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 0,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
