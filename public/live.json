@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-02T19:17:27.338Z"
+    "fetchedAt": "2026-07-03T02:30:01.910Z"
   },
   "teams": [
     {
@@ -8486,9 +8486,9 @@
       "away": "AUT",
       "homeName": "Spain",
       "awayName": "Austria",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
@@ -8584,9 +8584,9 @@
       "away": "CRO",
       "homeName": "Portugal",
       "awayName": "Croatia",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
