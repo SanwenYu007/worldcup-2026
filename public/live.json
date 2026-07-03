@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-03T02:30:01.910Z"
+    "fetchedAt": "2026-07-03T08:55:35.656Z"
   },
   "teams": [
     {
@@ -8682,9 +8682,9 @@
       "away": "ALG",
       "homeName": "Switzerland",
       "awayName": "Algeria",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 0,
       "events": [],
       "odds": {
         "had": {
