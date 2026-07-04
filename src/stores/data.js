@@ -15,6 +15,13 @@ export const useDataStore = defineStore('data', () => {
   const lastUpdated = ref(null) // 最近一次成功拉取真实数据的时间
   const predictions = ref(null) // AI 预测（来自 public/predictions.json）
 
+  // 阶段键规范化：football-data 的 LAST_32/QUARTER_FINALS 等 → 前端统一的 r32/qf 等
+  const STAGE_KEY = { last32: 'r32', last16: 'r16', quarterfinals: 'qf', semifinals: 'sf', thirdplace: 'third' }
+  function normalizeStages(list) {
+    list.forEach((m) => { if (STAGE_KEY[m.stage]) m.stage = STAGE_KEY[m.stage] })
+    return list
+  }
+
   async function tryLoadLive() {
     loading.value = true
     try {
@@ -23,7 +30,7 @@ export const useDataStore = defineStore('data', () => {
       const data = await res.json()
       if (data?.matches?.length) {
         teams.value = data.teams || TEAMS
-        matches.value = data.matches
+        matches.value = normalizeStages(data.matches)
         // 合并默认 meta：live.json 只含 title/source，host/队数/场次仍用默认值兜底
         meta.value = { ...META, ...data.meta }
         // 从真实球队的小组归属重建 groups（供积分榜用），否则积分榜仍是示例队伍
@@ -173,7 +180,7 @@ export const useDataStore = defineStore('data', () => {
       const data = await res.json()
       if (!data?.matches?.length) return
       // 原地更新比分/状态，保留已合并的真实赔率结构由 overlay 重新覆盖
-      matches.value = data.matches
+      matches.value = normalizeStages(data.matches)
       teams.value = data.teams || teams.value
       source.value = 'live'
       lastUpdated.value = new Date()

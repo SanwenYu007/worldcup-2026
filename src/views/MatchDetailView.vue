@@ -74,7 +74,7 @@ const resText = (r) => (r === 'w' ? t('common.win') : r === 'd' ? t('common.draw
           <div v-if="match.homeGoals != null" class="sc">{{ match.homeGoals }} : {{ match.awayGoals }}</div>
           <div v-else class="vs">{{ t('common.vs') }}</div>
           <div class="when">{{ fmtDate(match.date) }}</div>
-          <div class="stage muted">{{ match.group ? match.group + ' ' + t('common.group') : (match.stageName || '') }}</div>
+          <div class="stage muted">{{ match.group ? match.group + ' ' + t('common.group') : (['r32','r16','qf','sf','third','final'].includes(match.stage) ? t('overview.stages.' + match.stage) : (match.stageName || '')) }}</div>
         </div>
         <div class="side">
           <div class="fl">{{ teamOf(match.away)?.flag }}</div>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../stores/data'
 
@@ -7,6 +7,12 @@ const store = useDataStore()
 const { t, locale } = useI18n()
 const filter = ref('all') // all | upcoming | finished
 const lc = () => (locale.value === 'en' ? 'en-GB' : 'zh-CN')
+
+// 进入页面自动定位到「今天」那一天，无需手动下滑。
+const root = ref(null) // .timeline-view 根元素
+// 用户一旦自己滚动/切换筛选，就交还控制权，不再自动定位。
+let userTook = false
+const yieldToUser = () => { userTook = true }
 
 // 全部比赛按日期分组、组内按时间排序。
 const dayGroups = computed(() => {
@@ -27,15 +33,55 @@ const statusText = computed(() => ({ finished: t('common.finished'), live: t('co
 const weekday = (d) => new Date(d).toLocaleDateString(lc(), { weekday: 'short' })
 const fmtDay = (d) => new Date(d).toLocaleDateString(lc(), { month: 'long', day: 'numeric' })
 const fmtTime = (d) => new Date(d).toLocaleTimeString(lc(), { hour: '2-digit', minute: '2-digit' })
-const stageLabel = (m) => m.group ? `${m.group}${t('common.group')}` : (m.stageName || t('schedule.knockoutTab'))
+const KO = ['r32', 'r16', 'qf', 'sf', 'third', 'final']
+const stageLabel = (m) => m.group ? `${m.group}${t('common.group')}` : (KO.includes(m.stage) ? t('overview.stages.' + m.stage) : (m.stageName || t('schedule.knockoutTab')))
 
 function isToday(d) {
   return new Date(d).toDateString() === store.now.toDateString()
 }
+
+// 定位目标：优先「今天」；今天无比赛则取最近的未来一天，再不行取最后一天。
+const focusDate = computed(() => {
+  const days = dayGroups.value
+  if (!days.length) return null
+  const today = days.find((d) => isToday(d.date))
+  if (today) return today.date
+  const future = days.find((d) => new Date(d.date).getTime() >= store.now.getTime())
+  return (future || days[days.length - 1]).date
+})
+
+// 定位到目标日（直接按 DOM 查询，避开模板 ref 与数据切换重渲染的时序问题）。
+// 数据会从示例切换到真实(live.json) 导致列表重排、滚动被重置，因此在挂载后短时间内
+// 反复校正到目标日置顶为止；用户一旦滚动或切换筛选即停止，交还控制权。
+let scrollTimer = null
+function alignToFocus() {
+  if (userTook) return
+  const el = root.value?.querySelector('.day-head.focus')?.closest('.day')
+  if (el) el.scrollIntoView({ block: 'start' })
+}
+
+onMounted(() => {
+  window.addEventListener('wheel', yieldToUser, { passive: true, once: true })
+  window.addEventListener('touchstart', yieldToUser, { passive: true, once: true })
+  let tries = 0
+  const tick = () => {
+    if (userTook || tries++ > 16) return // 最多校正约 2.4s
+    alignToFocus()
+    scrollTimer = setTimeout(tick, 150)
+  }
+  nextTick(tick)
+})
+onBeforeUnmount(() => {
+  clearTimeout(scrollTimer)
+  window.removeEventListener('wheel', yieldToUser)
+  window.removeEventListener('touchstart', yieldToUser)
+})
+// 用户切换筛选即视为接管，避免被自动定位打断。
+watch(filter, yieldToUser)
 </script>
 
 <template>
-  <div class="view">
+  <div class="view timeline-view" ref="root">
     <div class="head">
       <h2>{{ t('timeline.title') }}</h2>
       <div class="filters">
@@ -46,7 +92,7 @@ function isToday(d) {
     </div>
 
     <div v-for="day in dayGroups" :key="day.date" class="day">
-      <div class="day-head" :class="{ today: isToday(day.date) }">
+      <div class="day-head" :class="{ today: isToday(day.date), focus: day.date === focusDate }">
         <span class="d-date">{{ fmtDay(day.date) }}</span>
         <span class="d-wd">{{ weekday(day.date) }}</span>
         <span class="d-badge" v-if="isToday(day.date)">{{ t('common.today') }}</span>
@@ -58,14 +104,14 @@ function isToday(d) {
           <span class="time mono">{{ fmtTime(m.date) }}</span>
           <span class="stage">{{ stageLabel(m) }}</span>
           <span class="t home">
-            <span class="nm">{{ store.getTeam(m.home)?.name || m.homeLabel || '待定' }}</span>
+            <span class="nm">{{ store.getTeam(m.home)?.name || m.homeLabel || t('common.tbd') }}</span>
             <span class="fl">{{ store.getTeam(m.home)?.flag || '🏳️' }}</span>
           </span>
           <span class="sc mono" v-if="m.homeGoals != null">{{ m.homeGoals }}:{{ m.awayGoals }}</span>
           <span class="sc vs" v-else>vs</span>
           <span class="t away">
             <span class="fl">{{ store.getTeam(m.away)?.flag || '🏳️' }}</span>
-            <span class="nm">{{ store.getTeam(m.away)?.name || m.awayLabel || '待定' }}</span>
+            <span class="nm">{{ store.getTeam(m.away)?.name || m.awayLabel || t('common.tbd') }}</span>
           </span>
           <span class="st" :class="m.status">{{ statusText[m.status] }}</span>
         </div>
@@ -84,7 +130,7 @@ function isToday(d) {
 }
 .filters button.on { background: var(--primary); color: #06231b; border-color: transparent; }
 
-.day { margin-bottom: 20px; }
+.day { margin-bottom: 20px; scroll-margin-top: 76px; }
 .day-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding-left: 2px; }
 .d-date { font-weight: 800; font-size: 1rem; }
 .d-wd { color: var(--text-dim); font-size: 0.85rem; }

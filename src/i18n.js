@@ -15,10 +15,16 @@ const messages = {
       groupStage: '小组赛进行中', host: '美国 · 加拿大 · 墨西哥', teamsCount: '支球队', matchesCount: '场比赛',
       totalGoals: '总进球数', avgGoals: '场均进球', draws: '平局场次', biggestWin: '最大分差', played: '已赛',
       spotlight: '焦点比赛', allSchedule: '全部赛程 →', strengthDist: '球队实力分布', goalTiming: '进球时段分布', latest: '最新战报', detail: '详情 →',
-      stages: { group: '小组赛', r32: '32 强', r16: '16 强', qf: '1/4', sf: '半决赛', final: '决赛' }
+      stageLive: '{s}进行中',
+      stages: { group: '小组赛', r32: '32 强', r16: '16 强', qf: '1/4 决赛', sf: '半决赛', final: '决赛', third: '季军赛' }
     },
     dataStatus: { schedule: '赛程比分', odds: '体彩赔率', predictions: 'AI 预测', sportteryLive: '体彩实时', modelOdds: '模型赔率' },
-    schedule: { title: '完整赛程 · 胜平负赔率与积分榜', groupTab: '小组赛', knockoutTab: '淘汰赛', searchTeam: '搜索球队（跨小组）…', oddsTitle: '胜平负赔率', bracketTitle: '淘汰赛对阵树', sportteryOdds: '体彩实时赔率', modelOdds: '模型赔率', oddsClosed: '赛后赔率已截止', allGroups: '全部小组', allGroupsHint: '一览 12 个小组积分与得分（点小组查看赛程赔率）' },
+    schedule: { title: '完整赛程 · 胜平负赔率与积分榜', groupTab: '小组赛', knockoutTab: '淘汰赛', historyTab: '世界杯历史', searchTeam: '搜索球队（跨小组）…', oddsTitle: '胜平负赔率', bracketTitle: '淘汰赛对阵树', sportteryOdds: '体彩实时赔率', modelOdds: '模型赔率', oddsClosed: '赛后赔率已截止', allGroups: '全部小组', allGroupsHint: '一览 12 个小组积分与得分（点小组查看赛程赔率）', bracketPending: '对阵随赛果逐步揭晓，未定场次显示「待定」；点击比赛可看详情。' },
+    history: {
+      title: '历史 16 强 · 历届名次与冠军次数', lead: '按夺冠次数与近年战绩排序，列出世界杯历史 16 支劲旅；展示最近四届（2010–2022）名次。点击球队查看夺冠年份。',
+      titles: '夺冠', titlesUnit: '次', noTitle: '尚未夺冠', titleYears: '夺冠年份', recent: '近四届', rank: '#', toTeam: '查看球队 →',
+      tier: { C: '冠军', RU: '亚军', 3: '季军', 4: '殿军', QF: '八强', R16: '十六强', GS: '小组赛', DNQ: '未参赛' }
+    },
     teamTip: { groupGames: '小组赛战绩', tbd: '待赛', record: '战绩' },
     standings: { rank: '#', team: '球队', played: '赛', win: '胜', draw: '平', loss: '负', gd: '净', pts: '分' },
     teams: {
@@ -68,10 +74,16 @@ const messages = {
       groupStage: 'Group stage in progress', host: 'USA · Canada · Mexico', teamsCount: ' teams', matchesCount: ' matches',
       totalGoals: 'Total goals', avgGoals: 'Goals/match', draws: 'Draws', biggestWin: 'Biggest win', played: 'Played',
       spotlight: 'Featured matches', allSchedule: 'Full schedule →', strengthDist: 'Team strength', goalTiming: 'Goal timing', latest: 'Latest results', detail: 'Details →',
-      stages: { group: 'Groups', r32: 'R32', r16: 'R16', qf: 'QF', sf: 'SF', final: 'Final' }
+      stageLive: '{s} under way',
+      stages: { group: 'Groups', r32: 'R32', r16: 'R16', qf: 'Quarter-finals', sf: 'Semi-finals', final: 'Final', third: '3rd Place' }
     },
     dataStatus: { schedule: 'Schedule & scores', odds: 'Lottery odds', predictions: 'AI predictions', sportteryLive: 'Sporttery live', modelOdds: 'Model odds' },
-    schedule: { title: 'Full Schedule · Odds & Standings', groupTab: 'Groups', knockoutTab: 'Knockout', searchTeam: 'Search team (all groups)…', oddsTitle: 'Match Odds', bracketTitle: 'Knockout Bracket', sportteryOdds: 'Sporttery live odds', modelOdds: 'Model odds', oddsClosed: 'Odds closed', allGroups: 'All groups', allGroupsHint: 'All 12 groups at a glance (click a group for fixtures & odds)' },
+    schedule: { title: 'Full Schedule · Odds & Standings', groupTab: 'Groups', knockoutTab: 'Knockout', historyTab: 'WC History', searchTeam: 'Search team (all groups)…', oddsTitle: 'Match Odds', bracketTitle: 'Knockout Bracket', sportteryOdds: 'Sporttery live odds', modelOdds: 'Model odds', oddsClosed: 'Odds closed', allGroups: 'All groups', allGroupsHint: 'All 12 groups at a glance (click a group for fixtures & odds)', bracketPending: 'Pairings fill in as results come; undecided slots show TBD. Click a match for details.' },
+    history: {
+      title: 'All-time Top 16 · Past Finishes & Titles', lead: 'The 16 historic powerhouses ranked by titles and recent form, with finishes at the last four World Cups (2010–2022). Tap a team for its title years.',
+      titles: 'Titles', titlesUnit: '', noTitle: 'No title yet', titleYears: 'Title years', recent: 'Last 4', rank: '#', toTeam: 'View team →',
+      tier: { C: 'Champion', RU: 'Runner-up', 3: 'Third', 4: 'Fourth', QF: 'Quarter-final', R16: 'Round of 16', GS: 'Group stage', DNQ: 'Did not qualify' }
+    },
     teamTip: { groupGames: 'Group record', tbd: 'Upcoming', record: 'Record' },
     standings: { rank: '#', team: 'Team', played: 'P', win: 'W', draw: 'D', loss: 'L', gd: 'GD', pts: 'Pts' },
     teams: {

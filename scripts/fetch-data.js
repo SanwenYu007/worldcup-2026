@@ -55,11 +55,14 @@ async function api(path) {
   return res.json()
 }
 
+// 阶段键统一成前端使用的短键（对阵树/进度条/i18n 均按此）
+const STAGE_KEY = { GROUP_STAGE: 'group', LAST_32: 'r32', LAST_16: 'r16', QUARTER_FINALS: 'qf', SEMI_FINALS: 'sf', THIRD_PLACE: 'third', FINAL: 'final' }
+
 function normalizeMatch(m) {
   const statusMap = { FINISHED: 'finished', IN_PLAY: 'live', PAUSED: 'live', TIMED: 'scheduled', SCHEDULED: 'scheduled' }
   return {
     id: String(m.id),
-    stage: m.stage === 'GROUP_STAGE' ? 'group' : m.stage.toLowerCase().replace(/_/g, ''),
+    stage: STAGE_KEY[m.stage] || m.stage.toLowerCase().replace(/_/g, ''),
     stageName: m.stage === 'GROUP_STAGE' ? null : m.stage.replace(/_/g, ' '),
     group: m.group ? m.group.replace('GROUP_', '') : null,
     matchday: m.matchday,

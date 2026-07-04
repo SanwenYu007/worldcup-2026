@@ -1,19 +1,21 @@
 name: 定时更新数据与AI预测并部署
 
-# 「服务器到时间自动更新」：GitHub Actions 按 cron 定时运行，
-# 拉取真实赛程比分(football-data.org) + 体彩赔率(sporttery) + 重新生成 AI 预测(ChatGPT)，
+# 「开赛后约 2 小时更新」：不再固定每 N 小时跑，而是只在各场开赛时间 + 2 小时唤醒，
+# 由 scripts/should-update.js 读取真实赛程确认「确有比赛已开赛满 2 小时」才抓取/提交。
+# 抓取真实赛程比分(football-data.org) + 体彩赔率(sporttery) + 重新生成 AI 预测(ChatGPT)，
 # 提交回仓库并部署到 GitHub Pages。
 on:
   schedule:
-    - cron: '0 */6 * * *'   # 每 6 小时（UTC）。可按需改频率
-  workflow_dispatch:          # 也可在 Actions 页手动触发
+    # 覆盖各开赛时刻(UTC) + 2 小时的窗口；具体是否真正更新由 should-update.js 网关判定。
+    - cron: '0 0-6,18-23 * * *'   # 整点开赛(如 16:00–04:00 各场) + 2 小时
+    - cron: '30 1,2,3,22 * * *'   # 半点开赛(如 23:30/00:30/20:30) + 2 小时
+  workflow_dispatch:          # 也可在 Actions 页手动触发（强制更新）
   push:
-    branches: [main]          # 推送代码后也重新构建部署
+    branches: [main]          # 推送代码后也重新构建部署（不抓数据）
 
+# 默认收回所有权限，再按 job 最小化授予（least privilege）。
 permissions:
-  contents: write   # 提交更新后的数据 JSON
-  pages: write      # 部署 Pages
-  id-token: write
+  contents: read
 
 concurrency:
   group: update-and-deploy
@@ -22,8 +24,14 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 仅此 job 需要：提交更新后的数据 JSON
+    outputs:
+      deploy: ${{ steps.flags.outputs.deploy }}   # 是否需要构建并部署
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true   # 需要凭据回推数据提交
 
       - uses: actions/setup-node@v4
         with:
@@ -32,8 +40,20 @@ jobs:
 
       - run: npm ci
 
+      - name: 判断是否到「开赛满 2 小时」更新窗口
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "手动触发：强制更新"; echo "do=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "代码推送：仅构建部署，不抓数据"; echo "do=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # 定时触发：按真实赛程判定是否确有比赛已开赛满 2 小时
+          node scripts/should-update.js | tee -a "$GITHUB_OUTPUT"
+
       - name: 拉取真实赛程比分（football-data.org）
-        if: ${{ github.event_name != 'push' }}
+        if: ${{ steps.gate.outputs.do == 'true' }}
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: |
@@ -42,12 +62,12 @@ jobs:
         continue-on-error: true
 
       - name: 拉取体彩竞彩赔率（sporttery，可能因服务器地区受限）
-        if: ${{ github.event_name != 'push' }}
+        if: ${{ steps.gate.outputs.do == 'true' }}
         run: npm run fetch-odds || echo "赔率抓取失败（可能海外服务器被限），保留现有快照"
         continue-on-error: true
 
       - name: 生成 AI 预测（ChatGPT / OpenAI）
-        if: ${{ github.event_name != 'push' }}
+        if: ${{ steps.gate.outputs.do == 'true' }}
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}        # 可选：仓库变量指定模型，默认 gpt-4o
@@ -58,31 +78,50 @@ jobs:
         continue-on-error: true
 
       - name: 提交更新的数据
-        if: ${{ github.event_name != 'push' }}
+        id: commit
+        if: ${{ steps.gate.outputs.do == 'true' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/live.json public/odds.json public/predictions.json
           if git diff --staged --quiet; then
-            echo "数据无变化，无需提交"
+            echo "数据无变化，无需提交"; echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: 自动更新数据与AI预测 $(date -u +%FT%TZ)"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 计算是否需要构建部署
+        id: flags
+        run: |
+          # 推送/手动触发 → 总是部署；定时触发 → 仅当数据确有更新时才部署，避免无意义的重复发布。
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "本次无更新，跳过构建部署"; echo "deploy=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: 构建（注入 Pages 子路径）
+        if: ${{ steps.flags.outputs.deploy == 'true' }}
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
         run: npm run build
 
       - uses: actions/configure-pages@v5
+        if: ${{ steps.flags.outputs.deploy == 'true' }}
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ steps.flags.outputs.deploy == 'true' }}
         with:
           path: dist
 
   deploy:
     needs: update
+    if: ${{ needs.update.outputs.deploy == 'true' }}
     runs-on: ubuntu-latest
+    permissions:
+      pages: write      # 仅此 job 需要：部署 Pages
+      id-token: write   # OIDC 身份令牌，供 deploy-pages 校验
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

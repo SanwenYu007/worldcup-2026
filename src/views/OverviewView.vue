@@ -30,11 +30,10 @@ const currentStageIdx = computed(() => {
 
 const kn = computed(() => keyNumbers(store.matches))
 
-// 今日 / 进行中 / 临近的比赛
+// 今日 / 进行中 / 临近的比赛（不限阶段：淘汰赛开始后自动展示淘汰赛）
 const spotlightMatches = computed(() => {
   const now = store.now.getTime()
   return [...store.matches]
-    .filter((m) => m.stage === 'group')
     .sort((a, b) => Math.abs(new Date(a.date) - now) - Math.abs(new Date(b.date) - now))
     .slice(0, 6)
 })
@@ -51,7 +50,7 @@ const biggest = computed(() => kn.value.biggest)
   <!-- Hero -->
   <section class="hero card">
     <div class="hero-main">
-      <div class="badge live" style="margin-bottom:12px">{{ t('overview.groupStage') }}</div>
+      <div class="badge live" style="margin-bottom:12px">{{ t('overview.stageLive', { s: t('overview.stages.' + stages[currentStageIdx].key) }) }}</div>
       <h1>2026 FIFA 世界杯</h1>
       <p class="muted">{{ t('overview.host') }} · {{ store.meta.teamCount }}{{ t('overview.teamsCount') }} · {{ store.meta.totalMatches }}{{ t('overview.matchesCount') }}</p>
       <div class="progress">

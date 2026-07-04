@@ -1,13 +1,22 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 import { useDataStore } from '../stores/data'
 import PlayerAvatar from '../components/PlayerAvatar.vue'
+import { honorsOf, TIER_STYLE } from '../data/history'
 
 const store = useDataStore()
+const route = useRoute()
 const { t, locale } = useI18n()
 const selected = ref(null) // 选中的球队 code
 const query = ref('')
+
+// 支持从「世界杯历史」等页面通过 ?team=CODE 直接预选某队。
+watch(() => route.query.team, (code) => { if (code) selected.value = String(code) }, { immediate: true })
+
+// 当前球队的历史世界杯荣誉（夺冠次数 + 历届名次），按 code/中文名匹配。
+const tierStyle = (tier) => TIER_STYLE[tier] || TIER_STYLE.GS
 
 const data = computed(() => store.teamsFull)
 const teams = computed(() => data.value?.teams || [])
@@ -20,6 +29,9 @@ const filtered = computed(() => {
 })
 
 const current = computed(() => teams.value.find((t) => t.code === selected.value) || null)
+
+// 选中球队的世界杯历史荣誉（夺冠次数、夺冠年份、近四届名次）。
+const honors = computed(() => current.value ? honorsOf(current.value.code, current.value.cnName) : null)
 
 // 关注球队：localStorage 持久化，关注的置顶
 const FAV_KEY = 'wc2026-fav'
@@ -73,6 +85,24 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
             <span class="badge">{{ current.squad.length }}{{ t('teams.roster') }}</span>
           </div>
           <p class="intro">{{ intro }}</p>
+        </div>
+      </div>
+
+      <!-- 世界杯历史荣誉 -->
+      <div v-if="honors" class="honors card">
+        <div class="hon-titles">
+          <span class="hon-cup">🏆</span>
+          <span class="hon-n">{{ honors.titles }}</span>
+          <span class="hon-lbl">{{ honors.titles ? t('history.titles') : t('history.noTitle') }}</span>
+          <span v-if="honors.titleYears.length" class="hon-years">
+            <span v-for="y in honors.titleYears" :key="y" class="ybadge">{{ y }}</span>
+          </span>
+        </div>
+        <div class="hon-recent">
+          <span class="hon-recent-lbl muted">{{ t('history.recent') }}</span>
+          <span v-for="[yr, tier] in honors.recent" :key="yr" class="chip" :style="{ color: tierStyle(tier).color, background: tierStyle(tier).bg }">
+            <small class="yr">{{ String(yr).slice(2) }}</small>{{ t('history.tier.' + tier) }}
+          </span>
         </div>
       </div>
 
@@ -144,6 +174,20 @@ const fmtUpdated = computed(() => data.value?.fetchedAt ? new Date(data.value.fe
 .th-text h2 small { font-size: 0.9rem; color: var(--text-mute); font-weight: 500; }
 .th-tags { display: flex; gap: 8px; margin: 8px 0; }
 .intro { font-size: 0.86rem; color: var(--text-dim); line-height: 1.6; }
+
+/* 历史世界杯荣誉 */
+.honors { padding: 14px 20px; margin-bottom: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; }
+.hon-titles { display: flex; align-items: center; gap: 8px; }
+.hon-cup { font-size: 1.3rem; }
+.hon-n { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+.hon-lbl { font-size: 0.82rem; color: var(--text-dim); font-weight: 600; }
+.hon-years { display: flex; gap: 4px; flex-wrap: wrap; margin-left: 4px; }
+.honors .ybadge { display: inline-block; font-weight: 700; font-size: 0.74rem; color: #06231b; background: var(--accent); padding: 1px 7px; border-radius: 6px; }
+.hon-recent { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.hon-recent-lbl { font-size: 0.78rem; font-weight: 600; }
+.honors .chip { display: inline-flex; align-items: center; gap: 3px; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); white-space: nowrap; }
+.honors .chip .yr { font-size: 0.6rem; opacity: 0.8; font-weight: 600; }
+
 .pos-block { margin-top: 4px; }
 .players { grid-template-columns: repeat(4, 1fr); }
 .player { display: flex; align-items: center; gap: 12px; padding: 12px 14px; }

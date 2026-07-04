@@ -17,6 +17,11 @@ const dateLabel = computed(() => {
   return d.toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
 })
 const statusLabel = computed(() => ({ finished: t('common.finished'), live: t('common.inplay'), scheduled: t('common.upcoming') }))
+// 阶段标签：小组赛显示「X 组」，淘汰赛用 i18n 轮次名
+const KO = ['r32', 'r16', 'qf', 'sf', 'third', 'final']
+const stageLabel = computed(() => props.match.group
+  ? `${props.match.group} ${t('common.group')}`
+  : (KO.includes(props.match.stage) ? t('overview.stages.' + props.match.stage) : (props.match.stageName || '')))
 const hasScore = computed(() => props.match.homeGoals != null)
 function won(side) {
   if (!hasScore.value || props.match.status === 'scheduled') return false
@@ -32,19 +37,19 @@ function won(side) {
       <span class="badge" :class="match.status">{{ statusLabel[match.status] }}
         <template v-if="match.status === 'live'"> · {{ match.minute }}'</template>
       </span>
-      <span class="when">{{ match.group ? `${match.group} ${t('common.group')}` : (match.stageName || '') }} · {{ dateLabel }}</span>
+      <span class="when">{{ stageLabel }} · {{ dateLabel }}</span>
     </div>
     <div class="teams">
       <div class="team" :class="{ win: won('home') }">
         <span class="flag">{{ home?.flag || '🏳️' }}</span>
-        <span class="name">{{ home?.name || match.homeLabel || '待定' }}</span>
+        <span class="name">{{ home?.name || match.homeLabel || t('common.tbd') }}</span>
       </div>
       <div class="score mono" v-if="hasScore">
         {{ match.homeGoals }}<span class="sep">:</span>{{ match.awayGoals }}
       </div>
       <div class="score vs" v-else>VS</div>
       <div class="team away" :class="{ win: won('away') }">
-        <span class="name">{{ away?.name || match.awayLabel || '待定' }}</span>
+        <span class="name">{{ away?.name || match.awayLabel || t('common.tbd') }}</span>
         <span class="flag">{{ away?.flag || '🏳️' }}</span>
       </div>
     </div>

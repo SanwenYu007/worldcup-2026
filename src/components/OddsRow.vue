@@ -22,6 +22,11 @@ const dateLabel = computed(() => {
   return d.toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
 })
 const statusText = computed(() => ({ finished: t('common.finished'), live: t('common.inplay'), scheduled: t('common.upcoming') }))
+// 阶段标签：小组赛「X组」，淘汰赛用 i18n 轮次名
+const KO = ['r32', 'r16', 'qf', 'sf', 'third', 'final']
+const stageLabel = computed(() => props.match.group
+  ? props.match.group + t('common.group')
+  : (KO.includes(props.match.stage) ? t('overview.stages.' + props.match.stage) : (props.match.stageName || 'WC')))
 const hasScore = computed(() => props.match.homeGoals != null)
 
 // 实际结果命中的项（用于高亮）
@@ -52,7 +57,7 @@ const lineLabel = computed(() => {
     <!-- 头部：场次编号 / 赛事 / 时间 / 状态 -->
     <div class="row-head">
       <span class="num">{{ match.matchNum }}</span>
-      <span class="league">{{ match.group ? match.group + t('common.group') : (match.stageName || 'WC') }}</span>
+      <span class="league">{{ stageLabel }}</span>
       <span class="time">{{ dateLabel }}</span>
       <span class="status" :class="match.status">
         {{ statusText[match.status] }}

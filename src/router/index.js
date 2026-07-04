@@ -18,7 +18,8 @@ const router = createRouter({
   // 用 hash 模式：纯静态部署到任意平台都不用配服务端 rewrite
   history: createWebHashHistory(),
   routes,
-  scrollBehavior: () => ({ top: 0 })
+  // 时间表页由组件自行定位到「今天」，不强制回到顶部；其余页面进入即回顶。
+  scrollBehavior: (to) => (to.name === 'timeline' ? false : { top: 0 })
 })
 
 export default router
