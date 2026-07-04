@@ -69,7 +69,7 @@ const lineLabel = computed(() => {
     <router-link class="teams" :to="`/match/${match.id}`">
       <div class="t home">
         <span class="flag">{{ home?.flag || '🏳️' }}</span>
-        <span class="nm">{{ home?.name || match.homeLabel || t('common.tbd') }}</span>
+        <span class="nm">{{ store.dispName(match.home) || match.homeLabel || t('common.tbd') }}</span>
         <span class="hcap" v-if="showOdds">{{ lineLabel }}</span>
       </div>
       <div class="score" v-if="hasScore" :class="match.status">
@@ -78,7 +78,7 @@ const lineLabel = computed(() => {
       <div class="score vs" v-else>VS</div>
       <div class="t away">
         <span class="flag">{{ away?.flag || '🏳️' }}</span>
-        <span class="nm">{{ away?.name || match.awayLabel || t('common.tbd') }}</span>
+        <span class="nm">{{ store.dispName(match.away) || match.awayLabel || t('common.tbd') }}</span>
       </div>
     </router-link>
 

@@ -41,7 +41,7 @@ onMounted(() => { loadLocal(); loadSeed() })
 function submit() {
   const text = content.value.trim()
   if (!text) return
-  const item = { name: name.value.trim() || '匿名', content: text, date: new Date().toISOString() }
+  const item = { name: name.value.trim() || t('common.anon'), content: text, date: new Date().toISOString() }
   const next = [item, ...localItems.value]
   localItems.value = next
   localStorage.setItem(LS_KEY, JSON.stringify(next))

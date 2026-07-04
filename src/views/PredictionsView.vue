@@ -76,9 +76,9 @@ const accuracy = computed(() => {
           <span class="badge scheduled" v-else>{{ t('predictions.pending') }}</span>
         </div>
         <div class="p-match">
-          <span class="tm">{{ locale === 'en' ? (r.p.home || r.p.homeName) : r.p.homeName }}</span>
+          <span class="tm">{{ store.dispName(r.p.home) || r.p.homeName }}</span>
           <span class="pscore mono">{{ r.p.score.home }} : {{ r.p.score.away }}</span>
-          <span class="tm">{{ locale === 'en' ? (r.p.away || r.p.awayName) : r.p.awayName }}</span>
+          <span class="tm">{{ store.dispName(r.p.away) || r.p.awayName }}</span>
         </div>
         <div class="p-meta">
           <span class="out">{{ t('predictions.predicted') }} {{ outcomeLabel[r.p.outcome] }}</span>
@@ -92,11 +92,11 @@ const accuracy = computed(() => {
           <summary>{{ t('teams.lineupTitle') }}<span class="fmt" v-if="r.lineup.homeFormation"> · {{ r.lineup.homeFormation }} / {{ r.lineup.awayFormation }}</span></summary>
           <div class="xi-grid">
             <div class="xi">
-              <div class="xi-tm">{{ locale === 'en' ? (r.p.home || r.p.homeName) : r.p.homeName }}</div>
+              <div class="xi-tm">{{ store.dispName(r.p.home) || r.p.homeName }}</div>
               <ol><li v-for="(n, i) in r.lineup.homeXI" :key="'h'+i">{{ n }}</li></ol>
             </div>
             <div class="xi">
-              <div class="xi-tm">{{ locale === 'en' ? (r.p.away || r.p.awayName) : r.p.awayName }}</div>
+              <div class="xi-tm">{{ store.dispName(r.p.away) || r.p.awayName }}</div>
               <ol><li v-for="(n, i) in r.lineup.awayXI" :key="'a'+i">{{ n }}</li></ol>
             </div>
           </div>

@@ -20,9 +20,9 @@ const option = computed(() => {
   const max = Math.max(1, ...data)
   return {
     tooltip: { ...tooltipStyle, trigger: 'axis', axisPointer: { type: 'shadow' },
-      formatter: (p) => `${p[0].axisValue} 分钟<br/>进球 <b>${p[0].data}</b> 个` },
+      formatter: (p) => `${p[0].axisValue} ${t('common.minutes')}<br/>${t('common.goals')} <b>${p[0].data}</b>` },
     grid: { ...baseGrid, top: 18 },
-    xAxis: { type: 'category', data: labels, name: '分钟', nameTextStyle: { color: '#647093' }, ...axisStyle },
+    xAxis: { type: 'category', data: labels, name: t('common.minutes'), nameTextStyle: { color: '#647093' }, ...axisStyle },
     yAxis: { type: 'value', ...axisStyle },
     series: [{
       type: 'bar', data, barWidth: '52%',

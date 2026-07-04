@@ -24,7 +24,7 @@ const dayGroups = computed(() => {
   const list = [...(feed.value?.matches || [])].sort((a, b) => (a.dateTime || '').localeCompare(b.dateTime || ''))
   const days = {}
   list.forEach((m) => {
-    const key = m.matchDate || '其他'
+    const key = m.matchDate || t('common.other')
     ;(days[key] ||= []).push(m)
   })
   return Object.entries(days).map(([date, matches]) => ({ date, matches }))
@@ -49,7 +49,7 @@ function pick(m, label, odd) {
   const arr = picks.value[key] ? [...picks.value[key]] : []
   const idx = arr.findIndex((x) => x.label === label)
   if (idx >= 0) arr.splice(idx, 1) // 再点取消
-  else arr.push({ num: m.matchNum, matchLabel: `${m.homeName} vs ${m.awayName}`, label, odd })
+  else arr.push({ num: m.matchNum, matchLabel: `${store.dispNameCn(m.homeName)} vs ${store.dispNameCn(m.awayName)}`, label, odd })
   const next = { ...picks.value }
   if (arr.length) next[key] = arr
   else delete next[key]
@@ -129,8 +129,8 @@ const maxPrize = computed(() => UNIT * mult.value * maxOdds.value)
             </div>
             <!-- 中间：对阵 -->
             <div class="teams">
-              <div class="tm"><span v-if="m.homeRank" class="rk">{{ m.homeRank }}</span>{{ m.homeName }}</div>
-              <div class="tm"><span v-if="m.awayRank" class="rk">{{ m.awayRank }}</span>{{ m.awayName }}</div>
+              <div class="tm"><span v-if="m.homeRank" class="rk">{{ m.homeRank }}</span>{{ store.dispNameCn(m.homeName) }}</div>
+              <div class="tm"><span v-if="m.awayRank" class="rk">{{ m.awayRank }}</span>{{ store.dispNameCn(m.awayName) }}</div>
             </div>
             <!-- 右侧：胜平负 + 让球胜平负，列头 胜/平/负 -->
             <div class="odds">

@@ -11,7 +11,9 @@ const routes = [
   { path: '/strategy', name: 'strategy', component: () => import('../views/StrategyView.vue'), meta: { title: '投注策略' } },
   { path: '/match/:id', name: 'match', component: () => import('../views/MatchDetailView.vue'), meta: { title: '比赛详情' } },
   { path: '/stats', name: 'stats', component: () => import('../views/StatsView.vue'), meta: { title: '数据' } },
-  { path: '/feedback', name: 'feedback', component: () => import('../views/FeedbackView.vue'), meta: { title: '意见' } }
+  { path: '/feedback', name: 'feedback', component: () => import('../views/FeedbackView.vue'), meta: { title: '意见' } },
+  // 兜底：未知路径重定向到首页，避免白屏
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
 const router = createRouter({

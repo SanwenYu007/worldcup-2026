@@ -51,7 +51,7 @@ const biggest = computed(() => kn.value.biggest)
   <section class="hero card">
     <div class="hero-main">
       <div class="badge live" style="margin-bottom:12px">{{ t('overview.stageLive', { s: t('overview.stages.' + stages[currentStageIdx].key) }) }}</div>
-      <h1>2026 FIFA 世界杯</h1>
+      <h1>{{ t('overview.title') }}</h1>
       <p class="muted">{{ t('overview.host') }} · {{ store.meta.teamCount }}{{ t('overview.teamsCount') }} · {{ store.meta.totalMatches }}{{ t('overview.matchesCount') }}</p>
       <div class="progress">
         <div v-for="(s, i) in stages" :key="s.key" class="stage" :class="{ done: i < currentStageIdx, active: i === currentStageIdx }">
@@ -71,7 +71,7 @@ const biggest = computed(() => kn.value.biggest)
     <StatCard icon="📊" :value="kn.avgGoals" :label="t('overview.avgGoals')" accent="var(--accent)" />
     <StatCard icon="🤝" :value="kn.draws" :label="t('overview.draws')" accent="#5b8def" />
     <StatCard icon="💥" :value="biggest ? `${biggest.homeGoals}:${biggest.awayGoals}` : '-'"
-      :label="t('overview.biggestWin')" :sub="biggest ? `${store.getTeam(biggest.home)?.name} vs ${store.getTeam(biggest.away)?.name}` : ''" accent="var(--danger)" />
+      :label="t('overview.biggestWin')" :sub="biggest ? `${store.dispName(biggest.home)} vs ${store.dispName(biggest.away)}` : ''" accent="var(--danger)" />
   </div>
 
   <!-- 焦点比赛 -->

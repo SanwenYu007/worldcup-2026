@@ -10,18 +10,8 @@ const { t, locale } = useI18n()
 
 const roundKeys = ['r32', 'r16', 'qf', 'sf', 'final', 'third']
 
-// 英文名映射（live 队名为中文，teams.json 含英文 name）
-const enByCode = computed(() => {
-  const m = {}
-  ;(store.teamsFull?.teams || []).forEach((tm) => { if (tm.code) m[tm.code] = tm.name })
-  return m
-})
-function dName(code, label) {
-  if (!code) return label || t('common.tbd')
-  const tm = store.getTeam(code)
-  if (!tm) return code
-  return locale.value === 'en' ? (enByCode.value[code] || tm.name) : tm.name
-}
+// 队名按当前语言显示（store 统一映射英文名）
+const dName = (code, label) => store.dispName(code) || label || t('common.tbd')
 const flagOf = (code) => (code ? store.getTeam(code)?.flag || '' : '')
 
 const columns = computed(() =>

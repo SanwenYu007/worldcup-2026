@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { TEAMS, MATCHES, GROUPS, META, NOW, teamOf } from '../data/worldcup'
+import { i18n } from '../i18n'
 
 // 数据 store：默认用种子数据（src/data/worldcup.js）。
 // 若部署时 scripts/fetch-data.js 已生成 public/live.json，则运行时优先采用真实数据。
@@ -208,10 +209,34 @@ export const useDataStore = defineStore('data', () => {
     return teams.value.find((t) => t.id === code) || teamOf(code)
   }
 
+  // 按当前语言返回队名：live 数据只有中文名，英文名取自 teams.json 的 name 字段。
+  const enNames = computed(() => {
+    const m = {}
+    ;(teamsFull.value?.teams || []).forEach((t) => { if (t.code) m[t.code] = t.name })
+    return m
+  })
+  function dispName(code) {
+    if (!code) return ''
+    const tm = getTeam(code)
+    if (!tm) return code
+    return i18n.global.locale.value === 'en' ? (enNames.value[code] || tm.name) : tm.name
+  }
+  // 体彩盘口只有中文队名：中文名 → code → 英文名（映射不到则原样返回）
+  const cnToCode = computed(() => {
+    const m = {}
+    ;(teamsFull.value?.teams || []).forEach((t) => { if (t.cnName) m[t.cnName.replace(/\s+/g, '')] = t.code })
+    return m
+  })
+  function dispNameCn(cn) {
+    if (!cn || i18n.global.locale.value !== 'en') return cn || ''
+    const code = cnToCode.value[cn.replace(/\s+/g, '')]
+    return (code && enNames.value[code]) || cn
+  }
+
   return {
     teams, matches, groups, meta, now, source, loading, oddsSource, oddsFeed,
     predictions, teamsFull, lineups, lastUpdated, finishedMatches, liveMatches, groupMatches, knockoutMatches,
-    getTeam, tryLoadLive, getPrediction, getLineup, shouldShowOdds,
+    getTeam, dispName, dispNameCn, tryLoadLive, getPrediction, getLineup, shouldShowOdds,
     refreshLive, startAutoRefresh, stopAutoRefresh
   }
 })

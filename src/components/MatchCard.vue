@@ -42,14 +42,14 @@ function won(side) {
     <div class="teams">
       <div class="team" :class="{ win: won('home') }">
         <span class="flag">{{ home?.flag || '🏳️' }}</span>
-        <span class="name">{{ home?.name || match.homeLabel || t('common.tbd') }}</span>
+        <span class="name">{{ store.dispName(match.home) || match.homeLabel || t('common.tbd') }}</span>
       </div>
       <div class="score mono" v-if="hasScore">
         {{ match.homeGoals }}<span class="sep">:</span>{{ match.awayGoals }}
       </div>
       <div class="score vs" v-else>VS</div>
       <div class="team away" :class="{ win: won('away') }">
-        <span class="name">{{ away?.name || match.awayLabel || t('common.tbd') }}</span>
+        <span class="name">{{ store.dispName(match.away) || match.awayLabel || t('common.tbd') }}</span>
         <span class="flag">{{ away?.flag || '🏳️' }}</span>
       </div>
     </div>

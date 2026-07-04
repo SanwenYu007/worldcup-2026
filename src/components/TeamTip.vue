@@ -12,7 +12,8 @@ const store = useDataStore()
 const { t, locale } = useI18n()
 
 const team = computed(() => store.getTeam(props.code))
-const dName = (tm) => (locale.value === 'en' ? (tm?.name || tm?.cnName) : (tm?.cnName || tm?.name)) || props.code
+// 队名按当前语言显示（store 统一映射英文名）
+const selfName = computed(() => store.dispName(props.code) || props.code)
 
 // 该队所有小组赛（按时间）
 const games = computed(() => {
@@ -28,7 +29,7 @@ const games = computed(() => {
       const ga = isHome ? m.awayGoals : m.homeGoals
       const res = played ? (gf > ga ? 'w' : gf === ga ? 'd' : 'l') : null
       const time = new Date(m.date).toLocaleDateString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit' })
-      return { id: m.id, opp: dName(opp), oppFlag: opp?.flag || '', played, gf, ga, res, time, live: m.status === 'live' }
+      return { id: m.id, opp: store.dispName(isHome ? m.away : m.home) || '?', oppFlag: opp?.flag || '', played, gf, ga, res, time, live: m.status === 'live' }
     })
 })
 
@@ -62,10 +63,10 @@ onBeforeUnmount(() => clearTimeout(timer))
 
 <template>
   <span ref="elRef" class="tt-name" @mouseenter="onEnter" @mouseleave="onLeave">
-    <span v-if="showFlag" class="flag">{{ team?.flag }}</span>{{ dName(team) }}
+    <span v-if="showFlag" class="flag">{{ team?.flag }}</span>{{ selfName }}
     <Teleport to="body">
       <div v-if="open" class="tt-card" :style="{ top: pos.top + 'px', left: pos.left + 'px' }">
-        <div class="tt-head"><span class="flag">{{ team?.flag }}</span>{{ dName(team) }}<small v-if="team?.group"> · {{ team.group }} {{ t('common.group') }}</small></div>
+        <div class="tt-head"><span class="flag">{{ team?.flag }}</span>{{ selfName }}<small v-if="team?.group"> · {{ team.group }} {{ t('common.group') }}</small></div>
         <div class="tt-sub">{{ t('teamTip.groupGames') }}</div>
         <ul class="tt-list">
           <li v-for="g in games" :key="g.id">

@@ -1,11 +1,13 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useDataStore } from '../../stores/data'
 import { groupStrength } from '../../composables/useStats'
 import BaseChart from './BaseChart.vue'
 import { tooltipStyle } from './echarts'
 
 const store = useDataStore()
+const { t, locale } = useI18n()
 
 // 各组平均实力雷达——一眼看出「死亡之组」。
 const option = computed(() => {
@@ -15,7 +17,7 @@ const option = computed(() => {
   return {
     tooltip: { ...tooltipStyle },
     radar: {
-      indicator: order.map((g) => ({ name: `${g} 组`, max: 1900, min: 1450 })),
+      indicator: order.map((g) => ({ name: locale.value === 'en' ? g : `${g} 组`, max: 1900, min: 1450 })),
       radius: '68%',
       axisName: { color: '#9aa6c4', fontSize: 11 },
       splitLine: { lineStyle: { color: 'rgba(42,54,84,0.8)' } },
@@ -26,7 +28,7 @@ const option = computed(() => {
       type: 'radar',
       data: [{
         value: order.map((g) => byGroup[g]),
-        name: '小组平均实力',
+        name: t('stats.groupAvg'),
         areaStyle: { color: 'rgba(45,212,167,0.25)' },
         lineStyle: { color: '#2dd4a7' },
         itemStyle: { color: '#2dd4a7' }

@@ -33,7 +33,7 @@ const deathGroups = computed(() => groupStrength(store.groups).slice(0, 3))
           <div class="dg-body">
             <div class="dg-head"><b>{{ g.group }} {{ t('common.group') }}</b><span class="muted">{{ t('stats.avgStrength') }} {{ g.avgRating }}</span></div>
             <div class="dg-teams">
-              <span v-for="tm in g.teams" :key="tm.code">{{ tm.flag }} {{ tm.name }}</span>
+              <span v-for="tm in g.teams" :key="tm.code">{{ tm.flag }} {{ store.dispName(tm.code) || tm.name }}</span>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ const deathGroups = computed(() => groupStrength(store.groups).slice(0, 3))
         <div v-for="(s, i) in scorers" :key="s.team.code" class="scorer">
           <span class="idx">{{ i + 1 }}</span>
           <span class="flag">{{ s.team.flag }}</span>
-          <span class="nm">{{ s.team.name }}</span>
+          <span class="nm">{{ store.dispName(s.team.code || s.team.id) || s.team.name }}</span>
           <span class="bar"><span :style="{ width: (s.goals / scorers[0].goals * 100) + '%' }" /></span>
           <span class="g mono">{{ s.goals }}</span>
         </div>

@@ -104,14 +104,14 @@ watch(filter, yieldToUser)
           <span class="time mono">{{ fmtTime(m.date) }}</span>
           <span class="stage">{{ stageLabel(m) }}</span>
           <span class="t home">
-            <span class="nm">{{ store.getTeam(m.home)?.name || m.homeLabel || t('common.tbd') }}</span>
+            <span class="nm">{{ store.dispName(m.home) || m.homeLabel || t('common.tbd') }}</span>
             <span class="fl">{{ store.getTeam(m.home)?.flag || '🏳️' }}</span>
           </span>
           <span class="sc mono" v-if="m.homeGoals != null">{{ m.homeGoals }}:{{ m.awayGoals }}</span>
           <span class="sc vs" v-else>vs</span>
           <span class="t away">
             <span class="fl">{{ store.getTeam(m.away)?.flag || '🏳️' }}</span>
-            <span class="nm">{{ store.getTeam(m.away)?.name || m.awayLabel || t('common.tbd') }}</span>
+            <span class="nm">{{ store.dispName(m.away) || m.awayLabel || t('common.tbd') }}</span>
           </span>
           <span class="st" :class="m.status">{{ statusText[m.status] }}</span>
         </div>
