@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-04T19:15:39.073Z"
+    "fetchedAt": "2026-07-04T23:34:13.811Z"
   },
   "teams": [
     {
@@ -9172,9 +9172,9 @@
       "away": "FRA",
       "homeName": "Paraguay",
       "awayName": "France",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 0,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
