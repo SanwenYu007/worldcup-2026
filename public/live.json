@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-05T00:02:34.297Z"
+    "fetchedAt": "2026-07-05T23:02:21.393Z"
   },
   "teams": [
     {
@@ -9270,9 +9270,9 @@
       "away": "NOR",
       "homeName": "Brazil",
       "awayName": "Norway",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
@@ -9854,14 +9854,95 @@
       "group": null,
       "matchday": null,
       "date": "2026-07-09T20:00:00Z",
-      "home": null,
-      "away": null,
-      "homeName": null,
-      "awayName": null,
+      "home": "FRA",
+      "away": "MAR",
+      "homeName": "France",
+      "awayName": "Morocco",
       "status": "scheduled",
       "homeGoals": null,
       "awayGoals": null,
       "events": [],
+      "odds": {
+        "had": {
+          "h": 1.19,
+          "d": 5.66,
+          "a": 10.42
+        },
+        "hhad": {
+          "goalLine": -1,
+          "h": 1.72,
+          "d": 3.91,
+          "a": 3.67
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.51
+          }
+        ],
+        "crs": [
+          {
+            "score": "2:0",
+            "odds": 6.71
+          },
+          {
+            "score": "1:0",
+            "odds": 7.98
+          },
+          {
+            "score": "3:0",
+            "odds": 8.46
+          },
+          {
+            "score": "2:1",
+            "odds": 10.01
+          },
+          {
+            "score": "1:1",
+            "odds": 11.92
+          },
+          {
+            "score": "3:1",
+            "odds": 12.62
+          },
+          {
+            "score": "4:0",
+            "odds": 14.21
+          },
+          {
+            "score": "0:0",
+            "odds": 19
+          }
+        ]
+      },
       "matchNum": "周四001"
     },
     {
