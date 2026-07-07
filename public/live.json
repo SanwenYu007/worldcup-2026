@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-06T21:44:20.037Z"
+    "fetchedAt": "2026-07-07T23:02:48.345Z"
   },
   "teams": [
     {
@@ -9564,9 +9564,9 @@
       "away": "BEL",
       "homeName": "United States",
       "awayName": "Belgium",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 1,
+      "awayGoals": 4,
       "events": [],
       "odds": {
         "had": {
@@ -9662,9 +9662,9 @@
       "away": "EGY",
       "homeName": "Argentina",
       "awayName": "Egypt",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 3,
+      "awayGoals": 2,
       "events": [],
       "odds": {
         "had": {
@@ -9760,9 +9760,9 @@
       "away": "COL",
       "homeName": "Switzerland",
       "awayName": "Colombia",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 3,
       "events": [],
       "odds": {
         "had": {
@@ -9952,14 +9952,95 @@
       "group": null,
       "matchday": null,
       "date": "2026-07-10T19:00:00Z",
-      "home": null,
-      "away": null,
-      "homeName": null,
-      "awayName": null,
+      "home": "ESP",
+      "away": "BEL",
+      "homeName": "Spain",
+      "awayName": "Belgium",
       "status": "scheduled",
       "homeGoals": null,
       "awayGoals": null,
       "events": [],
+      "odds": {
+        "had": {
+          "h": 1.64,
+          "d": 4.03,
+          "a": 3.94
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.64,
+          "d": 4.03,
+          "a": 3.94
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.05
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.7
+          },
+          {
+            "score": "2:1",
+            "odds": 9.16
+          },
+          {
+            "score": "1:0",
+            "odds": 10
+          },
+          {
+            "score": "2:0",
+            "odds": 10.53
+          },
+          {
+            "score": "3:1",
+            "odds": 14.46
+          },
+          {
+            "score": "1:2",
+            "odds": 15.13
+          },
+          {
+            "score": "2:2",
+            "odds": 15.92
+          },
+          {
+            "score": "0:1",
+            "odds": 16.53
+          }
+        ]
+      },
       "matchNum": "周五001"
     },
     {
