@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-09T23:12:50.639Z"
+    "fetchedAt": "2026-07-10T21:06:38.785Z"
   },
   "teams": [
     {
@@ -9956,9 +9956,9 @@
       "away": "BEL",
       "homeName": "Spain",
       "awayName": "Belgium",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "finished",
+      "homeGoals": 2,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
@@ -10246,9 +10246,9 @@
       "group": null,
       "matchday": null,
       "date": "2026-07-14T19:00:00Z",
-      "home": null,
+      "home": "FRA",
       "away": null,
-      "homeName": null,
+      "homeName": "France",
       "awayName": null,
       "status": "scheduled",
       "homeGoals": null,
