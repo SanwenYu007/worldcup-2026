@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-11T23:30:10.917Z"
+    "fetchedAt": "2026-07-11T23:56:21.086Z"
   },
   "teams": [
     {
@@ -10054,7 +10054,7 @@
       "away": "ENG",
       "homeName": "Norway",
       "awayName": "England",
-      "status": "live",
+      "status": "finished",
       "homeGoals": 1,
       "awayGoals": 2,
       "events": [],
