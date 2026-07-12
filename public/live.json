@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-11T23:56:21.086Z"
+    "fetchedAt": "2026-07-12T03:21:07.003Z"
   },
   "teams": [
     {
@@ -10152,9 +10152,9 @@
       "away": "SUI",
       "homeName": "Argentina",
       "awayName": "Switzerland",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 1,
+      "awayGoals": 1,
       "events": [],
       "odds": {
         "had": {
