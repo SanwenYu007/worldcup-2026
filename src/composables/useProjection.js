@@ -93,9 +93,65 @@ function statRow(r) {
   return { pts: r.pts, gd: r.gd, gf: r.gf }
 }
 
+// 已完赛淘汰赛的真实胜者（常规比分分胜负，战平看点球）。
+function realWinner(m) {
+  if (m.homeGoals == null) return null
+  if (m.homeGoals !== m.awayGoals) return m.homeGoals > m.awayGoals ? m.home : m.away
+  if (m.penHome != null && m.penHome !== m.penAway) return m.penHome > m.penAway ? m.home : m.away
+  return null
+}
+
+// 淘汰赛开打后：从真实对阵状态向前模拟。
+// 已完赛 → 用真实胜者；对阵已定未赛 → Elo 概率；后续轮空位 → 按对阵顺序由上一轮胜者填入。
+function simulateBracket(teams, rounds, N) {
+  const byCode = Object.fromEntries(teams.map((t) => [t.code, t]))
+  const rate = (c) => byCode[c]?.rating || 1550
+  const champ = {}; const finalReach = {}; const semiReach = {}
+  teams.forEach((t) => { champ[t.code] = 0; finalReach[t.code] = 0; semiReach[t.code] = 0 })
+  const rnd = Math.random
+
+  for (let n = 0; n < N; n++) {
+    let prev = null // 上一轮各场胜者（按对阵顺序）
+    for (const round of rounds) {
+      const winners = []
+      round.ms.forEach((m, i) => {
+        const home = m.home || (prev ? prev[2 * i] : null)
+        const away = m.away || (prev ? prev[2 * i + 1] : null)
+        // 本轮参赛者计数（进四强 / 进决赛）
+        if (round.key === 'sf') { if (home) semiReach[home]++; if (away) semiReach[away]++ }
+        if (round.key === 'final') { if (home) finalReach[home]++; if (away) finalReach[away]++ }
+        let w = null
+        if (m.status === 'finished') w = realWinner(m)
+        if (!w && home && away) {
+          const eH = 1 / (1 + Math.pow(10, (rate(away) - rate(home)) / 400))
+          w = rnd() < eH ? home : away
+        }
+        winners.push(w || home || away || null)
+      })
+      if (round.key === 'final' && winners[0]) champ[winners[0]]++
+      prev = winners
+    }
+  }
+
+  return teams.map((t) => ({
+    team: t,
+    title: champ[t.code] / N,
+    final: finalReach[t.code] / N,
+    semi: semiReach[t.code] / N
+  })).sort((a, b) => b.title - a.title || b.final - a.final)
+}
+
 // 蒙特卡洛：模拟剩余小组赛 + 淘汰赛，估算各队夺冠/进决赛/进四强概率。
 // 2026 赛制：12 组各 4 队，每组前 2 + 成绩最好的 8 个第三名 = 32 队进淘汰赛。
+// 淘汰赛开打后自动切换为「真实对阵驱动」的模拟（见 simulateBracket）。
 export function simulateTitle(teams, groups, matches, N = 2000) {
+  const KO_ORDER = ['r32', 'r16', 'qf', 'sf', 'final']
+  const rounds = KO_ORDER
+    .map((key) => ({ key, ms: matches.filter((m) => m.stage === key).sort((a, b) => new Date(a.date) - new Date(b.date)) }))
+    .filter((r) => r.ms.length)
+  if (rounds.length && rounds[0].ms.some((m) => m.home || m.away)) {
+    return simulateBracket(teams, rounds, N)
+  }
   const groupKeys = Object.keys(groups)
   const champ = {}; const finalReach = {}; const semiReach = {}
   teams.forEach((t) => { champ[t.code] = 0; finalReach[t.code] = 0; semiReach[t.code] = 0 })

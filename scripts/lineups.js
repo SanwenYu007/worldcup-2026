@@ -104,6 +104,11 @@ for (const m of upcoming) {
   }
 }
 
+// 全部调用失败时不覆盖旧文件（如网关余额不足返回 403），避免把已有阵容清空
+if (!lineups.length) {
+  console.error(`✗ 本次未成功生成任何阵容（${calls} 次调用），保留现有 lineups.json。`)
+  process.exit(1)
+}
 const payload = { model: MODEL, generatedAt: new Date().toISOString(), horizonDays: HORIZON_DAYS, lineups }
 await writeFile(OUT, JSON.stringify(payload, null, 2))
 console.log(`✓ ${calls} 次调用，已写入 ${lineups.length} 场首发阵容 → public/lineups.json`)

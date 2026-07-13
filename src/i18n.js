@@ -8,7 +8,7 @@ const messages = {
       live: '实时数据', sample: '示例数据', realData: '真实数据', updatedAt: '更新于', source: '数据来源',
       win: '胜', draw: '平', loss: '负', vs: 'VS', finished: '完场', inplay: '进行中', upcoming: '未开赛',
       group: '组', all: '全部', today: '今日', search: '搜索', noResult: '没有符合条件的比赛',
-      players: '人名单', back: '返回', confidence: '置信度', minutes: '分钟', goals: '进球', tbd: '待定', other: '其他', anon: '匿名'
+      players: '人名单', back: '返回', confidence: '置信度', minutes: '分钟', goals: '进球', tbd: '待定', other: '其他', anon: '匿名', pens: '点球'
     },
     result: { home: '主胜', draw: '平局', away: '客胜' },
     overview: {
@@ -68,7 +68,7 @@ const messages = {
       live: 'Live data', sample: 'Sample data', realData: 'Real data', updatedAt: 'Updated', source: 'Source',
       win: 'W', draw: 'D', loss: 'L', vs: 'VS', finished: 'FT', inplay: 'Live', upcoming: 'Upcoming',
       group: 'Group', all: 'All', today: 'Today', search: 'Search', noResult: 'No matches found',
-      players: ' players', back: 'Back', confidence: 'Confidence', minutes: 'min', goals: 'Goals', tbd: 'TBD', other: 'Other', anon: 'Anonymous'
+      players: ' players', back: 'Back', confidence: 'Confidence', minutes: 'min', goals: 'Goals', tbd: 'TBD', other: 'Other', anon: 'Anonymous', pens: 'Pens'
     },
     result: { home: 'Home', draw: 'Draw', away: 'Away' },
     overview: {

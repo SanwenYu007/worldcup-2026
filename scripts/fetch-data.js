@@ -74,6 +74,9 @@ function normalizeMatch(m) {
     status: statusMap[m.status] || 'scheduled',
     homeGoals: m.score?.fullTime?.home ?? null,
     awayGoals: m.score?.fullTime?.away ?? null,
+    // 淘汰赛点球决胜（常规+加时战平时决定晋级方）
+    penHome: m.score?.penalties?.home ?? null,
+    penAway: m.score?.penalties?.away ?? null,
     events: []
   }
 }

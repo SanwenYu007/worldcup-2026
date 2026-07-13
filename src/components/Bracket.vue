@@ -27,9 +27,13 @@ const columns = computed(() =>
 )
 
 const fmt = (d) => new Date(d).toLocaleString(locale.value === 'en' ? 'en-GB' : 'zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
-const winner = (m, side) =>
-  m.status === 'finished' && m.homeGoals != null &&
-  (side === 'home' ? m.homeGoals > m.awayGoals : m.awayGoals > m.homeGoals)
+// 晋级方：常规比分分胜负；战平看点球
+function winner(m, side) {
+  if (m.status !== 'finished' || m.homeGoals == null) return false
+  if (m.homeGoals !== m.awayGoals) return side === 'home' ? m.homeGoals > m.awayGoals : m.awayGoals > m.homeGoals
+  if (m.penHome != null && m.penHome !== m.penAway) return side === 'home' ? m.penHome > m.penAway : m.penAway > m.penHome
+  return false
+}
 </script>
 
 <template>
@@ -41,6 +45,7 @@ const winner = (m, side) =>
           <router-link v-for="m in col.matches" :key="m.id" class="ko-match" :class="m.status" :to="`/match/${m.id}`">
             <div class="ko-meta">
               <span>{{ fmt(m.date) }}</span>
+              <span v-if="m.penHome != null" class="pens">{{ t('common.pens') }} {{ m.penHome }}-{{ m.penAway }}</span>
               <span class="st" :class="m.status">
                 {{ m.status === 'finished' ? t('common.finished') : m.status === 'live' ? t('common.inplay') : '' }}
               </span>
@@ -82,6 +87,7 @@ const winner = (m, side) =>
   border-bottom: 1px solid var(--border); background: var(--card);
 }
 .ko-meta .st.finished { color: var(--primary); font-weight: 600; }
+.ko-meta .pens { color: var(--accent); font-weight: 600; }
 .ko-meta .st.live { color: var(--live); font-weight: 700; }
 .ko-team { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 7px 10px; font-size: 0.84rem; }
 .ko-team:first-of-type { border-bottom: 1px dashed var(--border); }

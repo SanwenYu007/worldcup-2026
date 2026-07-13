@@ -73,6 +73,7 @@ const resText = (r) => (r === 'w' ? t('common.win') : r === 'd' ? t('common.draw
         <div class="mid">
           <div v-if="match.homeGoals != null" class="sc">{{ match.homeGoals }} : {{ match.awayGoals }}</div>
           <div v-else class="vs">{{ t('common.vs') }}</div>
+          <div v-if="match.penHome != null" class="pens">{{ t('common.pens') }} {{ match.penHome }} - {{ match.penAway }}</div>
           <div class="when">{{ fmtDate(match.date) }}</div>
           <div class="stage muted">{{ match.group ? match.group + ' ' + t('common.group') : (['r32','r16','qf','sf','third','final'].includes(match.stage) ? t('overview.stages.' + match.stage) : (match.stageName || '')) }}</div>
         </div>
@@ -160,6 +161,7 @@ const resText = (r) => (r === 'w' ? t('common.win') : r === 'd' ? t('common.draw
 .sc { font-size: 2.2rem; font-weight: 800; font-variant-numeric: tabular-nums; }
 .vs { font-size: 1.4rem; font-weight: 700; color: var(--text-mute); }
 .when { font-size: 0.82rem; color: var(--text-dim); margin-top: 4px; }
+.pens { font-size: 0.78rem; color: var(--accent); font-weight: 700; margin-top: 2px; }
 .stage { font-size: 0.74rem; }
 .cols { grid-template-columns: 1fr 1fr; }
 .blk { padding: 16px; margin-top: 14px; }

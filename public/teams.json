@@ -1,6 +1,6 @@
 {
   "source": "football-data.org",
-  "fetchedAt": "2026-06-20T01:02:49.431Z",
+  "fetchedAt": "2026-07-13T13:00:09.820Z",
   "teamCount": 48,
   "teams": [
     {
@@ -455,7 +455,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-13",
           "nationality": "Czech Republic",
           "photo": null,
@@ -964,7 +964,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 25,
+          "age": 26,
           "dob": "2000-07-07",
           "nationality": "South Korea",
           "photo": null,
@@ -1144,7 +1144,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 33,
+          "age": 34,
           "dob": "1992-07-08",
           "nationality": "South Korea",
           "photo": null,
@@ -1233,7 +1233,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 40,
+          "age": 41,
           "dob": "1985-07-13",
           "nationality": "Mexico",
           "photo": null,
@@ -2012,7 +2012,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-03",
           "nationality": "Canada",
           "photo": null,
@@ -2086,7 +2086,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 35,
+          "age": 36,
           "dob": "1990-07-09",
           "nationality": "Qatar",
           "photo": null,
@@ -2146,7 +2146,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 35,
+          "age": 36,
           "dob": "1990-07-03",
           "nationality": "Qatar",
           "photo": null,
@@ -2490,7 +2490,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 32,
+          "age": 33,
           "dob": "1993-06-20",
           "nationality": "Bosnia-Herzegovina",
           "photo": null,
@@ -2505,7 +2505,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 27,
+          "age": 28,
           "dob": "1998-07-09",
           "nationality": "Bosnia-Herzegovina",
           "photo": null,
@@ -2879,7 +2879,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-03",
           "nationality": "Switzerland",
           "photo": null,
@@ -3508,7 +3508,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 25,
+          "age": 26,
           "dob": "2000-07-12",
           "nationality": "Brazil",
           "photo": null,
@@ -3583,7 +3583,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-06-26",
           "nationality": "Brazil",
           "photo": null,
@@ -3897,7 +3897,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-02",
           "nationality": "Morocco",
           "photo": null,
@@ -3987,7 +3987,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 32,
+          "age": 33,
           "dob": "1993-06-25",
           "nationality": "Morocco",
           "photo": null,
@@ -4106,7 +4106,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 29,
+          "age": 30,
           "dob": "1996-06-28",
           "nationality": "Haiti",
           "photo": null,
@@ -4241,7 +4241,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 27,
+          "age": 28,
           "dob": "1998-06-27",
           "nationality": "Haiti",
           "photo": null,
@@ -4436,7 +4436,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-07",
           "nationality": "Haiti",
           "photo": null,
@@ -4780,7 +4780,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 29,
+          "age": 30,
           "dob": "1996-07-13",
           "nationality": "Scotland",
           "photo": null,
@@ -4810,7 +4810,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 29,
+          "age": 30,
           "dob": "1996-07-11",
           "nationality": "Scotland",
           "photo": null,
@@ -5049,7 +5049,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 25,
+          "age": 26,
           "dob": "2000-07-07",
           "nationality": "Turkey",
           "photo": null,
@@ -5184,7 +5184,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 25,
+          "age": 26,
           "dob": "2000-07-07",
           "nationality": "Turkey",
           "photo": null,
@@ -5214,7 +5214,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 21,
+          "age": 22,
           "dob": "2004-07-02",
           "nationality": "Turkey",
           "photo": null,
@@ -5483,7 +5483,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 24,
+          "age": 25,
           "dob": "2001-06-22",
           "nationality": "Paraguay",
           "photo": null,
@@ -5498,7 +5498,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 25,
+          "age": 26,
           "dob": "2000-06-27",
           "nationality": "Paraguay",
           "photo": null,
@@ -5528,7 +5528,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-11",
           "nationality": "Paraguay",
           "photo": null,
@@ -5917,7 +5917,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 29,
+          "age": 30,
           "dob": "1996-07-05",
           "nationality": "Australia",
           "photo": null,
@@ -5932,7 +5932,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 27,
+          "age": 28,
           "dob": "1998-07-04",
           "nationality": "Australia",
           "photo": null,
@@ -6081,7 +6081,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 31,
+          "age": 32,
           "dob": "1994-06-24",
           "nationality": "USA",
           "photo": null,
@@ -6441,7 +6441,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-03",
           "nationality": "USA",
           "photo": null,
@@ -6800,7 +6800,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 25,
+          "age": 26,
           "dob": "2000-06-23",
           "nationality": "Ecuador",
           "photo": null,
@@ -6889,7 +6889,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 26,
+          "age": 27,
           "dob": "1999-07-06",
           "nationality": "Curaçao",
           "photo": null,
@@ -7922,7 +7922,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-11",
           "nationality": "Ivory Coast",
           "photo": null,
@@ -7982,7 +7982,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-01",
           "nationality": "Ivory Coast",
           "photo": null,
@@ -8191,7 +8191,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 25,
+          "age": 26,
           "dob": "2000-06-28",
           "nationality": "Japan",
           "photo": null,
@@ -8266,28 +8266,13 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 22,
+          "age": 23,
           "dob": "2003-07-12",
           "nationality": "Japan",
           "photo": null,
           "bio": {
             "zh": "Junnosuke Suzuki是年轻的日本后卫，可作为防线储备力量为球队提供选择。",
             "en": "Junnosuke Suzuki is a young Japanese defender who offers additional depth and options in the back line."
-          }
-        },
-        {
-          "name": "Wataru Endō",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 33,
-          "dob": "1993-02-09",
-          "nationality": "Japan",
-          "photo": null,
-          "bio": {
-            "zh": "Wataru Endō是司职中场的日本球员，常在防守型中场位置承担拦截、对抗和组织衔接任务。",
-            "en": "Wataru Endō is a Japanese midfielder who often plays a holding role, contributing ball-winning, duels and midfield connection."
           }
         },
         {
@@ -8426,6 +8411,17 @@
           }
         },
         {
+          "name": "Shuto Machino",
+          "position": "Offence",
+          "posKey": "FWD",
+          "posLabel": "前锋",
+          "posOrder": 3,
+          "age": 26,
+          "dob": "1999-09-30",
+          "nationality": "Japan",
+          "photo": null
+        },
+        {
           "name": "Junya Ito",
           "position": "Offence",
           "posKey": "FWD",
@@ -8505,7 +8501,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 36,
+          "age": 37,
           "dob": "1989-06-23",
           "nationality": "Sweden",
           "photo": null,
@@ -8535,7 +8531,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 27,
+          "age": 28,
           "dob": "1998-07-11",
           "nationality": "Sweden",
           "photo": null,
@@ -8685,7 +8681,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 23,
+          "age": 24,
           "dob": "2002-06-22",
           "nationality": "Sweden",
           "photo": null,
@@ -8730,7 +8726,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 30,
+          "age": 31,
           "dob": "1995-06-21",
           "nationality": "Sweden",
           "photo": null,
@@ -8775,7 +8771,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 27,
+          "age": 28,
           "dob": "1998-07-01",
           "nationality": "Sweden",
           "photo": null,
@@ -8850,7 +8846,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-07-08",
           "nationality": "Sweden",
           "photo": null,
@@ -8999,7 +8995,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 31,
+          "age": 32,
           "dob": "1994-07-02",
           "nationality": "Tunisia",
           "photo": null,
@@ -9209,7 +9205,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-13",
           "nationality": "Tunisia",
           "photo": null,
@@ -9373,7 +9369,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 34,
+          "age": 35,
           "dob": "1991-07-08",
           "nationality": "Netherlands",
           "photo": null,
@@ -9717,7 +9713,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 33,
+          "age": 34,
           "dob": "1992-06-30",
           "nationality": "Iran",
           "photo": null,
@@ -10555,7 +10551,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-04",
           "nationality": "New Zealand",
           "photo": null,
@@ -10630,7 +10626,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 26,
+          "age": 27,
           "dob": "1999-07-07",
           "nationality": "New Zealand",
           "photo": null,
@@ -10820,6 +10816,21 @@
           }
         },
         {
+          "name": "Logan Rogerson",
+          "position": "Offence",
+          "posKey": "FWD",
+          "posLabel": "前锋",
+          "posOrder": 3,
+          "age": 28,
+          "dob": "1998-05-28",
+          "nationality": "New Zealand",
+          "photo": null,
+          "bio": {
+            "zh": "Logan Rogerson 是一名新西兰前锋，通常活跃在前场区域，可为球队提供跑动、冲击力和进攻选择。",
+            "en": "Logan Rogerson is a New Zealand forward who operates in attacking areas and can offer movement, energy, and attacking options for the team."
+          }
+        },
+        {
           "name": "Chris Wood",
           "position": "Offence",
           "posKey": "FWD",
@@ -10862,21 +10873,6 @@
           "bio": {
             "zh": "Elijah Just是一名前锋，能够在边路或前场位置以速度和灵活性参与进攻。",
             "en": "Elijah Just is a forward who can contribute in wide or advanced roles with pace and flexibility."
-          }
-        },
-        {
-          "name": "Matthew Garbett",
-          "position": "Offence",
-          "posKey": "FWD",
-          "posLabel": "前锋",
-          "posOrder": 3,
-          "age": 24,
-          "dob": "2002-04-13",
-          "nationality": "New Zealand",
-          "photo": null,
-          "bio": {
-            "zh": "Matthew Garbett是一名前场球员，可在进攻区域通过跑动和技术提供支援。",
-            "en": "Matthew Garbett is an attacking player who supports the forward line with movement and technical quality."
           }
         },
         {
@@ -10944,7 +10940,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-07",
           "nationality": "Belgium",
           "photo": null,
@@ -11109,7 +11105,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 34,
+          "age": 35,
           "dob": "1991-06-28",
           "nationality": "Belgium",
           "photo": null,
@@ -11169,7 +11165,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 26,
+          "age": 27,
           "dob": "1999-06-27",
           "nationality": "Belgium",
           "photo": null,
@@ -11311,6 +11307,410 @@
           "bio": {
             "zh": "Matias Fernandez-Pardo是年轻前锋，具备前场机动性和成长潜力，可作为比利时进攻线的储备选择。",
             "en": "Matias Fernandez-Pardo is a young forward with mobility and development potential, providing a depth option for Belgium's attack."
+          }
+        }
+      ]
+    },
+    {
+      "code": "URU",
+      "name": "Uruguay",
+      "cnName": "乌拉圭",
+      "group": "H",
+      "crest": "https://crests.football-data.org/758.svg",
+      "country": "Uruguay",
+      "founded": 1900,
+      "clubColors": "Sky Blue / White / Black",
+      "venue": "",
+      "coach": "Marcelo Bielsa",
+      "squad": [
+        {
+          "name": "Fernando Muslera",
+          "position": "Goalkeeper",
+          "posKey": "GK",
+          "posLabel": "门将",
+          "posOrder": 0,
+          "age": 40,
+          "dob": "1986-06-16",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Fernando Muslera是乌拉圭经验丰富的门将，常以稳健的门线技术和领导力为球队提供保障。",
+            "en": "Fernando Muslera is an experienced Uruguayan goalkeeper known for steady shot-stopping and leadership in the squad."
+          }
+        },
+        {
+          "name": "Santiago Mele",
+          "position": "Goalkeeper",
+          "posKey": "GK",
+          "posLabel": "门将",
+          "posOrder": 0,
+          "age": 28,
+          "dob": "1997-09-06",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Santiago Mele是司职门将的球员，具备门线反应和参与后场出球的能力。",
+            "en": "Santiago Mele is a goalkeeper who offers shot-stopping ability and can take part in building play from the back."
+          }
+        },
+        {
+          "name": "Sergio Rochet",
+          "position": "Goalkeeper",
+          "posKey": "GK",
+          "posLabel": "门将",
+          "posOrder": 0,
+          "age": 33,
+          "dob": "1993-03-23",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Sergio Rochet是乌拉圭门将，通常以稳定的扑救和禁区指挥能力承担重要角色。",
+            "en": "Sergio Rochet is a Uruguayan goalkeeper who is valued for reliable saves and command of his area."
+          }
+        },
+        {
+          "name": "Guillermo Varela",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 33,
+          "dob": "1993-03-24",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Guillermo Varela是司职右后卫的防守球员，能够在边路提供防守覆盖和前插支持。",
+            "en": "Guillermo Varela is a right-back who can provide defensive cover and support attacks down the flank."
+          }
+        },
+        {
+          "name": "Ronald Araújo",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 27,
+          "dob": "1999-03-07",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Ronald Araújo是身体素质出色的后卫，可胜任中卫和右路防守角色，是后防线的重要力量。",
+            "en": "Ronald Araújo is a physically strong defender who can play at centre-back or on the right side and is an important presence in the back line."
+          }
+        },
+        {
+          "name": "Sebastían Cáceres",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 26,
+          "dob": "1999-08-18",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Sebastían Cáceres是司职中后卫的球员，特点是对抗积极并注重防守位置感。",
+            "en": "Sebastían Cáceres is a centre-back known for active duels and disciplined defensive positioning."
+          }
+        },
+        {
+          "name": "Matías Viña",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 28,
+          "dob": "1997-11-09",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Matías Viña是左路防守球员，可担任左后卫或边翼卫，为球队提供边路推进和防守平衡。",
+            "en": "Matías Viña is a left-sided defender who can play as a full-back or wing-back, offering width and defensive balance."
+          }
+        },
+        {
+          "name": "Joaquín Piquerez",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 27,
+          "dob": "1998-08-24",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Joaquín Piquerez是司职左后卫的球员，能够在边路完成防守任务并参与进攻推进。",
+            "en": "Joaquín Piquerez is a left-back who contributes defensively while also joining attacking moves on the flank."
+          }
+        },
+        {
+          "name": "Maximiliano Araújo",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 26,
+          "dob": "2000-02-15",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Maximiliano Araújo是左路多面手，能够在边后卫或更靠前位置提供速度和冲击力。",
+            "en": "Maximiliano Araújo is a versatile left-sided player who can bring pace and directness from full-back or advanced wide roles."
+          }
+        },
+        {
+          "name": "Mathías Olivera",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 28,
+          "dob": "1997-10-31",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Mathías Olivera是乌拉圭左后卫，防守积极且具备前插助攻和边路覆盖能力。",
+            "en": "Mathías Olivera is a Uruguayan left-back who combines proactive defending with overlapping runs and wide coverage."
+          }
+        },
+        {
+          "name": "Santiago Bueno",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 27,
+          "dob": "1998-11-09",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Santiago Bueno是司职中后卫的球员，通常以身高、对抗和防空能力参与后防轮换。",
+            "en": "Santiago Bueno is a centre-back who adds height, physical duels, and aerial presence to the defensive options."
+          }
+        },
+        {
+          "name": "José Giménez",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 31,
+          "dob": "1995-01-20",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "José Giménez是经验丰富的中后卫，以强硬防守、空中对抗和后场组织责任感著称。",
+            "en": "José Giménez is an experienced centre-back known for tough defending, aerial strength, and responsibility in organizing the back line."
+          }
+        },
+        {
+          "name": "Federico Valverde",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 27,
+          "dob": "1998-07-22",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Federico Valverde是全能型中场，兼具奔跑覆盖、推进和远射能力，是球队中场核心之一。",
+            "en": "Federico Valverde is a complete midfielder who combines work rate, ball progression, and shooting ability, making him a key figure in midfield."
+          }
+        },
+        {
+          "name": "Giorgian De Arrascaeta",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 32,
+          "dob": "1994-06-01",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Giorgian De Arrascaeta是技术型中场，擅长在前场组织进攻、送出创造性传球并连接锋线。",
+            "en": "Giorgian De Arrascaeta is a technical midfielder who helps create attacks, deliver incisive passes, and link play with the forwards."
+          }
+        },
+        {
+          "name": "Rodrigo Bentancur",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 29,
+          "dob": "1997-06-25",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Rodrigo Bentancur是中场球员，具备控球、传导和防守覆盖能力，可在中路承担平衡作用。",
+            "en": "Rodrigo Bentancur is a midfielder who offers ball retention, passing, and defensive coverage to balance the central areas."
+          }
+        },
+        {
+          "name": "Manuel Ugarte",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 25,
+          "dob": "2001-04-11",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Manuel Ugarte是防守型中场，特点是抢断积极、覆盖范围大并为后防线提供保护。",
+            "en": "Manuel Ugarte is a defensive midfielder known for aggressive ball-winning, wide coverage, and protection in front of the defence."
+          }
+        },
+        {
+          "name": "Brian Rodríguez",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 26,
+          "dob": "2000-05-20",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Brian Rodríguez是速度型边路中场，擅长突破、拉开宽度并为前场制造变化。",
+            "en": "Brian Rodríguez is a pacey wide midfielder who can beat defenders, stretch the pitch, and add variety in attack."
+          }
+        },
+        {
+          "name": "Rodrigo Zalazar",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 26,
+          "dob": "1999-08-12",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Rodrigo Zalazar是进攻属性较强的中场，能够在中前场提供跑动、传球和射门威胁。",
+            "en": "Rodrigo Zalazar is an attack-minded midfielder who can contribute movement, passing, and shooting threat in advanced areas."
+          }
+        },
+        {
+          "name": "Facundo Pellistri",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 24,
+          "dob": "2001-12-20",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Facundo Pellistri是边路中场，具备速度和盘带能力，常用于提升球队在边路的推进效率。",
+            "en": "Facundo Pellistri is a wide midfielder with pace and dribbling ability, often used to improve progression down the flanks."
+          }
+        },
+        {
+          "name": "Emiliano Martínez",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 26,
+          "dob": "1999-08-17",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Emiliano Martínez是司职中场的球员，可在中路提供防守覆盖、对抗和简洁传球。",
+            "en": "Emiliano Martínez is a midfielder who can provide defensive cover, physical duels, and simple distribution in central areas."
+          }
+        },
+        {
+          "name": "Juan Sanabria",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 26,
+          "dob": "2000-03-29",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Juan Sanabria是中场球员，能够在中路或边路参与衔接，提供跑动和战术执行力。",
+            "en": "Juan Sanabria is a midfielder who can help link play centrally or wide, offering work rate and tactical discipline."
+          }
+        },
+        {
+          "name": "Nicolas de la Cruz",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 29,
+          "dob": "1997-06-01",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Nicolas de la Cruz是机动性强的中场，擅长前后场衔接、压迫和参与进攻组织。",
+            "en": "Nicolas de la Cruz is a mobile midfielder who excels at linking phases of play, pressing, and contributing to attacking moves."
+          }
+        },
+        {
+          "name": "Rodrigo Aguirre",
+          "position": "Offence",
+          "posKey": "FWD",
+          "posLabel": "前锋",
+          "posOrder": 3,
+          "age": 31,
+          "dob": "1994-10-01",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Rodrigo Aguirre是司职前锋的球员，能够在禁区内提供身体对抗和终结点。",
+            "en": "Rodrigo Aguirre is a forward who can offer physical presence and a finishing option inside the penalty area."
+          }
+        },
+        {
+          "name": "Darwin Núñez",
+          "position": "Offence",
+          "posKey": "FWD",
+          "posLabel": "前锋",
+          "posOrder": 3,
+          "age": 27,
+          "dob": "1999-06-24",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Darwin Núñez是冲击力强的前锋，依靠速度、力量和跑位为球队制造纵深威胁。",
+            "en": "Darwin Núñez is a dynamic forward who uses pace, power, and movement to create depth and attacking threat."
+          }
+        },
+        {
+          "name": "Agustín Canobbio",
+          "position": "Offence",
+          "posKey": "FWD",
+          "posLabel": "前锋",
+          "posOrder": 3,
+          "age": 27,
+          "dob": "1998-10-01",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Agustín Canobbio是前场多面手，可在边路或锋线活动，提供跑动、压迫和进攻支援。",
+            "en": "Agustín Canobbio is a versatile attacking player who can operate wide or up front, adding work rate, pressing, and support in attack."
+          }
+        },
+        {
+          "name": "Federico Viñas",
+          "position": "Offence",
+          "posKey": "FWD",
+          "posLabel": "前锋",
+          "posOrder": 3,
+          "age": 28,
+          "dob": "1998-06-30",
+          "nationality": "Uruguay",
+          "photo": null,
+          "bio": {
+            "zh": "Federico Viñas是司职前锋的球员，具备禁区意识和支点作用，可为进攻端提供选择。",
+            "en": "Federico Viñas is a forward with penalty-area awareness and hold-up qualities, giving the attack an additional option."
           }
         }
       ]
@@ -11498,7 +11898,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 26,
+          "age": 27,
           "dob": "1999-07-04",
           "nationality": "Cape Verde Islands",
           "photo": null,
@@ -11573,7 +11973,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 24,
+          "age": 25,
           "dob": "2001-06-21",
           "nationality": "Cape Verde Islands",
           "photo": null,
@@ -12321,7 +12721,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 29,
+          "age": 30,
           "dob": "1996-06-22",
           "nationality": "Spain",
           "photo": null,
@@ -12336,7 +12736,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 29,
+          "age": 30,
           "dob": "1996-06-22",
           "nationality": "Spain",
           "photo": null,
@@ -12486,7 +12886,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-12",
           "nationality": "Spain",
           "photo": null,
@@ -12501,7 +12901,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 18,
+          "age": 19,
           "dob": "2007-07-13",
           "nationality": "Spain",
           "photo": null,
@@ -12516,7 +12916,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 22,
+          "age": 23,
           "dob": "2003-07-13",
           "nationality": "Spain",
           "photo": null,
@@ -12650,7 +13050,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 30,
+          "age": 31,
           "dob": "1995-07-01",
           "nationality": "Iraq",
           "photo": null,
@@ -12800,7 +13200,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 22,
+          "age": 23,
           "dob": "2003-07-12",
           "nationality": "Iraq",
           "photo": null,
@@ -12905,7 +13305,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 25,
+          "age": 26,
           "dob": "2000-06-20",
           "nationality": "Iraq",
           "photo": null,
@@ -12979,7 +13379,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 32,
+          "age": 33,
           "dob": "1993-06-22",
           "nationality": "Senegal",
           "photo": null,
@@ -13279,7 +13679,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-06-20",
           "nationality": "Senegal",
           "photo": null,
@@ -13668,7 +14068,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 22,
+          "age": 23,
           "dob": "2003-07-12",
           "nationality": "Norway",
           "photo": null,
@@ -13787,7 +14187,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 30,
+          "age": 31,
           "dob": "1995-07-03",
           "nationality": "France",
           "photo": null,
@@ -14072,7 +14472,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 28,
+          "age": 29,
           "dob": "1997-06-28",
           "nationality": "France",
           "photo": null,
@@ -14221,7 +14621,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 33,
+          "age": 34,
           "dob": "1992-06-24",
           "nationality": "Austria",
           "photo": null,
@@ -14296,7 +14696,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 29,
+          "age": 30,
           "dob": "1996-07-11",
           "nationality": "Austria",
           "photo": null,
@@ -14551,7 +14951,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 28,
+          "age": 29,
           "dob": "1997-07-07",
           "nationality": "Austria",
           "photo": null,
@@ -14835,7 +15235,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 23,
+          "age": 24,
           "dob": "2002-07-03",
           "nationality": "Jordan",
           "photo": null,
@@ -15179,7 +15579,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 27,
+          "age": 28,
           "dob": "1998-06-30",
           "nationality": "Algeria",
           "photo": null,
@@ -15583,7 +15983,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 31,
+          "age": 32,
           "dob": "1994-06-29",
           "nationality": "Argentina",
           "photo": null,
@@ -15688,7 +16088,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 38,
+          "age": 39,
           "dob": "1987-06-24",
           "nationality": "Argentina",
           "photo": null,
@@ -15807,7 +16207,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 30,
+          "age": 31,
           "dob": "1995-06-23",
           "nationality": "Uzbekistan",
           "photo": null,
@@ -15837,7 +16237,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 29,
+          "age": 30,
           "dob": "1996-07-07",
           "nationality": "Uzbekistan",
           "photo": null,
@@ -16002,7 +16402,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 29,
+          "age": 30,
           "dob": "1996-06-22",
           "nationality": "Uzbekistan",
           "photo": null,
@@ -16122,7 +16522,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 30,
+          "age": 31,
           "dob": "1995-06-29",
           "nationality": "Uzbekistan",
           "photo": null,
@@ -16361,7 +16761,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 34,
+          "age": 35,
           "dob": "1991-06-21",
           "nationality": "Congo DR",
           "photo": null,
@@ -16571,7 +16971,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 31,
+          "age": 32,
           "dob": "1994-06-24",
           "nationality": "Congo DR",
           "photo": null,
@@ -16735,7 +17135,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 27,
+          "age": 28,
           "dob": "1998-06-26",
           "nationality": "Colombia",
           "photo": null,
@@ -16765,13 +17165,28 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 34,
+          "age": 35,
           "dob": "1991-07-12",
           "nationality": "Colombia",
           "photo": null,
           "bio": {
             "zh": "James Rodríguez是进攻型中场，擅长传球组织和定位球，是球队创造力的重要来源。",
             "en": "James Rodríguez is an attacking midfielder known for playmaking and set pieces, providing a major creative outlet."
+          }
+        },
+        {
+          "name": "Juan Fernando Quintero",
+          "position": "Midfield",
+          "posKey": "MID",
+          "posLabel": "中场",
+          "posOrder": 2,
+          "age": 33,
+          "dob": "1993-01-18",
+          "nationality": "Colombia",
+          "photo": null,
+          "bio": {
+            "zh": "Juan Fernando Quintero 是一名哥伦比亚中场球员，以左脚技术、传球创造力和定位球能力见长，在队中常扮演组织进攻的角色。",
+            "en": "Juan Fernando Quintero is a Colombian midfielder known for his left-footed technique, creative passing and set-piece ability, often serving as a playmaking option in the team."
           }
         },
         {
@@ -16832,21 +17247,6 @@
           "bio": {
             "zh": "Kevin Castaño司职中场，风格务实，能够参与防守覆盖和中场衔接。",
             "en": "Kevin Castaño is a practical midfielder who contributes defensive cover and midfield connection."
-          }
-        },
-        {
-          "name": "Juan Quintero",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 33,
-          "dob": "1993-01-18",
-          "nationality": "Colombia",
-          "photo": null,
-          "bio": {
-            "zh": "Juan Quintero是创造型中场，脚下技术细腻，擅长传威胁球和定位球。",
-            "en": "Juan Quintero is a creative midfielder with fine technique, known for incisive passing and set-piece quality."
           }
         },
         {
@@ -17364,7 +17764,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-06-20",
           "nationality": "Portugal",
           "photo": null,
@@ -17842,7 +18242,7 @@
           "posKey": "GK",
           "posLabel": "门将",
           "posOrder": 0,
-          "age": 33,
+          "age": 34,
           "dob": "1992-07-13",
           "nationality": "Ghana",
           "photo": null,
@@ -17857,7 +18257,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 31,
+          "age": 32,
           "dob": "1994-07-02",
           "nationality": "Ghana",
           "photo": null,
@@ -17872,7 +18272,7 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 30,
+          "age": 31,
           "dob": "1995-07-03",
           "nationality": "Ghana",
           "photo": null,
@@ -18022,7 +18422,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 27,
+          "age": 28,
           "dob": "1998-06-24",
           "nationality": "Ghana",
           "photo": null,
@@ -18591,7 +18991,7 @@
           "posKey": "FWD",
           "posLabel": "前锋",
           "posOrder": 3,
-          "age": 24,
+          "age": 25,
           "dob": "2001-06-21",
           "nationality": "Panama",
           "photo": null,
@@ -18705,6 +19105,21 @@
           }
         },
         {
+          "name": "Trevoh Chalobah",
+          "position": "Defence",
+          "posKey": "DEF",
+          "posLabel": "后卫",
+          "posOrder": 1,
+          "age": 27,
+          "dob": "1999-07-05",
+          "nationality": "England",
+          "photo": null,
+          "bio": {
+            "zh": "Trevoh Chalobah是一名英格兰后卫，具备中卫和边后卫位置适应性，通常以身体对抗和防守覆盖为球队提供后场选择。",
+            "en": "Trevoh Chalobah is an English defender who can operate across the back line, offering physicality, defensive coverage, and positional flexibility to the squad."
+          }
+        },
+        {
           "name": "Reece James",
           "position": "Defence",
           "posKey": "DEF",
@@ -18740,28 +19155,13 @@
           "posKey": "DEF",
           "posLabel": "后卫",
           "posOrder": 1,
-          "age": 25,
+          "age": 26,
           "dob": "2000-07-13",
           "nationality": "England",
           "photo": null,
           "bio": {
             "zh": "Marc Guéhi是中卫球员，防守沉着、出球简洁，是后防线的稳定选择之一。",
             "en": "Marc Guéhi is a centre-back noted for calm defending and simple distribution, making him a steady defensive option."
-          }
-        },
-        {
-          "name": "Valentino Livramento",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 23,
-          "dob": "2002-11-12",
-          "nationality": "England",
-          "photo": null,
-          "bio": {
-            "zh": "Valentino Livramento是边后卫，具备速度和持球推进能力，可为边路防守与进攻提供活力。",
-            "en": "Valentino Livramento is a full-back with pace and ball-carrying ability, bringing energy to both defending and attacking wide areas."
           }
         },
         {
@@ -18815,7 +19215,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 27,
+          "age": 28,
           "dob": "1998-06-29",
           "nationality": "England",
           "photo": null,
@@ -18890,7 +19290,7 @@
           "posKey": "MID",
           "posLabel": "中场",
           "posOrder": 2,
-          "age": 22,
+          "age": 23,
           "dob": "2003-06-29",
           "nationality": "England",
           "photo": null,
@@ -19002,410 +19402,6 @@
           "bio": {
             "zh": "Noni Madueke是边锋球员，擅长一对一突破和内切进攻，可为球队提供边路爆点。",
             "en": "Noni Madueke is a winger known for one-on-one dribbling and cutting inside, offering a dynamic wide attacking option."
-          }
-        }
-      ]
-    },
-    {
-      "code": "URU",
-      "name": "Uruguay",
-      "cnName": "乌拉圭",
-      "group": null,
-      "crest": "https://crests.football-data.org/758.svg",
-      "country": "Uruguay",
-      "founded": 1900,
-      "clubColors": "Sky Blue / White / Black",
-      "venue": "",
-      "coach": "Marcelo Bielsa",
-      "squad": [
-        {
-          "name": "Fernando Muslera",
-          "position": "Goalkeeper",
-          "posKey": "GK",
-          "posLabel": "门将",
-          "posOrder": 0,
-          "age": 40,
-          "dob": "1986-06-16",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Fernando Muslera是乌拉圭经验丰富的门将，常以稳健的门线技术和领导力为球队提供保障。",
-            "en": "Fernando Muslera is an experienced Uruguayan goalkeeper known for steady shot-stopping and leadership in the squad."
-          }
-        },
-        {
-          "name": "Santiago Mele",
-          "position": "Goalkeeper",
-          "posKey": "GK",
-          "posLabel": "门将",
-          "posOrder": 0,
-          "age": 28,
-          "dob": "1997-09-06",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Santiago Mele是司职门将的球员，具备门线反应和参与后场出球的能力。",
-            "en": "Santiago Mele is a goalkeeper who offers shot-stopping ability and can take part in building play from the back."
-          }
-        },
-        {
-          "name": "Sergio Rochet",
-          "position": "Goalkeeper",
-          "posKey": "GK",
-          "posLabel": "门将",
-          "posOrder": 0,
-          "age": 33,
-          "dob": "1993-03-23",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Sergio Rochet是乌拉圭门将，通常以稳定的扑救和禁区指挥能力承担重要角色。",
-            "en": "Sergio Rochet is a Uruguayan goalkeeper who is valued for reliable saves and command of his area."
-          }
-        },
-        {
-          "name": "Guillermo Varela",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 33,
-          "dob": "1993-03-24",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Guillermo Varela是司职右后卫的防守球员，能够在边路提供防守覆盖和前插支持。",
-            "en": "Guillermo Varela is a right-back who can provide defensive cover and support attacks down the flank."
-          }
-        },
-        {
-          "name": "Ronald Araújo",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 27,
-          "dob": "1999-03-07",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Ronald Araújo是身体素质出色的后卫，可胜任中卫和右路防守角色，是后防线的重要力量。",
-            "en": "Ronald Araújo is a physically strong defender who can play at centre-back or on the right side and is an important presence in the back line."
-          }
-        },
-        {
-          "name": "Sebastían Cáceres",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 26,
-          "dob": "1999-08-18",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Sebastían Cáceres是司职中后卫的球员，特点是对抗积极并注重防守位置感。",
-            "en": "Sebastían Cáceres is a centre-back known for active duels and disciplined defensive positioning."
-          }
-        },
-        {
-          "name": "Matías Viña",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 28,
-          "dob": "1997-11-09",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Matías Viña是左路防守球员，可担任左后卫或边翼卫，为球队提供边路推进和防守平衡。",
-            "en": "Matías Viña is a left-sided defender who can play as a full-back or wing-back, offering width and defensive balance."
-          }
-        },
-        {
-          "name": "Joaquín Piquerez",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 27,
-          "dob": "1998-08-24",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Joaquín Piquerez是司职左后卫的球员，能够在边路完成防守任务并参与进攻推进。",
-            "en": "Joaquín Piquerez is a left-back who contributes defensively while also joining attacking moves on the flank."
-          }
-        },
-        {
-          "name": "Maximiliano Araújo",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 26,
-          "dob": "2000-02-15",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Maximiliano Araújo是左路多面手，能够在边后卫或更靠前位置提供速度和冲击力。",
-            "en": "Maximiliano Araújo is a versatile left-sided player who can bring pace and directness from full-back or advanced wide roles."
-          }
-        },
-        {
-          "name": "Mathías Olivera",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 28,
-          "dob": "1997-10-31",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Mathías Olivera是乌拉圭左后卫，防守积极且具备前插助攻和边路覆盖能力。",
-            "en": "Mathías Olivera is a Uruguayan left-back who combines proactive defending with overlapping runs and wide coverage."
-          }
-        },
-        {
-          "name": "Santiago Bueno",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 27,
-          "dob": "1998-11-09",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Santiago Bueno是司职中后卫的球员，通常以身高、对抗和防空能力参与后防轮换。",
-            "en": "Santiago Bueno is a centre-back who adds height, physical duels, and aerial presence to the defensive options."
-          }
-        },
-        {
-          "name": "José Giménez",
-          "position": "Defence",
-          "posKey": "DEF",
-          "posLabel": "后卫",
-          "posOrder": 1,
-          "age": 31,
-          "dob": "1995-01-20",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "José Giménez是经验丰富的中后卫，以强硬防守、空中对抗和后场组织责任感著称。",
-            "en": "José Giménez is an experienced centre-back known for tough defending, aerial strength, and responsibility in organizing the back line."
-          }
-        },
-        {
-          "name": "Federico Valverde",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 27,
-          "dob": "1998-07-22",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Federico Valverde是全能型中场，兼具奔跑覆盖、推进和远射能力，是球队中场核心之一。",
-            "en": "Federico Valverde is a complete midfielder who combines work rate, ball progression, and shooting ability, making him a key figure in midfield."
-          }
-        },
-        {
-          "name": "Giorgian De Arrascaeta",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 32,
-          "dob": "1994-06-01",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Giorgian De Arrascaeta是技术型中场，擅长在前场组织进攻、送出创造性传球并连接锋线。",
-            "en": "Giorgian De Arrascaeta is a technical midfielder who helps create attacks, deliver incisive passes, and link play with the forwards."
-          }
-        },
-        {
-          "name": "Rodrigo Bentancur",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 28,
-          "dob": "1997-06-25",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Rodrigo Bentancur是中场球员，具备控球、传导和防守覆盖能力，可在中路承担平衡作用。",
-            "en": "Rodrigo Bentancur is a midfielder who offers ball retention, passing, and defensive coverage to balance the central areas."
-          }
-        },
-        {
-          "name": "Manuel Ugarte",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 25,
-          "dob": "2001-04-11",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Manuel Ugarte是防守型中场，特点是抢断积极、覆盖范围大并为后防线提供保护。",
-            "en": "Manuel Ugarte is a defensive midfielder known for aggressive ball-winning, wide coverage, and protection in front of the defence."
-          }
-        },
-        {
-          "name": "Brian Rodríguez",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 26,
-          "dob": "2000-05-20",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Brian Rodríguez是速度型边路中场，擅长突破、拉开宽度并为前场制造变化。",
-            "en": "Brian Rodríguez is a pacey wide midfielder who can beat defenders, stretch the pitch, and add variety in attack."
-          }
-        },
-        {
-          "name": "Rodrigo Zalazar",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 26,
-          "dob": "1999-08-12",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Rodrigo Zalazar是进攻属性较强的中场，能够在中前场提供跑动、传球和射门威胁。",
-            "en": "Rodrigo Zalazar is an attack-minded midfielder who can contribute movement, passing, and shooting threat in advanced areas."
-          }
-        },
-        {
-          "name": "Facundo Pellistri",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 24,
-          "dob": "2001-12-20",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Facundo Pellistri是边路中场，具备速度和盘带能力，常用于提升球队在边路的推进效率。",
-            "en": "Facundo Pellistri is a wide midfielder with pace and dribbling ability, often used to improve progression down the flanks."
-          }
-        },
-        {
-          "name": "Emiliano Martínez",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 26,
-          "dob": "1999-08-17",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Emiliano Martínez是司职中场的球员，可在中路提供防守覆盖、对抗和简洁传球。",
-            "en": "Emiliano Martínez is a midfielder who can provide defensive cover, physical duels, and simple distribution in central areas."
-          }
-        },
-        {
-          "name": "Juan Sanabria",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 26,
-          "dob": "2000-03-29",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Juan Sanabria是中场球员，能够在中路或边路参与衔接，提供跑动和战术执行力。",
-            "en": "Juan Sanabria is a midfielder who can help link play centrally or wide, offering work rate and tactical discipline."
-          }
-        },
-        {
-          "name": "Nicolas de la Cruz",
-          "position": "Midfield",
-          "posKey": "MID",
-          "posLabel": "中场",
-          "posOrder": 2,
-          "age": 29,
-          "dob": "1997-06-01",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Nicolas de la Cruz是机动性强的中场，擅长前后场衔接、压迫和参与进攻组织。",
-            "en": "Nicolas de la Cruz is a mobile midfielder who excels at linking phases of play, pressing, and contributing to attacking moves."
-          }
-        },
-        {
-          "name": "Rodrigo Aguirre",
-          "position": "Offence",
-          "posKey": "FWD",
-          "posLabel": "前锋",
-          "posOrder": 3,
-          "age": 31,
-          "dob": "1994-10-01",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Rodrigo Aguirre是司职前锋的球员，能够在禁区内提供身体对抗和终结点。",
-            "en": "Rodrigo Aguirre is a forward who can offer physical presence and a finishing option inside the penalty area."
-          }
-        },
-        {
-          "name": "Darwin Núñez",
-          "position": "Offence",
-          "posKey": "FWD",
-          "posLabel": "前锋",
-          "posOrder": 3,
-          "age": 26,
-          "dob": "1999-06-24",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Darwin Núñez是冲击力强的前锋，依靠速度、力量和跑位为球队制造纵深威胁。",
-            "en": "Darwin Núñez is a dynamic forward who uses pace, power, and movement to create depth and attacking threat."
-          }
-        },
-        {
-          "name": "Agustín Canobbio",
-          "position": "Offence",
-          "posKey": "FWD",
-          "posLabel": "前锋",
-          "posOrder": 3,
-          "age": 27,
-          "dob": "1998-10-01",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Agustín Canobbio是前场多面手，可在边路或锋线活动，提供跑动、压迫和进攻支援。",
-            "en": "Agustín Canobbio is a versatile attacking player who can operate wide or up front, adding work rate, pressing, and support in attack."
-          }
-        },
-        {
-          "name": "Federico Viñas",
-          "position": "Offence",
-          "posKey": "FWD",
-          "posLabel": "前锋",
-          "posOrder": 3,
-          "age": 27,
-          "dob": "1998-06-30",
-          "nationality": "Uruguay",
-          "photo": null,
-          "bio": {
-            "zh": "Federico Viñas是司职前锋的球员，具备禁区意识和支点作用，可为进攻端提供选择。",
-            "en": "Federico Viñas is a forward with penalty-area awareness and hold-up qualities, giving the attack an additional option."
           }
         }
       ]
