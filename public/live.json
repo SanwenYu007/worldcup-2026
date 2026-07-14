@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-13T13:00:06.099Z"
+    "fetchedAt": "2026-07-14T21:01:21.384Z"
   },
   "teams": [
     {
@@ -453,6 +453,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -551,6 +553,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -649,6 +653,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -747,6 +753,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -845,6 +853,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -943,6 +953,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1041,6 +1053,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1139,6 +1153,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1237,6 +1253,8 @@
       "status": "finished",
       "homeGoals": 7,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1335,6 +1353,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1433,6 +1453,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1531,6 +1553,8 @@
       "status": "finished",
       "homeGoals": 5,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1629,6 +1653,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1727,6 +1753,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1825,6 +1853,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -1923,6 +1953,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2021,6 +2053,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2119,6 +2153,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 4,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2217,6 +2253,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2315,6 +2353,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2413,6 +2453,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2511,6 +2553,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2609,6 +2653,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2707,6 +2753,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2805,6 +2853,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -2903,6 +2953,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3001,6 +3053,8 @@
       "status": "finished",
       "homeGoals": 6,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3099,6 +3153,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3197,6 +3253,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3295,6 +3353,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3393,6 +3453,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3491,6 +3553,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3589,6 +3653,8 @@
       "status": "finished",
       "homeGoals": 5,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3687,6 +3753,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3785,6 +3853,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3883,6 +3953,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 4,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -3981,6 +4053,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4079,6 +4153,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4177,6 +4253,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4275,6 +4353,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4373,6 +4453,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4471,6 +4553,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4569,6 +4653,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4667,6 +4753,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4765,6 +4853,8 @@
       "status": "finished",
       "homeGoals": 5,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4863,6 +4953,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -4961,6 +5053,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5059,6 +5153,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5157,6 +5253,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5255,6 +5353,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5353,6 +5453,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5451,6 +5553,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5549,6 +5653,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5647,6 +5753,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5745,6 +5853,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5843,6 +5953,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -5941,6 +6053,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6039,6 +6153,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6137,6 +6253,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6235,6 +6353,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6333,6 +6453,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 4,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6431,6 +6553,8 @@
       "status": "finished",
       "homeGoals": 5,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6529,6 +6653,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6627,6 +6753,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6725,6 +6853,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 5,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6823,6 +6953,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -6921,6 +7053,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7019,6 +7153,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7117,6 +7253,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7215,6 +7353,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7313,6 +7453,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7411,6 +7553,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7509,6 +7653,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7607,6 +7753,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7705,6 +7853,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 5,
+      "penHome": 3,
+      "penAway": 4,
       "events": [],
       "odds": {
         "had": {
@@ -7803,6 +7953,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 4,
+      "penHome": 2,
+      "penAway": 3,
       "events": [],
       "odds": {
         "had": {
@@ -7901,6 +8053,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -7999,6 +8153,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8097,6 +8253,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8195,6 +8353,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8293,6 +8453,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8391,6 +8553,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8489,6 +8653,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8587,6 +8753,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8685,6 +8853,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8783,6 +8953,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 5,
+      "penHome": 2,
+      "penAway": 4,
       "events": [],
       "odds": {
         "had": {
@@ -8881,6 +9053,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -8979,6 +9153,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9077,6 +9253,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9175,6 +9353,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9273,6 +9453,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9371,6 +9553,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 3,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9469,6 +9653,8 @@
       "status": "finished",
       "homeGoals": 0,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9567,6 +9753,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 4,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9665,6 +9853,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9763,6 +9953,8 @@
       "status": "finished",
       "homeGoals": 4,
       "awayGoals": 3,
+      "penHome": 4,
+      "penAway": 3,
       "events": [],
       "odds": {
         "had": {
@@ -9861,6 +10053,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 0,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -9959,6 +10153,8 @@
       "status": "finished",
       "homeGoals": 2,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -10057,6 +10253,8 @@
       "status": "finished",
       "homeGoals": 1,
       "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -10155,6 +10353,8 @@
       "status": "finished",
       "homeGoals": 3,
       "awayGoals": 1,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -10250,9 +10450,11 @@
       "away": "ESP",
       "homeName": "France",
       "awayName": "Spain",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "status": "live",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -10351,6 +10553,8 @@
       "status": "scheduled",
       "homeGoals": null,
       "awayGoals": null,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "odds": {
         "had": {
@@ -10449,6 +10653,8 @@
       "status": "scheduled",
       "homeGoals": null,
       "awayGoals": null,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "matchNum": "周六001"
     },
@@ -10466,6 +10672,8 @@
       "status": "scheduled",
       "homeGoals": null,
       "awayGoals": null,
+      "penHome": null,
+      "penAway": null,
       "events": [],
       "matchNum": "周日001"
     }
