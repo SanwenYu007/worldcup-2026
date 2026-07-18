@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-15T21:01:40.448Z"
+    "fetchedAt": "2026-07-18T23:29:25.397Z"
   },
   "teams": [
     {
@@ -10550,7 +10550,7 @@
       "away": "ARG",
       "homeName": "England",
       "awayName": "Argentina",
-      "status": "live",
+      "status": "finished",
       "homeGoals": 1,
       "awayGoals": 2,
       "penHome": null,
@@ -10647,15 +10647,96 @@
       "matchday": null,
       "date": "2026-07-18T21:00:00Z",
       "home": "FRA",
-      "away": null,
+      "away": "ENG",
       "homeName": "France",
-      "awayName": null,
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "awayName": "England",
+      "status": "finished",
+      "homeGoals": 4,
+      "awayGoals": 6,
       "penHome": null,
       "penAway": null,
       "events": [],
+      "odds": {
+        "had": {
+          "h": 1.79,
+          "d": 3.89,
+          "a": 3.39
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 1.79,
+          "d": 3.89,
+          "a": 3.39
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 25.02
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.45
+          },
+          {
+            "score": "2:1",
+            "odds": 9.38
+          },
+          {
+            "score": "1:0",
+            "odds": 10.56
+          },
+          {
+            "score": "2:0",
+            "odds": 11.73
+          },
+          {
+            "score": "1:2",
+            "odds": 13.51
+          },
+          {
+            "score": "2:2",
+            "odds": 15.02
+          },
+          {
+            "score": "0:1",
+            "odds": 15.2
+          },
+          {
+            "score": "3:1",
+            "odds": 15.64
+          }
+        ]
+      },
       "matchNum": "周六001"
     },
     {
@@ -10666,15 +10747,96 @@
       "matchday": null,
       "date": "2026-07-19T19:00:00Z",
       "home": "ESP",
-      "away": null,
+      "away": "ARG",
       "homeName": "Spain",
-      "awayName": null,
+      "awayName": "Argentina",
       "status": "scheduled",
       "homeGoals": null,
       "awayGoals": null,
       "penHome": null,
       "penAway": null,
       "events": [],
+      "odds": {
+        "had": {
+          "h": 2.23,
+          "d": 3.74,
+          "a": 2.53
+        },
+        "hhad": {
+          "goalLine": 0,
+          "h": 2.23,
+          "d": 3.74,
+          "a": 2.53
+        },
+        "ttg": [
+          {
+            "goals": "0",
+            "odds": 19
+          },
+          {
+            "goals": "1",
+            "odds": 6.23
+          },
+          {
+            "goals": "2",
+            "odds": 4.09
+          },
+          {
+            "goals": "3",
+            "odds": 4.02
+          },
+          {
+            "goals": "4",
+            "odds": 5.27
+          },
+          {
+            "goals": "5",
+            "odds": 8.64
+          },
+          {
+            "goals": "6",
+            "odds": 17
+          },
+          {
+            "goals": "7+",
+            "odds": 24.98
+          }
+        ],
+        "crs": [
+          {
+            "score": "1:1",
+            "odds": 8.18
+          },
+          {
+            "score": "2:1",
+            "odds": 10.36
+          },
+          {
+            "score": "1:2",
+            "odds": 11.13
+          },
+          {
+            "score": "1:0",
+            "odds": 12.03
+          },
+          {
+            "score": "0:1",
+            "odds": 12.93
+          },
+          {
+            "score": "2:2",
+            "odds": 14.09
+          },
+          {
+            "score": "2:0",
+            "odds": 15.22
+          },
+          {
+            "score": "0:2",
+            "odds": 17.59
+          }
+        ]
+      },
       "matchNum": "周日001"
     }
   ]
