@@ -2,7 +2,7 @@
   "meta": {
     "title": "2026 FIFA 世界杯",
     "source": "football-data.org",
-    "fetchedAt": "2026-07-18T23:55:03.348Z"
+    "fetchedAt": "2026-07-19T21:54:09.710Z"
   },
   "teams": [
     {
@@ -10751,8 +10751,8 @@
       "homeName": "Spain",
       "awayName": "Argentina",
       "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 1,
+      "awayGoals": 0,
       "penHome": null,
       "penAway": null,
       "events": [],
